@@ -1,0 +1,85 @@
+/*NEW RESPONSIVE STYLE*/
+@media screen and (max-width: 480px) {
+  .he-1 {
+    font-size: 1.8em; }
+
+  .container {
+    padding-top: 3%; }
+
+  header img {
+    width: 20px;
+    height: auto !important; }
+
+  header span {
+    font-size: 14px; } }
+/*END OD NEW RESPONSIVE STYLE*/
+/*FORM STYLE*/
+input:focus {
+  outline: none; }
+
+label {
+  font-weight: normal; }
+
+input[type="text"], input[type="password"], input[type="submit"], select {
+  background: none;
+  border: none; }
+
+input[type="text"], input[type="password"] {
+  border-bottom: 2px solid #3498db;
+  width: 95%;
+  padding-left: 5px; }
+
+input[type="submit"] {
+  border: 1px solid #3498db;
+  width: 100%; }
+
+.inNum input[type="text"] {
+  width: 80%; }
+
+select {
+  width: 95%;
+  padding: 5px;
+  border: 1px solid #3498db; }
+
+input[type="radio"], label span {
+  float: left; }
+
+label span {
+  width: 90%;
+  padding-left: 7px; }
+
+/*END OF FORM STYLE*/
+/*REGISTER & LOGIN STYLE */
+#sign-header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.no-m {
+  margin: 0; }
+
+/*END REGISTER & LOGIN STYLE */
+/* LOGIN STYLE*/
+.wrapLogin {
+  width: 100%;
+  height: 100vh; }
+
+.wrapForm {
+  background-color: #ebeff0;
+  padding: 5%; }
+
+/* END OF LOGIN STYLE*/
+/* REGISTER STYLE*/
+.wrapReg, .wrapDesc {
+  padding: 20px 20px 15px; }
+
+.wrapReg {
+  /*border: 1px solid #3498db;*/ }
+
+.wrapDesc {
+  border-left: 2px solid #3498db; }
+
+/* END OF REGISTER STYLE*/
+
+/*# sourceMappingURL=signInUp.css.map */

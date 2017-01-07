@@ -1,0 +1,64 @@
+/*ASIDE NAV*/
+/*.navbar-default {
+	background: #fff;
+}*/
+.navbar-side-default{
+	background: #fff ;
+}
+.navEvent li a {
+	transition: all 0.3s ease-in-out;
+}
+.navEvent li a:hover, .navEvent li.active a, .navEvent li a:focus, .navEvent li a:active{
+	background-color: #337ab7;
+	color: #FFFFFF;
+}
+.fixedNav {
+	position: fixed;
+    top: 20px;
+    width:262px;
+}
+.divEvent {
+	padding: 20px 0;
+}
+/*Responsive*/
+@media screen and (max-width: 1196px) {
+		.fixedNav {
+			position: fixed;
+		    top: 20px;
+		    width:auto;
+		}
+		.padNav {
+			padding-top: 0px !important;
+			padding-bottom: 0px !important;
+		}
+	}
+@media screen and (max-width: 992px) {
+		.fixedNav {
+			position: relative;
+		    top: 0px;
+		    width:100%;
+		}
+		.padNav {
+			padding-top: 0px !important;
+			padding-bottom: 0px !important;
+		}
+	}
+@media screen and (max-width: 960px) {
+		.fixedNav {
+			position: relative;
+		    top: 0px;
+		    width:100%;
+		}
+		.padNav {
+			padding-top: 0px !important;
+			padding-bottom: 0px !important;
+		}
+	}
+@media screen and (max-width: 768px) {
+		.thenNo {
+			display: none;
+		}
+		.thenSmall {
+			font-size: 1.5em;
+		}
+	}

@@ -1,0 +1,163 @@
+/*
+    Font assets library for Vocomfest 2017
+*/
+
+@font-face{
+    font-family: 'Aller-Light' ;
+    src : url('../fonts/Aller-Light.eot?#iefix') format('embedded-opentype'),  
+        url('../fonts/Aller-Light.woff') format('woff'), 
+        url('../fonts/Aller-Light.ttf')  format('truetype'), 
+        url('../fonts/Aller-Light.svg#Aller-Light') format('svg');
+    font-weight: normal ;
+    font-style : normal ;
+}
+
+@font-face {
+  font-family: 'KottaOne';
+  src:	url('../fonts/KottaOne-Regular.eot?#iefix') format('embedded-opentype'),  
+  		url('../fonts/KottaOne-Regular.woff') format('woff'), 
+  		url('../fonts/KottaOne-Regular.ttf')  format('truetype'), 
+  		url('../fonts/KottaOne-Regular.svg#KottaOne-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato-Light';
+  src: 	url('../fonts/Lato-Light.eot?#iefix') format('embedded-opentype'),  
+  		url('../fonts/Lato-Light.woff') format('woff'), 
+  		url('../fonts/Lato-Light.ttf')  format('truetype'), 
+  		url('../fonts/Lato-Light.svg#Lato-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: 	url('../fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),  
+  		url('../fonts/Montserrat-Regular.woff') format('woff'), 
+  		url('../fonts/Montserrat-Regular.ttf')  format('truetype'), 
+  		url('../fonts/Montserrat-Regular.svg#Montserrat-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: 	url('../fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),  
+  		url('../fonts/Montserrat-Bold.woff') format('woff'), 
+  		url('../fonts/Montserrat-Bold.ttf')  format('truetype'), 
+  		url('../fonts/Montserrat-Bold.svg#Montserrat-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: 	url('../fonts/Raleway-Regular.eot?#iefix') format('embedded-opentype'),  
+  		url('../fonts/Raleway-Regular.otf')  format('opentype'),
+	    url('../fonts/Raleway-Regular.woff') format('woff'), 
+ 		url('../fonts/Raleway-Regular.ttf')  format('truetype'), 
+ 		url('../fonts/Raleway-Regular.svg#Raleway-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway-Light';
+  src: 	url('../fonts/Raleway-Light.eot?#iefix') format('embedded-opentype'),  
+  		url('../fonts/Raleway-Light.otf')  format('opentype'),
+	    url('../fonts/Raleway-Light.woff') format('woff'), 
+ 		url('../fonts/Raleway-Light.ttf')  format('truetype'), 
+ 		url('../fonts/Raleway-Light.svg#Raleway-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway-Thin';
+  src: 	url('../fonts/Raleway-Thin.eot?#iefix') format('embedded-opentype'), 
+  		url('../fonts/Raleway-Thin.otf')  format('opentype'),
+	    url('../fonts/Raleway-Thin.woff') format('woff'), 
+ 		url('../fonts/Raleway-Thin.ttf')  format('truetype'), 
+ 		url('../fonts/Raleway-Thin.svg#Raleway-Thin') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.aller{
+  font-family : 'Aller-Light' !important;
+}
+.lato{
+  font-family : 'Lato-Light' !important;
+}
+.kottaone{
+  font-family : 'KottaOne' !important;
+}
+.mont{
+  font-family : 'Montserrat' !important;
+}
+.mont-bold{
+  font-family : 'Montserrat-Bold' !important;
+}
+.raleway{
+  font-family : 'Raleway' !important;
+}
+.raleway-light{
+  font-family : 'Raleway-Light' !important;
+}
+.raleway-thin{
+  font-family : 'Raleway-Thin' !important;
+}
+.normal{
+  font-size : 1em ;
+}
+.litbig{
+  font-size : 1.1em ;
+}
+.big{
+  font-size : 1.2em ;
+}
+.bigger{
+  font-size : 1.4em ;
+}
+.somewhat-bigger{
+  font-size : 1.6em ;
+}
+.more-bigger{
+  font-size: 1.8em ;
+}
+.he-1{
+  font-size : 2.4em ;
+}
+.sep-title{
+  font-size: 3.75em ;
+  letter-spacing: -3px ;
+}
+.special{
+  font-family : 'Montserrat-Bold' ;
+  color : inherit ;
+}
+.copyright{
+  color : $white ;
+}
+
+/* Font color */
+.wh{
+  color : $white !important ;
+}
+.blue{
+  color : $blue !important ;
+}
+.lblue{
+  color : $lightblue !important ;
+}
+.red{
+  color : $red !important ;
+}
+.turq{
+  color : $turq !important ;
+}
+.emerald{
+  color : $emerald !important ;
+}

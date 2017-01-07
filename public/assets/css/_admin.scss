@@ -1,0 +1,132 @@
+/* Admin style */
+.dash-frame{
+	background: $white ;
+	border-radius: 3px ;
+}
+.sum-content{
+	background: $white ;
+	border-radius: 3px ;
+	text-align: center ;
+	padding-top : 10px ;
+	padding-bottom : 10px ;
+	margin : 1% ;
+}
+/* Main bar */
+.custom-bar-chart {
+    height: 305px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-top: 1px dashed #c9cdd7;
+}
+
+.custom-bar-chart .bar {
+    height: 100%;
+    position: relative;
+    width: 4.3%;
+    margin: 20px 2%;
+    float: left;
+    text-align: center;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    z-index: 10;
+}
+
+.custom-bar-chart .bar:before {
+    background:#bfc2cd;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    content: "";
+    height: 10px;
+    left: 50%;
+    margin-left: -5px;
+    margin-top: -26px;
+    position: absolute;
+    width: 10px;
+    z-index: -1;
+}
+
+.custom-bar-chart .bar:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    margin-top: -10px;
+    left: 50%;
+    margin-left: -1px;
+    height: 100%;
+    width: 1px;
+    background: #bfc2cd;
+}
+
+.custom-bar-chart .bar .title {
+    position: absolute;
+    top: -50px;
+    width: 100%;
+    text-align: center;
+}
+
+.custom-bar-chart .bar .value {
+    position: absolute;
+    bottom: 0;
+    background: #bfc2cd;
+    color: #bfc2cd;
+    width: 100%;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.custom-bar-chart .bar .value:before {
+    border-top: 5px solid #f1f2f7;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: -5px;
+    left: 0;
+}
+
+.custom-bar-chart .bar .value:hover {
+    background: #e8403f;
+    color: #fff;
+}
+
+.custom-bar-chart .bar.doted:before {
+    background: #bfc2cd;
+    content: "";
+    height: 8px;
+    left: 50%;
+    margin-left: -3px;
+    margin-top: -25px;
+    position: absolute;
+    width: 8px;
+    z-index: -1;
+}
+
+.custom-bar-chart .bar.doted:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    margin-top: -10px;
+    left: 50%;
+    margin-left: 0;
+    height: 100%;
+    width: 1px;
+    background: transparent;
+    border-left: 1px dashed #d6d9e0;
+}
+
+.custom-bar-chart .bar.doted .title {
+    top: -42px;
+    font-size: 10px;
+}
+@media screen and (min-width: 1200px){
+	.sum-content{
+		width : 23% ;
+	}
+}

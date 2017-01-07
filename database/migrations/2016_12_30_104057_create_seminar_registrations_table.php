@@ -17,9 +17,9 @@ class CreateSeminarRegistrationsTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
-            $table->string('name');
             $table->string('phone');
-            $table->string('email');
+            $table->integer('category'); // 1 for mahasiswa/pelajar, 2 for umum
+            $table->integer('progress')->default(1); // 1 if unpayed, 2 if payment done
             $table->timestamps();
         });
     }
