@@ -30,7 +30,7 @@ class CreateWebTeamsTable extends Migration
             $table->string('member2_email')->nullable();
             $table->string('member2_phone')->nullable();
             $table->string('member2_identity')->nullable();
-            $table->integer('progress')->default(1); // 1 if registered, 2 payment confirmed, 3 selection batch 1 pass, 4 finalist
+            $table->integer('progress')->default(1); // 1 if registered, 2 payment confirmed, 3 selection batch 1 pass, 4 finalist, 5 if winner
             $table->timestamps();
         });
     }

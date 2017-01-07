@@ -26,4 +26,20 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function team()
+    {
+        if($this->role_id == 2)
+        {
+            return $this->hasOne('App\WebTeam', 'user_id');
+        }
+        else if($this->role_id == 3)
+        {
+            return $this->hasOne('App\MobileTeam', 'user_id');
+        }
+        else
+        {
+            return $this->hasOne('App\SeminarRegistration', 'user_id');
+        }
+    }
 }
