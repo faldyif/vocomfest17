@@ -187,7 +187,7 @@
 						WDC merupakan lomba membuat desain web untuk seluruh siswa SMA sederajat, dalam lomba WDC kali ini tema yang diambil adalah <span class="special">"Innovative Website to Educate Moral Citizen"</span>
 					</p>
 					<p>
-						<a href="./event-wdc.html" class="btn btn-default btn-sm">READ MORE</a>
+						<a href="{{ url('wdc') }}" class="btn btn-default btn-sm">READ MORE</a>
 					</p>
 				</div>
 				<div class="col-md-3 text-center event-point">
@@ -201,7 +201,7 @@
 						International Collegiate Programming Contest (ICPC) merupakan kompetisi pemrograman bagi mahasiswa yang diselenggarakan dibawah naungan Association for Computer Machinery (ACM)
 					</p>
 					<p>
-						<a href="./event-icpc.html" class="btn btn-default btn-sm">READ MORE</a>
+						<a href="{{ url('icpc') }}" class="btn btn-default btn-sm">READ MORE</a>
 				</div>
 				<div class="col-md-3 text-center event-point">
 					<div class="row pd-bt-15">
@@ -214,7 +214,7 @@
 						MADC merupakan lomba membuat aplikasi berbasis platform android untuk seluruh mahasiswa di Indonesia, dengan tema <span class="special">"Impactful Apps for Citizen Mutualism"</span>
 					</p>
 					<p>
-						<a href="./event-madc.html" class="btn btn-default btn-sm">READ MORE</a>
+						<a href="{{ url('madc') }}" class="btn btn-default btn-sm">READ MORE</a>
 				</div>
 				<div class="col-md-3 text-center event-point">
 					<div class="row pd-bt-15">
@@ -227,7 +227,7 @@
 						Puncak acara Vocomfest sekaligus penutup seluruh rangkaian acara Vocomfest 2017 dengan seminar nasional bertemakan <span class="special">"Improving Indonesia's Economy through Creative Technopreneurship"</span>
 					</p>
 					<p>
-						<a href="./event-semnas.html" class="btn btn-default btn-sm">READ MORE</a>
+						<a href="{{ url('semnas') }}" class="btn btn-default btn-sm">READ MORE</a>
 				</div>
 			</div>
 		</div>
