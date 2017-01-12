@@ -4,6 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+// Custom class
+use App\User;
+use App\Submission;
+use Session;
+use Illuminate\Support\Facades\Auth;
+
 class SubmissionController extends Controller
 {
     /**
@@ -35,33 +41,32 @@ class SubmissionController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'type' => 'required',
-            'path_uri' => 'required',
+            'path_url' => 'required',
         ]);
 
         $user = User::find(Auth::user()->id);
-        $user->name = $request->name;
-        $user->email = $request->email;
-        if($request->password != NULL) {
-            $user->password = bcrypt($request->password);
-        }
-        if($request->bio == NULL) {
-            $user->bio = "";
+        $type = 0;
+
+        if($user->role_id == 2) {
+            if($user->team->progress == 2) {
+                $type = 1; // web
+            }
         } else {
-            $user->bio = $request->bio;
+            if($user->team->progress == 2) {
+                $type = 2; // proposal
+            } else if ($user->team->progress == 3) {
+                $type = 3; // aplikasi
+            }
         }
-        if($request->hasFile('displaypic') && $request->file('displaypic')->isValid()) {
-           $destinationPath = 'public/profilepic';
-           $extension = $request->displaypic->extension();
-           $fileName = date('YmdHms').'_'.Auth::user()->id.'.'.$extension;
-           $request->displaypic->storeAs($destinationPath, $fileName);
-           $user->picPath = $fileName;
-       }
 
-        $user->save();
+        $submission = new Submission;
+        $submission->user_id = Auth::user()->id;
+        $submission->type = $type;
+        $submission->path_url = $request->path_url;
+        $submission->save();
 
-        Session::flash('message', 'Your profile has been updated!');
-        return redirect('home');
+        Session::flash('message', 'Your submission has sent!');
+        return redirect('dashboard');
     }
 
     /**

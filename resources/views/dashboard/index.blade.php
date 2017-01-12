@@ -12,26 +12,19 @@
 			</div>
 			<div class="modal-body">
 				<div class="col-md-8">
-					<form method="POST" action="">
+					{!! Form::open(array('route' => 'submission.store', 'enctype' => 'multipart/form-data')) !!}
 						<div class="form-group">
 							<label class="control-label">{{ Auth::user()->name }} : </label>
 							<input type="text" name="team" id="team" value="Your {{ Auth::user()->name }}" class="form-control" disabled>
 						</div>
 						<div class="form-group">
-							<label for="file" class="control-label">Document :</label>
-							<input type="file" id="file" name="fileUpload" class="form-control" />
-						</div>
-						<div class="form-group">
-							<label for="payment" class="control-label"><span class="text-center">- or -</span></label>
-						</div>
-						<div class="form-group">
 							<label for="fileLink" class="control-label">Document link :</label>
-							<input type="text" id="fileLink" name="fileLink" class="form-control" />
+							<input type="text" id="fileLink" name="path_url" class="form-control" />
 						</div>
 						<div class="form-group">
 							<input type="submit" name="submit" class="btn btn-info" value="Submit" />
 						</div>
-					</form>
+					{!! Form::close() !!}
 				</div>
 			</div>
 		</div>

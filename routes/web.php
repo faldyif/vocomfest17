@@ -22,9 +22,14 @@ Route::get('/home', function() {
 });
 
 // Give security for logged user only
-Route::group(['middleware' => 'auth'], function () {
-	Route::get('/dashboard', function () {
-	    return view('dashboard.index');
+Route::group(['prefix' => 'dashboard'], function () {
+	Route::group(['middleware' => 'auth'], function () {
+		Route::get('/', function () {
+		    return view('dashboard.index');
+		});
+		Route::resource('submission', 'SubmissionController', ['only' => [
+	    	'store'
+		]]);
 	});
 });
 Route::get('/wdc', function () {

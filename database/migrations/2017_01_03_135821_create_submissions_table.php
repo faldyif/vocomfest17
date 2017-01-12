@@ -17,7 +17,7 @@ class CreateSubmissionsTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
-            $table->integer('type'); // 1 for proposal, 2 for website, 3 for application
+            $table->integer('type'); // 1 for website, 2 for proposal, 3 for application
             $table->string('path_url');
             $table->timestamps();
         });
