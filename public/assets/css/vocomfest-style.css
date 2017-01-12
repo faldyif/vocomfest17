@@ -374,6 +374,9 @@ html, body {
     -moz-transition: all 0.25s ease-in-out;
     -o-transition: all 0.25s ease-in-out; }
 
+.label-confirm {
+  background: #9b59b6 !important; }
+
 .new-pagination {
   font-family: "Montserrat";
   padding: 0;
@@ -1659,7 +1662,8 @@ a.a-fa:hover {
 
 #content {
   float: right;
-  background-color: #b3b3b3; }
+  background-color: #ebeff0;
+  min-height: 100vh; }
 
 .content-db {
   background-color: #EBEFF0;
@@ -1838,6 +1842,9 @@ a.a-fa:hover {
   margin-bottom: 40px;
   border-top: 1px dashed #c9cdd7; }
 
+#previewGallery {
+  width: 100%; }
+
 .custom-bar-chart .bar {
   height: 100%;
   position: relative;
@@ -1935,6 +1942,20 @@ a.a-fa:hover {
   top: -42px;
   font-size: 10px; }
 
+.text-right {
+  text-align: right; }
+
+/*gallery*/
+.list-photo {
+  border: 1px solid #ebeff0; }
+
+.list-photo a:hover img {
+  box-shadow: 0px 0px 5px; }
+
+.modal-delete {
+  width: 30%; }
+
+/*/gallerry*/
 @media screen and (min-width: 1200px) {
   .sum-content {
     width: 23%; } }

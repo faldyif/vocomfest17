@@ -18,7 +18,9 @@
     margin-bottom: 40px;
     border-top: 1px dashed #c9cdd7;
 }
-
+#previewGallery{
+	width : 100% ;
+}
 .custom-bar-chart .bar {
     height: 100%;
     position: relative;
@@ -125,6 +127,20 @@
     top: -42px;
     font-size: 10px;
 }
+.text-right {
+    text-align: right;
+}
+/*gallery*/
+        .list-photo {
+            border: 1px solid #ebeff0;
+        }
+        .list-photo a:hover img {
+            box-shadow: 0px 0px 5px;
+        }
+        .modal-delete {
+            width: 30%;
+        }
+/*/gallerry*/
 @media screen and (min-width: 1200px){
 	.sum-content{
 		width : 23% ;
