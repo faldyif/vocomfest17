@@ -17,8 +17,15 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/dashboard', function () {
-    return view('dashboard.index');
+Route::get('/home', function() {
+	return redirect('/dashboard');
+});
+
+// Give security for logged user only
+Route::group(['middleware' => 'auth'], function () {
+	Route::get('/dashboard', function () {
+	    return view('dashboard.index');
+	});
 });
 Route::get('/wdc', function () {
     return view('event.wdc');

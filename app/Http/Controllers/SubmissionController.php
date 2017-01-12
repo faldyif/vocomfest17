@@ -34,7 +34,34 @@ class SubmissionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'type' => 'required',
+            'path_uri' => 'required',
+        ]);
+
+        $user = User::find(Auth::user()->id);
+        $user->name = $request->name;
+        $user->email = $request->email;
+        if($request->password != NULL) {
+            $user->password = bcrypt($request->password);
+        }
+        if($request->bio == NULL) {
+            $user->bio = "";
+        } else {
+            $user->bio = $request->bio;
+        }
+        if($request->hasFile('displaypic') && $request->file('displaypic')->isValid()) {
+           $destinationPath = 'public/profilepic';
+           $extension = $request->displaypic->extension();
+           $fileName = date('YmdHms').'_'.Auth::user()->id.'.'.$extension;
+           $request->displaypic->storeAs($destinationPath, $fileName);
+           $user->picPath = $fileName;
+       }
+
+        $user->save();
+
+        Session::flash('message', 'Your profile has been updated!');
+        return redirect('home');
     }
 
     /**
