@@ -17,8 +17,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', function() {
-	return redirect('/dashboard');
+Route::group(['middleware' => 'auth'], function () {
+	Route::get('/home', 'HomeController@index');
 });
 
 // Give security for logged user only
@@ -30,6 +30,23 @@ Route::group(['prefix' => 'dashboard'], function () {
 		Route::resource('submission', 'SubmissionController', ['only' => [
 	    	'store'
 		]]);
+		Route::resource('payment', 'PaymentConfirmationController', ['only' => [
+	    	'store'
+		]]);
+	});
+});
+
+// Give security for logged user only
+Route::group(['prefix' => 'adminvocomfest17'], function () {
+	Route::group(['middleware' => 'auth'], function () {
+		Route::get('/', function () {
+		    return view('admin.index');
+		});
+		Route::resource('team', 'AdminTeamController', ['only' => [
+			'index', 'show', 'destroy'
+		]]);
+		Route::get('team/verify/{id}', 'AdminTeamController@verify');
+		Route::get('team/unverify/{id}', 'AdminTeamController@unverify');
 	});
 });
 Route::get('/wdc', function () {

@@ -4,7 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class PaymentController extends Controller
+// Custom class
+use App\User;
+use App\PaymentConfirmation;
+use Session;
+use Illuminate\Support\Facades\Auth;
+
+class PaymentConfirmationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +40,26 @@ class PaymentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'amount' => 'required',
+            'proof' => 'required|image'
+        ]);
+
+        $paymentconfirmation = new PaymentConfirmation;
+        $paymentconfirmation->user_id = Auth::user()->id;
+        $paymentconfirmation->amount = $request->amount;
+        $paymentconfirmation->description = $request->description;
+        if($request->hasFile('proof') && $request->file('proof')->isValid()) {
+           $destinationPath = 'public/payment_proofs';
+           $extension = $request->proof->extension();
+           $fileName = date('YmdHms').'_'.Auth::user()->id.'.'.$extension;
+           $request->proof->storeAs($destinationPath, $fileName);
+           $paymentconfirmation->proof = $fileName;
+        }
+        $paymentconfirmation->save();
+
+        Session::flash('message', 'Konfirmasi pembayaran anda telah berhasil dikirimkan! Silahkan tunggu 1x24 jam untuk menunggu verifikasi dari panitia.');
+        return redirect('dashboard');
     }
 
     /**
