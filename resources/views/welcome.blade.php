@@ -109,8 +109,8 @@
 					<li><a href="#gallery">GALLERY</a></li>
 					<li><a href="#sponsors">SPONSORS</a></li>
 					<li><a href="#contact">CONTACT</a></li>
-					<li><a href="./register.html">REGISTER</a></li>
-					<li><a href="./login.html">LOGIN</a></li>
+					<li><a href="{{ url('register') }}">REGISTER</a></li>
+					<li><a href="{{ url('login') }}">LOGIN</a></li>
 				</ul>
 			</div>
 		</div>
