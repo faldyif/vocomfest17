@@ -97,6 +97,9 @@ class AdminPaymentController extends Controller
     public function confirm($id)
     {
         $user = User::find(PaymentConfirmation::find($id)->user_id);
+        if($user->role_id == 4) {
+            $user->team->hash = crypt($user->name . $user->created_at, 'vocomfest2017');
+        }
         $user->team->progress = 2;
         $user->team->save();
 

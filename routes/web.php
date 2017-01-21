@@ -27,6 +27,9 @@ Route::group(['middleware' => 'auth'], function () {
 Route::group(['prefix' => 'dashboard'], function () {
 	Route::group(['middleware' => 'auth'], function () {
 		Route::get('/', function () {
+			if(Auth::user()->role_id == 1) {
+				return redirect('adminvocomfest17'); 
+			}
 		    return view('dashboard.index');
 		});
 		Route::resource('submission', 'SubmissionController', ['only' => [

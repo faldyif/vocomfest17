@@ -419,11 +419,14 @@
 									Selesaikan pembayaran terlebih dahulu.
 								</div>
 							@elseif($progress == 6)
-								<div class="row content-center team-sec">
-									<img src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl={{ crypt(Auth::user()->id, 'vocomfest2017') }}&choe=UTF-8">
-									<p>{{ crypt(Auth::user()->id, 'vocomfest2017') }}</p>
+								<div class="row content-center">
+									<img src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl={{ $user->team->hash }}&choe=UTF-8">
+									
 								</div>
-								<div class="row content-center team-sec">
+								<div class="row content-center" style="padding-top:0">
+									<p>{{ $user->team->hash }}</p>
+								</div>
+								<div class="row content-center">
 									<p>Silahkan tunjukkan kode diatas saat penukaran kepada panitia.</p>
 								</div>
 							@else
