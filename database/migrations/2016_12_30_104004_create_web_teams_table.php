@@ -31,7 +31,7 @@ class CreateWebTeamsTable extends Migration
             $table->string('member2_phone')->nullable();
             $table->string('member2_identity')->nullable();
             $table->integer('progress')->default(1); // 1 if registered, 2 payment confirmed, 3 finalist, 4 if winner
-            $table->integer('verified')->default(0); // 0 if unverified, 1 if locked profile (waiting for verification), 3 if verified
+            $table->integer('verified')->default(0); // 0 if unverified, 1 if locked profile (waiting for verification), 2 if verified
             $table->timestamps();
         });
     }

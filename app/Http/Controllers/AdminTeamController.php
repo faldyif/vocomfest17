@@ -97,6 +97,9 @@ class AdminTeamController extends Controller
             SeminarRegistration::where('user_id', $id)->delete();
         }
         User::destroy($id);
+
+        Session::flash('message', 'Berhasil menghapus tim!');
+        return redirect('adminvocomfest17/team');
     }
 
     public function verify($id)

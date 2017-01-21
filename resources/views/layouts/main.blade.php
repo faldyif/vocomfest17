@@ -49,6 +49,10 @@
 <script type="text/javascript" src="{{ url('/assets/js/lightcase.js') }}"></script>
 <script type="text/javascript" src="{{ url('/assets/js/wow.min.js') }}"></script>
 <script type="text/javascript" src="{{ url('/assets/js/owl.carousel.min.js') }}"></script>
+
+<script type="text/javascript" src="{{ url('/assets/plugins/tinymce/tinymce.min.js') }}" ></script>
+<script type="text/javascript" src="{{ url('/assets/plugins/tinymce/init-tinymce.js') }}" ></script>
+
 <script type="text/javascript">
 	$(document).ready(function(){
 		// wow js

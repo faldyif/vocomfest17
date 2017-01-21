@@ -124,13 +124,10 @@
 														@if($key->team->verified == 1)
 														<a title="Verify Team" href="{{ url('adminvocomfest17/team/verify') }}/{{ $key->id }}" class="btn btn-success btn-sm"><i class="fa fa-check"></i></a>
 														@elseif($key->team->verified == 2)
-														<a title="Unverify Team" href="{{ url('adminvocomfest17/team/unverify') }}/{{ $key->id }}" class="btn btn-danger btn-sm"><i class="fa fa-check"></i></a>
+														<a title="Unverify Team" href="{{ url('adminvocomfest17/team/unverify') }}/{{ $key->id }}" class="btn btn-warning btn-sm"><i class="fa fa-remove"></i></a>
 														@endif
 														<a title="View" href="{{ url('adminvocomfest17/team') }}/{{ $key->id }}" class="btn btn-primary btn-sm"><i class="fa fa-eye"></i></a>
-														<!--form action="{{ URL::route('team.destroy', $key->id) }}" method="POST">
-													        {{ method_field('DELETE') }}
-    														{{ csrf_field() }}
-														    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
+														<a title="Delete" href="{{ url('adminvocomfest17/team/delete') }}/{{ $key->id }}" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
 														</form-->
 													</td>
 												</tr>

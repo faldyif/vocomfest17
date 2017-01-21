@@ -469,54 +469,23 @@
 				<p class="small subtitle">Berita terbaru di Vocomfest 2017</p>
 			</div>
 			<div class="col-md-12 pd-t-30">
+				@foreach($news as $key)
 				<div class="col-md-3 news-content">
-					<a href="blog.html" alt="News Vocomfest" title="News Vocomfest">
+					<a href="{{ url('news') }}/{{ $key->id }}" alt="News Vocomfest" title="{{ $key->title }}">
 						<div class="overlay bk-gr-overlay"></div>
-						<img src="{{ url('assets/img/news-img.jpg') }}" alt="News Vocomfest" class="cover-img">
+						<img src="{{ url('storage/news_thumbs') }}/{{ $key->thumbnail }}" alt="News Vocomfest" class="cover-img">
 						<div class="news-desc">
-							<h4 class="news-title">Lorem Ipsum Dolorsit Amet</h4>
+							<h4 class="news-title">{{ $key->title }}</h4>
 							<hr class="bl-line-sep">
-							<p class="news-date">1 Februari 2017</p>
+							<p class="news-date">{{ $key->created_at->format('F jS, Y') }}</p>
 						</div>
 					</a>
 				</div>
-				<div class="col-md-3 news-content">
-					<a href="blog.html" alt="News Vocomfest" title="News Vocomfest">
-						<div class="overlay bk-gr-overlay"></div>
-						<img src="{{ url('assets/img/news-img.jpg') }}" alt="News Vocomfest" class="cover-img">
-						<div class="news-desc">
-							<h4 class="news-title">Lorem Ipsum Dolorsit Amet</h4>
-							<hr class="bl-line-sep">
-							<p class="news-date">1 Februari 2017</p>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3 news-content">
-					<a href="blog.html" alt="News Vocomfest" title="News Vocomfest">
-						<div class="overlay bk-gr-overlay"></div>
-						<img src="{{ url('assets/img/news-img.jpg') }}" alt="News Vocomfest" class="cover-img">
-						<div class="news-desc">
-							<h4 class="news-title">Lorem Ipsum Dolorsit Amet</h4>
-							<hr class="bl-line-sep">
-							<p class="news-date">1 Februari 2017</p>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3 news-content">
-					<a href="blog.html" alt="News Vocomfest" title="News Vocomfest">
-						<div class="overlay bk-gr-overlay"></div>
-						<img src="{{ url('assets/img/news-img.jpg') }}" alt="News Vocomfest" class="cover-img">
-						<div class="news-desc">
-							<h4 class="news-title">Lorem Ipsum Dolorsit Amet</h4>
-							<hr class="bl-line-sep">
-							<p class="news-date">1 Februari 2017</p>
-						</div>
-					</a>
-				</div>
+				@endforeach
 			</div>
 			<div class="col-md-12 pd-t-20">
 				<p class="text-center">
-					<a href="news.html" class="btn btn-more">LOAD MORE &nbsp; <i class="fa fa-arrow-right"></i></a>
+					<a href="{{ url('news') }}" class="btn btn-more">LOAD MORE &nbsp; <i class="fa fa-arrow-right"></i></a>
 				</p>
 			</div>
 		</div>
@@ -534,91 +503,22 @@
 				<p class="small subtitle">Dokumentasi kegiatan Vocomfest sebelumnya</p>
 			</div>
 			<div class="col-md-12 pd-t-30">
+				@foreach($gallery as $key)
 				<div class="col-md-3 gallery-content">
-					<a href="{{ url('assets/img/gallery-img.jpg') }}" data-rel="lightcase">
+					<a href="{{ url('storage/gallery') }}/{{ $key->path }}" data-rel="lightcase">
 						<div class="gal-overlay">
 							<div class="olay-content text-center">
 								+
 							</div>
 						</div>
-						<img src="{{ url('assets/img/gallery-img.jpg') }}" alt="Gallery" class="cover-img">
+						<img src="{{ url('storage/gallery') }}/{{ $key->path }}" alt="{{ $key->text }}" class="cover-img">
 					</a>
 				</div>
-				<div class="col-md-3 gallery-content">
-					<a href="{{ url('assets/img/gallery-img.jpg') }}" data-rel="lightcase">
-						<div class="gal-overlay">
-							<div class="olay-content text-center">
-								+
-							</div>
-						</div>
-						<img src="{{ url('assets/img/gallery-img.jpg') }}" alt="Gallery" class="cover-img">
-					</a>
-				</div>
-				<div class="col-md-3 gallery-content">
-					<a href="{{ url('assets/img/gallery-img.jpg') }}" data-rel="lightcase">
-						<div class="gal-overlay">
-							<div class="olay-content text-center">
-								+
-							</div>
-						</div>
-						<img src="{{ url('assets/img/gallery-img.jpg') }}" alt="Gallery" class="cover-img">
-					</a>
-				</div>
-				<div class="col-md-3 gallery-content">
-					<a href="{{ url('assets/img/gallery-img.jpg') }}" data-rel="lightcase">
-						<div class="gal-overlay">
-							<div class="olay-content text-center">
-								+
-							</div>
-						</div>
-						<img src="{{ url('assets/img/gallery-img.jpg') }}" alt="Gallery" class="cover-img">
-					</a>
-				</div>
-
-				<div class="col-md-3 gallery-content">
-					<a href="{{ url('assets/img/gallery-img.jpg') }}" data-rel="lightcase">
-						<div class="gal-overlay">
-							<div class="olay-content text-center">
-								+
-							</div>
-						</div>
-						<img src="{{ url('assets/img/gallery-img.jpg') }}" alt="Gallery" class="cover-img">
-					</a>
-				</div>
-				<div class="col-md-3 gallery-content">
-					<a href="{{ url('assets/img/gallery-img.jpg') }}" data-rel="lightcase">
-						<div class="gal-overlay">
-							<div class="olay-content text-center">
-								+
-							</div>
-						</div>
-						<img src="{{ url('assets/img/gallery-img.jpg') }}" alt="Gallery" class="cover-img">
-					</a>
-				</div>
-				<div class="col-md-3 gallery-content">
-					<a href="{{ url('assets/img/gallery-img.jpg') }}" data-rel="lightcase">
-						<div class="gal-overlay">
-							<div class="olay-content text-center">
-								+
-							</div>
-						</div>
-						<img src="{{ url('assets/img/gallery-img.jpg') }}" alt="Gallery" class="cover-img">
-					</a>
-				</div>
-				<div class="col-md-3 gallery-content">
-					<a href="{{ url('assets/img/gallery-img.jpg') }}" data-rel="lightcase">
-						<div class="gal-overlay">
-							<div class="olay-content text-center">
-								+
-							</div>
-						</div>
-						<img src="{{ url('assets/img/gallery-img.jpg') }}" alt="Gallery" class="cover-img">
-					</a>
-				</div>
+				@endforeach
 			</div>
 			<div class="col-md-12 pd-t-20">
 				<p class="text-center">
-					<a href="gallery.html" class="btn btn-more">LOAD MORE &nbsp; <i class="fa fa-arrow-right"></i></a>
+					<a href="{{ url('gallery-content') }}" class="btn btn-more">LOAD MORE &nbsp; <i class="fa fa-arrow-right"></i></a>
 				</p>
 			</div>
 		</div>
@@ -635,7 +535,7 @@
 					Jadi gimana? Kamu tertarik untuk jadi bagian dari Vocomfest 2017 ini? Ayo adu kemampuan dan asah bakatmu melalui Vocomfest 2017 ini! Caranya gampang tinggal klik tombol dibawah ini!
 				</p>
 				<p class="pd-t-25">
-					<a href="./register.html" class="btn btn-sep-2">REGISTER</a>
+					<a href="{{ url('register') }}" class="btn btn-sep-2">REGISTER</a>
 				</p>
 			</div>
 		</div>
@@ -781,14 +681,25 @@
 						</p>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-4 col-xs-12">
 					<h5 class="mont-bold">
 						<i class="fa fa-comments"></i> RECENT POST
 					</h5>
-					<table class="recents" cellspacing="3">
+					@foreach(\App\News::limit(3)->latest()->get() as $key)
+					<div class="row">
+						<div class="col-md-3 col-sm-4">
+							<img src="{{ url('storage/news_thumbs') }}/{{ $key->thumbnail }}" class="recent-img">
+						</div>
+						<div class="col-md-9 col-sm-8">
+							<a href="{{ url('news') }}/{{ $key->id }}" class="recent-link">{{ $key->title }}</a>
+							<p class="small mont">{{ $key->created_at->format('F jS, Y') }}</p>
+						</div>
+					</div>
+					@endforeach
+					<!-- <table class="recents" cellspacing="3">
 						<tr>
 							<td class="col-md-3">
-								<img src="{{ url('assets/img/sep-2.jpg') }}" class="recent-img">
+								<img src="./assets/img/sep-2.jpg" class="recent-img">
 							</td>
 							<td class="col-md-9">
 								<a href="blog.html" class="recent-link">Lorem Ipsum Dolorsit Amet</a>
@@ -797,7 +708,7 @@
 						</tr>
 						<tr>
 							<td class="col-md-3">
-								<img src="{{ url('assets/img/sep-2.jpg') }}" class="recent-img">
+								<img src="./assets/img/sep-2.jpg" class="recent-img">
 							</td>
 							<td class="col-md-9">
 								<a href="blog.html" class="recent-link">Lorem Ipsum Dolorsit Amet</a>
@@ -806,7 +717,7 @@
 						</tr>
 						<tr>
 							<td class="col-md-3">
-								<img src="{{ url('assets/img/sep-2.jpg') }}" class="recent-img">
+								<img src="./assets/img/sep-2.jpg" class="recent-img">
 							</td>
 							<td class="col-md-9">
 								<a href="blog.html" class="recent-link">Lorem Ipsum Dolorsit Amet</a>
@@ -814,6 +725,7 @@
 							</td>
 						</tr>
 					</table>
+					-->
 				</div>
 				<div class="col-md-4">
 					<h5 class="mont-bold">

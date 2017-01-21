@@ -12,7 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+	$news = \App\News::limit(4)->latest()->get();
+	$gallery = \App\Gallery::where('status', 1)->limit(8)->latest()->get();
+    return view('welcome')->with('news', $news)->with('gallery', $gallery);
 });
 
 Auth::routes();
@@ -43,8 +45,28 @@ Route::group(['prefix' => 'adminvocomfest17'], function () {
 		    return view('admin.index');
 		});
 		Route::resource('team', 'AdminTeamController', ['only' => [
-			'index', 'show', 'destroy'
+			'index', 'show'
 		]]);
+		Route::resource('news', 'AdminNewsController', ['only' => [
+			'index', 'show', 'create', 'edit', 'store', 'update'
+		]]);
+		Route::resource('gallery', 'AdminGalleryController', ['only' => [
+			'index', 'store'
+		]]);
+		Route::resource('payment', 'AdminPaymentController', ['only' => [
+			'index'
+		]]);
+		Route::resource('submission', 'AdminSubmissionController', ['only' => [
+			'index'
+		]]);
+		Route::get('payment/delete/{id}', 'AdminPaymentController@destroy');
+		Route::get('submission/delete/{id}', 'AdminSubmissionController@destroy');
+		Route::get('gallery/delete/{id}', 'AdminGalleryController@destroy');
+		Route::get('team/delete/{id}', 'AdminTeamController@destroy');
+		Route::get('news/delete/{id}', 'AdminNewsController@destroy');
+		Route::get('payment/confirm/{id}', 'AdminPaymentController@confirm');
+		Route::get('gallery/publish/{id}', 'AdminGalleryController@publish');
+		Route::get('gallery/unpublish/{id}', 'AdminGalleryController@unpublish');
 		Route::get('team/verify/{id}', 'AdminTeamController@verify');
 		Route::get('team/unverify/{id}', 'AdminTeamController@unverify');
 	});
@@ -61,3 +83,10 @@ Route::get('/semnas', function () {
 Route::get('/icpc', function () {
     return view('event.icpc');
 });
+
+Route::resource('news', 'NewsController', ['only' => [
+	'index', 'show'
+]]);
+Route::resource('gallery', 'GalleryController', ['only' => [
+	'index'
+]]);

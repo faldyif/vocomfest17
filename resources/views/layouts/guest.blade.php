@@ -52,23 +52,23 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a href="./index.html" class="navbar-brand">
-						<img src="./assets/img/icon-2.png" alt="Vocomfest" class="img-brand">
+					<a href="{{ url('/') }}" class="navbar-brand">
+						<img src="{{ url('/assets/img/icon-2.png') }}" alt="Vocomfest" class="img-brand">
 						<span class="text-brand">VOCOMFEST</span>
 					</a>
 				</div>
 				<div class="collapse navbar-collapse" id="navbar-top">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="index.html#header">HOME</a></li>
-						<li><a href="index.html#about">ABOUT</a></li>
-						<li class="active"><a href="index.html#events">EVENTS</a></li>
-						<li><a href="index.html#timeline">TIMELINE</a></li>
-						<li><a href="news.html">NEWS</a></li>
-						<li><a href="gallery.html">GALLERY</a></li>
-						<li><a href="index.html#sponsors">SPONSORS</a></li>
-						<li><a href="index.html#contact">CONTACT</a></li>
-						<li><a href="./register.html">REGISTER</a></li>
-						<li><a href="./login.html">LOGIN</a></li>
+						<li><a href="{{ url('/') }}#header">HOME</a></li>
+						<li><a href="{{ url('/') }}#about">ABOUT</a></li>
+						<li><a href="{{ url('/') }}#events">EVENTS</a></li>
+						<li><a href="{{ url('/') }}#timeline">TIMELINE</a></li>
+						<li><a href="{{ url('/') }}#news">NEWS</a></li>
+						<li><a href="{{ url('/') }}#gallery">GALLERY</a></li>
+						<li><a href="{{ url('/') }}#sponsors">SPONSORS</a></li>
+						<li><a href="{{ url('/') }}#contact">CONTACT</a></li>
+						<li><a href="{{ url('register') }}">REGISTER</a></li>
+						<li><a href="{{ url('login') }}">LOGIN</a></li>
 					</ul>
 				</div>
 			</div>
@@ -85,7 +85,7 @@
 			<div class="row pd-bt-20">
 				<div class="col-md-4">
 					<div class="col-md-10">
-						<img src="./assets/img/logo.png" alt="Vocomfest" title="Vocomfest" class="foot-logo mg-bt-20">
+						<img src="{{ url('assets/img/logo.png') }}" alt="Vocomfest" title="Vocomfest" class="foot-logo mg-bt-20">
 						<p class="small">
 							Vocational Computer Festival (VOCOMFEST) merupakan salah satu acara terbesar yang diselenggarakan oleh Himpunan Maasiswa Komputer dan Sistem Informasi SV UGM. Mengangkat tema <span class="special">"Creating Smart Citizen for Social Welfare with Technology"</span>
 						</p>
@@ -95,33 +95,17 @@
 					<h5 class="mont-bold">
 						<i class="fa fa-comments"></i> RECENT POST
 					</h5>
+					@foreach(\App\News::limit(3)->latest()->get() as $key)
 					<div class="row">
 						<div class="col-md-3 col-sm-4">
-							<img src="./assets/img/sep-2.jpg" class="recent-img">
+							<img src="{{ url('storage/news_thumbs') }}/{{ $key->thumbnail }}" class="recent-img">
 						</div>
 						<div class="col-md-9 col-sm-8">
-							<a href="blog.html" class="recent-link">Lorem Ipsum Dolorsit Amet</a>
-							<p class="small mont">1 Februari 2017</p>
+							<a href="{{ url('news') }}/{{ $key->id }}" class="recent-link">{{ $key->title }}</a>
+							<p class="small mont">{{ $key->created_at->format('F jS, Y') }}</p>
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-md-3 col-sm-4">
-							<img src="./assets/img/sep-2.jpg" class="recent-img">
-						</div>
-						<div class="col-md-9 col-sm-8">
-							<a href="blog.html" class="recent-link">Lorem Ipsum Dolorsit Amet</a>
-							<p class="small mont">1 Februari 2017</p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-3 col-sm-4">
-							<img src="./assets/img/sep-2.jpg" class="recent-img">
-						</div>
-						<div class="col-md-9 col-sm-8">
-							<a href="blog.html" class="recent-link">Lorem Ipsum Dolorsit Amet</a>
-							<p class="small mont">1 Februari 2017</p>
-						</div>
-					</div>
+					@endforeach
 					<!-- <table class="recents" cellspacing="3">
 						<tr>
 							<td class="col-md-3">
@@ -177,9 +161,9 @@
 			<div class="row pd-bt-10">
 				<div class="col-md-3">
 					<ul class="social-links">
-						<li><a href="#" title="Vocomfest 2017"><i class="fa fa-facebook"></a></i></li>
-						<li><a href="#" title="Vocomfest 2017"><i class="fa fa-twitter"></a></i></li>
-						<li><a href="#" title="Vocomfest 2017"><i class="fa fa-instagram"></a></i></li>
+						<li><a href="http://facebook.com/vocomfest" title="Vocomfest 2017"><i class="fa fa-facebook"></a></i></li>
+						<li><a href="http://twitter.com/vocomfest" title="Vocomfest 2017"><i class="fa fa-twitter"></a></i></li>
+						<li><a href="http://instagram.com/vocomfest" title="Vocomfest 2017"><i class="fa fa-instagram"></a></i></li>
 					</ul>
 				</div>
 				<div class="col-md-3 pull-right text-right">

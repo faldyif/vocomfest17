@@ -19,7 +19,7 @@ class CreateSeminarRegistrationsTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('phone');
             $table->integer('category'); // 1 for mahasiswa/pelajar, 2 for umum
-            $table->integer('progress')->default(1); // 1 if unpayed, 2 if payment done
+            $table->integer('progress')->default(1); // 1 if unpayed, 2 if payment done. 3 ticket picked up
             $table->timestamps();
         });
     }

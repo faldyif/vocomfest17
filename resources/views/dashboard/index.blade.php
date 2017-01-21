@@ -1,12 +1,12 @@
 <?php
 	$user = Auth::user();
 	$arr_type = array("", "Website", "Proposal", "Aplikasi");
-	$arr_jml_bayar = array(0, 100000, 50000, 50000);
-	$arr_progress = array("", "Menunggu pembayaran", "Seleksi website", "Seleksi proposal", "Seleksi aplikasi", "Finalis");
+	$arr_jml_bayar = array(0, 0, 100000, 50000, 50000);
+	$arr_progress = array("", "Menunggu pembayaran", "Seleksi website", "Seleksi proposal", "Seleksi aplikasi", "Finalis", "Penukaran Tiket", "Tiket sudah diambil");
 	$arr_submission_type = array(0, 0, 1, 2, 3, 0, 0);
 	$type = 0;
 	$progress;
-	if($user->role_id == 2) {
+	if ($user->role_id == 2) {
         if($user->team->progress == 1) {
         	$progress = 1;
         } else if($user->team->progress == 2) {
@@ -15,7 +15,7 @@
         } else if($user->team->progress == 3) {
         	$progress = 5;
         }
-    } else {
+    } else if($user->role_id == 3) {
     	if($user->team->progress == 1) {
     		$progress = 1;
         } else if($user->team->progress == 2) {
@@ -26,6 +26,14 @@
             $progress = 4;
         } else if($user->team->progress == 4) {
         	$progress = 5;
+        }
+    } else {
+    	if($user->team->progress == 1) {
+    		$progress = 1;
+        } else if($user->team->progress == 2) {
+            $progress = 6;
+        } else if ($user->team->progress == 3) {
+            $progress = 7;
         }
     }
 ?>
@@ -147,7 +155,9 @@
 			    <div class="collapse navbar-collapse nopad" id="asideNav">
 			      <ul class="nav nav-db">
 					<li class="active"><a href="{{ url('dashboard') }}"><i class="fa fa-dashboard"></i><span>Dashboard</span></a></li>
+					@if(Auth::user()->role_id != 4)
 					<li><a href="./dashboard-user.html"><i class="fa fa-users"></i><span>Team Members</span></a></li>
+					@endif
 					<li><a href="./event-wdc.html"><i class="fa fa-microphone"></i><span>Event</span></a></li>
 					<li><a href="./news.html"><i class="fa fa-hourglass-half"></i><span>News</span></a></li>
 					@if($user->team->progress == 1)
@@ -200,7 +210,7 @@
     </div>
 </div>
 @endif
-@if ($user->team->verified == 0)
+@if ($user->team->verified == 0 && Auth::user()->role_id != 4)
 <div class="row">
     <div class="alert alert-danger">
         <div class="sb-msg"><p><strong>Tim anda belum terverifikasi</strong></p>
@@ -292,6 +302,7 @@
 					@endif
 				</div>
 				<div class="row pd-bt-20">
+				@if(Auth::user()->role_id != 4)
 				<!-- Team Members -->
 					<section class="col-md-7 add-pd-b sec-team">
 						<div class="sec-content-db">
@@ -398,6 +409,32 @@
 						</div>
 					</section>
 				<!-- /team members -->
+				@else
+				<!-- Ticket code -->
+					<section class="col-md-7 add-pd-b sec-team">
+						<div class="sec-content-db">
+							<span class="title-sec-db"><i class="fa fa-users"></i>Kode Penukaran</span>
+							@if($progress == 1)
+								<div class="row content-center team-sec">
+									Selesaikan pembayaran terlebih dahulu.
+								</div>
+							@elseif($progress == 6)
+								<div class="row content-center team-sec">
+									<img src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl={{ crypt(Auth::user()->id, 'vocomfest2017') }}&choe=UTF-8">
+									<p>{{ crypt(Auth::user()->id, 'vocomfest2017') }}</p>
+								</div>
+								<div class="row content-center team-sec">
+									<p>Silahkan tunjukkan kode diatas saat penukaran kepada panitia.</p>
+								</div>
+							@else
+								<div class="row content-center team-sec">
+									Tiket anda sudah diambil.
+								</div>
+							@endif
+						</div>
+					</section>
+				<!-- /ticket code -->
+				@endif
 				<!-- Progress -->
 					<section class="col-md-5">
 						<div class="sec-content-db">
