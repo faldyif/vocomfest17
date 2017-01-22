@@ -21,6 +21,9 @@ class AdminTeamController extends Controller
      */
     public function index()
     {
+        if(Auth::user()->role_id != 1) {
+            return redirect('dashboard'); 
+        }
         $team = User::all()->whereIn('role_id', [2, 3]);
         return View('admin.team.index')->with('team', $team);
     }
@@ -54,6 +57,9 @@ class AdminTeamController extends Controller
      */
     public function show($id)
     {
+        if(Auth::user()->role_id != 1) {
+            return redirect('dashboard'); 
+        }
         $team = User::find($id);
         return View('admin.team.view')->with('team', $team);
     }
@@ -89,6 +95,9 @@ class AdminTeamController extends Controller
      */
     public function destroy($id)
     {
+        if(Auth::user()->role_id != 1) {
+            return redirect('dashboard'); 
+        }
         if(User::find($id) == 2) {
             WebTeam::where('user_id', $id)->delete();
         } else if(User::find($id) == 3) {
@@ -104,6 +113,9 @@ class AdminTeamController extends Controller
 
     public function verify($id)
     {
+        if(Auth::user()->role_id != 1) {
+            return redirect('dashboard'); 
+        }
         $user = User::find($id);
         $user->team->verified = 2;
         $user->team->save();
@@ -114,11 +126,40 @@ class AdminTeamController extends Controller
 
     public function unverify($id)
     {
+        if(Auth::user()->role_id != 1) {
+            return redirect('dashboard'); 
+        }
         $user = User::find($id);
         $user->team->verified = 0;
         $user->team->save();
 
         Session::flash('message', 'Berhasil membatalkan verifikasi!');
+        return redirect('adminvocomfest17/team');
+    }
+
+    public function pass($id)
+    {
+        if(Auth::user()->role_id != 1) {
+            return redirect('dashboard'); 
+        }
+        $user = User::find($id);
+        $user->team->progress++;
+        $user->team->save();
+
+        Session::flash('message', 'Berhasil meloloskan tim!');
+        return redirect('adminvocomfest17/team');
+    }
+
+    public function unpass($id)
+    {
+        if(Auth::user()->role_id != 1) {
+            return redirect('dashboard'); 
+        }
+        $user = User::find($id);
+        $user->team->progress--;
+        $user->team->save();
+
+        Session::flash('message', 'Berhasil membatalkan kelolosan tim!');
         return redirect('adminvocomfest17/team');
     }
 }

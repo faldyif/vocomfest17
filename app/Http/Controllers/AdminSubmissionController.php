@@ -19,6 +19,9 @@ class AdminSubmissionController extends Controller
      */
     public function index()
     {
+        if(Auth::user()->role_id != 1) {
+            return redirect('dashboard'); 
+        }
         $submission = Submission::all();
         return View('admin.submission.index')->with('submission', $submission);
     }
@@ -86,6 +89,9 @@ class AdminSubmissionController extends Controller
      */
     public function destroy($id)
     {
+        if(Auth::user()->role_id != 1) {
+            return redirect('dashboard'); 
+        }
         $submission = Submission::find($id);
         $submission->delete();
 

@@ -19,6 +19,9 @@ class AdminGalleryController extends Controller
      */
     public function index()
     {
+        if(Auth::user()->role_id != 1) {
+            return redirect('dashboard'); 
+        }
         $gallery = Gallery::all();
         return View('admin.gallery.index')->with('gallery', $gallery);   
     }
@@ -41,6 +44,9 @@ class AdminGalleryController extends Controller
      */
     public function store(Request $request)
     {
+        if(Auth::user()->role_id != 1) {
+            return redirect('dashboard'); 
+        }
         $this->validate($request, [
             'text' => 'required',
             'photo' => 'required|image'
@@ -108,6 +114,9 @@ class AdminGalleryController extends Controller
 
     public function publish($id)
     {
+        if(Auth::user()->role_id != 1) {
+            return redirect('dashboard'); 
+        }
         $gallery = Gallery::find($id);
         $gallery->status = 1;
         $gallery->save();
@@ -118,6 +127,9 @@ class AdminGalleryController extends Controller
 
     public function unpublish($id)
     {
+        if(Auth::user()->role_id != 1) {
+            return redirect('dashboard'); 
+        }
         $gallery = Gallery::find($id);
         $gallery->status = 0;
         $gallery->save();

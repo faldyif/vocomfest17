@@ -40,6 +40,8 @@
 					<li><a href="{{ url('adminvocomfest17/gallery') }}"><i class="fa fa-camera"></i><span>Gallery</span></a></li>
 					<li><a href="{{ url('adminvocomfest17/payment') }}"><i class="fa fa-credit-card-alt"></i><span>Payments</span></a></li>
 					<li><a href="{{ url('adminvocomfest17/submission') }}"><i class="fa fa-upload"></i><span>Uploads</span></a></li>
+					<li><a href="{{ url('adminvocomfest17/semnas') }}"><i class="fa fa-users"></i><span>Semnas Attenders</span></a></li>
+					<li><a href="{{ url('adminvocomfest17/semnas/create') }}"><i class="fa fa-check"></i><span>SemnasVerifier™</span></a></li>
 				</ul>
 			    </div>
 			  </div>
@@ -54,7 +56,7 @@
 		<div class="overlay bk-gr-overlay"  style=""></div>
 		<section class="header-text">
 			<div class="top-header">
-				<span>Hello, Administrator Name | <a class="a-fa" href=""><i class="fa fa-sign-out"></i> Logout</a></span>
+				<span>Hello, {{ Auth::user()->name }} | <a class="a-fa" href=""><i class="fa fa-sign-out"></i> Logout</a></span>
 			</div>
 			<h2 class="mont-bold">Team {{ $team->name }}</h2>
 			<hr class="bl-line-sep">
@@ -154,7 +156,9 @@
 									@if($team->team->leader_identity == NULL)
 										<img src="{{ url('assets/img/leader.jpg') }}">
 									@else
-										<img src="{{ $team->team->leader_identity }}">
+										<a href="{{ url('storage/identity_scans') }}/{{ $team->team->leader_identity }}" data-rel="lightcase">
+										<img src="{{ url('storage/identity_scans') }}/{{ $team->team->leader_identity }}">
+										</a>
 									@endif
 								</figure>
 								<span class="text-center">
@@ -172,7 +176,9 @@
 									@if($team->team->member1_identity == NULL)
 										<img src="{{ url('assets/img/leader.jpg') }}">
 									@else
-										<img src="{{ $team->team->member1_identity }}">
+										<a href="{{ url('storage/identity_scans') }}/{{ $team->team->member1_identity }}" data-rel="lightcase">
+										<img src="{{ url('storage/identity_scans') }}/{{ $team->team->member1_identity }}">
+										</a>
 									@endif
 								</figure>
 								<span class="text-center">
@@ -191,7 +197,9 @@
 									@if($team->team->member2_identity == NULL)
 										<img src="{{ url('assets/img/leader.jpg') }}">
 									@else
-										<img src="{{ $team->team->member2_identity }}">
+										<a href="{{ url('storage/identity_scans') }}/{{ $team->team->member2_identity }}" data-rel="lightcase">
+										<img src="{{ url('storage/identity_scans') }}/{{ $team->team->member2_identity }}">
+										</a>
 									@endif
 								</figure>
 								<span class="text-center">
@@ -210,7 +218,9 @@
 									@if($team->team->member2_identity == NULL)
 										<img src="{{ url('assets/img/leader.jpg') }}">
 									@else
-										<img src="{{ $team->team->member3_identity }}">
+										<a href="{{ url('storage/identity_scans') }}/{{ $team->team->member3_identity }}" data-rel="lightcase">
+										<img src="{{ url('storage/identity_scans') }}/{{ $team->team->member3_identity }}">
+										</a>
 									@endif
 								</figure>
 								<span class="text-center">

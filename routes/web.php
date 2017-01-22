@@ -32,12 +32,26 @@ Route::group(['prefix' => 'dashboard'], function () {
 			}
 		    return view('dashboard.index');
 		});
+		Route::get('team', function () {
+			if(Auth::user()->role_id == 1) {
+				return redirect('adminvocomfest17'); 
+			}
+		    return view('dashboard.team');
+		});
+		Route::resource('webteam', 'WebTeamController', ['only' => [
+	    	'update'
+		]]);
+		Route::resource('mobileteam', 'MobileTeamController', ['only' => [
+	    	'update'
+		]]);
 		Route::resource('submission', 'SubmissionController', ['only' => [
 	    	'store'
 		]]);
 		Route::resource('payment', 'PaymentConfirmationController', ['only' => [
 	    	'store'
 		]]);
+		Route::get('team/lock', 'VerifyTeamController@lock');
+		Route::get('team/unlock', 'VerifyTeamController@unlock');
 	});
 });
 
@@ -45,6 +59,9 @@ Route::group(['prefix' => 'dashboard'], function () {
 Route::group(['prefix' => 'adminvocomfest17'], function () {
 	Route::group(['middleware' => 'auth'], function () {
 		Route::get('/', function () {
+	        if(Auth::user()->role_id != 1) {
+	            return redirect('dashboard'); 
+	        }
 		    return view('admin.index');
 		});
 		Route::resource('team', 'AdminTeamController', ['only' => [
@@ -62,6 +79,10 @@ Route::group(['prefix' => 'adminvocomfest17'], function () {
 		Route::resource('submission', 'AdminSubmissionController', ['only' => [
 			'index'
 		]]);
+		Route::resource('semnas', 'AdminSemnasController', ['only' => [
+			'index', 'create', 'store'
+		]]);
+		Route::post('semnas/put', 'AdminSemnasController@put')->name('semnasput');
 		Route::get('payment/delete/{id}', 'AdminPaymentController@destroy');
 		Route::get('submission/delete/{id}', 'AdminSubmissionController@destroy');
 		Route::get('gallery/delete/{id}', 'AdminGalleryController@destroy');
@@ -72,6 +93,8 @@ Route::group(['prefix' => 'adminvocomfest17'], function () {
 		Route::get('gallery/unpublish/{id}', 'AdminGalleryController@unpublish');
 		Route::get('team/verify/{id}', 'AdminTeamController@verify');
 		Route::get('team/unverify/{id}', 'AdminTeamController@unverify');
+		Route::get('team/pass/{id}', 'AdminTeamController@pass');
+		Route::get('team/unpass/{id}', 'AdminTeamController@unpass');
 	});
 });
 Route::get('/wdc', function () {

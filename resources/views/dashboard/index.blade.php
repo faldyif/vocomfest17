@@ -36,6 +36,7 @@
             $progress = 7;
         }
     }
+    $news = \App\News::take(3)->latest()->get();
 ?>
 
 @extends('layouts.main')
@@ -62,7 +63,6 @@
 				</div>
 				<div class="col-md-8">
 					{!! Form::open(array('route' => 'payment.store', 'enctype' => 'multipart/form-data')) !!}
-					<form method="POST" action="">
 						<div class="form-group">
 							<label class="control-label">Nama Tim * : </label>
 							<input type="text" name="team" id="team" value="{{ $user->name }}" class="form-control" disabled>
@@ -124,8 +124,8 @@
 <section id="aside" class="col-md-2 col-sm-2 nopad">
 	<div id="logo" class="pd-20">
 		<div class="row force-center">
-			<a href="./index.html">
-				<img src="./assets/img/logoDb.png" alt="Vocomfest">
+			<a href="{{ url('') }}">
+				<img src="{{ url('assets/img/logoDb.png') }}" alt="Vocomfest">
 			</a>
 		</div>
 	</div>
@@ -156,10 +156,16 @@
 			      <ul class="nav nav-db">
 					<li class="active"><a href="{{ url('dashboard') }}"><i class="fa fa-dashboard"></i><span>Dashboard</span></a></li>
 					@if(Auth::user()->role_id != 4)
-					<li><a href="./dashboard-user.html"><i class="fa fa-users"></i><span>Team Members</span></a></li>
+					<li><a href="{{ url('dashboard/team') }}"><i class="fa fa-users"></i><span>Team Members</span></a></li>
 					@endif
-					<li><a href="./event-wdc.html"><i class="fa fa-microphone"></i><span>Event</span></a></li>
-					<li><a href="./news.html"><i class="fa fa-hourglass-half"></i><span>News</span></a></li>
+					@if(Auth::user()->role_id == 2)
+					<li><a href="{{ url('wdc') }}"><i class="fa fa-microphone"></i><span>Event</span></a></li>
+					@elseif(Auth::user()->role_id == 3)
+					<li><a href="{{ url('madc') }}"><i class="fa fa-microphone"></i><span>Event</span></a></li>
+					@else
+					<li><a href="{{ url('semnas') }}"><i class="fa fa-microphone"></i><span>Event</span></a></li>
+					@endif
+					<li><a href="{{ url('news') }}"><i class="fa fa-hourglass-half"></i><span>News</span></a></li>
 					@if($user->team->progress == 1)
 					<li><a href="#" data-toggle="modal" data-target="#paymentModal"><i class="fa fa-credit-card-alt"></i><span>Payment</span></a></li>
 					@endif
@@ -188,7 +194,7 @@
 </section>
 <section id="content" class="col-md-10 col-sm-10 nopad">
 	<header class="header-db">
-		<img src="./assets/img/event-cover.jpg" alt="News Vocomfest" class="cover-img">
+		<img src="{{ url('assets/img/event-cover.jpg') }}" alt="News Vocomfest" class="cover-img">
 		<div class="overlay bk-gr-overlay"  style=""></div>
 		<section class="header-text">
 			<div class="top-header">
@@ -214,7 +220,7 @@
 <div class="row">
     <div class="alert alert-danger">
         <div class="sb-msg"><p><strong>Tim anda belum terverifikasi</strong></p>
-        <p>Lengkapi terlebih dahulu identitas diri (Kartu tanda mahasiswa / Kartu pelajar) dan kunci sehingga kami bisa memverifikasi tim anda. Klik di<a href="#">sini</a> untuk melakukannya.</p></div>
+        <p>Lengkapi terlebih dahulu identitas diri (Kartu tanda mahasiswa / Kartu pelajar) dan kunci sehingga kami bisa memverifikasi tim anda. Klik di<a href="{{ url('dashboard/team') }}">sini</a> untuk melakukannya.</p></div>
     </div>
 </div>
 @endif
@@ -223,48 +229,54 @@
 			<section class="col-md-6 beFull pd-t-15 pd-lr-15">
 				<div class="sec-content-db">
 					<span class="title-sec-db"><i class="fa fa-hourglass-half"></i>News</span>
+					@if($news->count() >= 1)
 					<div class="div-content-db">
 						<a href="blog.html" alt="News Vocomfest" title="News Vocomfest">
 							<div class="news-db"  style="">
 								<div class="overlay bk-gr-overlay"  style=""></div>
-								<img src="./assets/img/news-img.jpg" alt="News Vocomfest" class="cover-img">
+								<img src="{{ url('storage/news_thumbs') }}/{{ $news->first()->thumbnail }}" alt="News Vocomfest" class="cover-img">
 								<div class="news-desc">
-									<h4 class="news-title">Lorem Ipsum Dolorsit Amet</h4>
+									<h4 class="news-title">{{ $news->first()->title }}</h4>
 									<hr class="bl-line-sep">
-									<p class="news-date">1 Februari 2017</p>
+									<p class="news-date">{{ $news->first()->created_at->format('F jS, Y') }}</p>
 								</div>
 							</div>
 						</a>
 					</div>
+					@endif
+					@if($news->count() >= 2)
 					<div class="row pd-t-15">
 						<div class="col-md-6 add-pd-b">
 							<a href="blog.html" alt="News Vocomfest" title="News Vocomfest">
 								<div class="news-db">
 									<div class="overlay bk-gr-overlay"></div>
-									<img src="./assets/img/news-img.jpg" alt="News Vocomfest" class="cover-img">
+									<img src="{{ url('storage/news_thumbs') }}/{{ $news[1]->thumbnail }}" alt="News Vocomfest" class="cover-img">
 									<div class="news-desc">
-										<h4 class="news-title">Lorem Ipsum Dolorsit Amet</h4>
-										<hr class="bl-line-sep">
-										<p class="news-date">1 Februari 2017</p>
+									<h4 class="news-title">{{ $news[1]->title }}</h4>
+									<hr class="bl-line-sep">
+									<p class="news-date">{{ $news[1]->created_at->format('F jS, Y') }}</p>
 									</div>
 
 								</div>
 							</a>
 						</div>
+						@if($news->count() >= 3)
 						<div class="col-md-6">
 							<a href="blog.html" alt="News Vocomfest" title="News Vocomfest">
 								<div class="news-db">
 									<div class="overlay bk-gr-overlay"></div>
-									<img src="./assets/img/news-img.jpg" alt="News Vocomfest" class="cover-img">
+									<img src="{{ url('storage/news_thumbs') }}/{{ $news[2]->thumbnail }}" alt="News Vocomfest" class="cover-img">
 									<div class="news-desc">
-										<h4 class="news-title">Lorem Ipsum Dolorsit Amet</h4>
-										<hr class="bl-line-sep">
-										<p class="news-date">1 Februari 2017</p>
+									<h4 class="news-title">{{ $news[2]->title }}</h4>
+									<hr class="bl-line-sep">
+									<p class="news-date">{{ $news[2]->created_at->format('F jS, Y') }}</p>
 									</div>
 								</div>
 							</a>
 						</div>
+						@endif
 					</div>
+					@endif
 				</div>
 			</section>
 		<!-- /1# section -->
@@ -278,7 +290,7 @@
 						<h3 class="mont normal nomag">Web Design Competition</h3>
 						<p class="mg-bt-20">Lorem ipsum dolor sit amet, labore aliquam mnesarchum pri ei, in vim dicit petentium, feugiat utroque facilisis no vim. Vidit dolores noluisse usu cu, an voluptua expetenda expetendis mel, malis lobortis torquatos et mea. </p>
 						<div>
-							<a href="./event-wdc.html" class="btn btn-default btn-sm">READ MORE</a>
+							<a href="{{ url('wdc') }}" class="btn btn-default btn-sm">READ MORE</a>
 						</div>
 					</div>
 					@elseif(Auth::user()->role_id == 3)
@@ -287,7 +299,7 @@
 						<h3 class="mont normal nomag">Mobile App Development Competition</h3>
 						<p class="mg-bt-20">Lorem ipsum dolor sit amet, labore aliquam mnesarchum pri ei, in vim dicit petentium, feugiat utroque facilisis no vim. Vidit dolores noluisse usu cu, an voluptua expetenda expetendis mel, malis lobortis torquatos et mea. </p>
 						<div>
-							<a href="./event-wdc.html" class="btn btn-default btn-sm">READ MORE</a>
+							<a href="{{ url('madc') }}" class="btn btn-default btn-sm">READ MORE</a>
 						</div>
 					</div>
 					@else
@@ -296,7 +308,7 @@
 						<h3 class="mont normal nomag">Seminar Nasional</h3>
 						<p class="mg-bt-20">Lorem ipsum dolor sit amet, labore aliquam mnesarchum pri ei, in vim dicit petentium, feugiat utroque facilisis no vim. Vidit dolores noluisse usu cu, an voluptua expetenda expetendis mel, malis lobortis torquatos et mea. </p>
 						<div>
-							<a href="./event-wdc.html" class="btn btn-default btn-sm">READ MORE</a>
+							<a href="{{ url('semnas') }}" class="btn btn-default btn-sm">READ MORE</a>
 						</div>
 					</div>
 					@endif

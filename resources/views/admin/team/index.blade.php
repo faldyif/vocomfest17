@@ -40,6 +40,8 @@
 					<li><a href="{{ url('adminvocomfest17/gallery') }}"><i class="fa fa-camera"></i><span>Gallery</span></a></li>
 					<li><a href="{{ url('adminvocomfest17/payment') }}"><i class="fa fa-credit-card-alt"></i><span>Payments</span></a></li>
 					<li><a href="{{ url('adminvocomfest17/submission') }}"><i class="fa fa-upload"></i><span>Uploads</span></a></li>
+					<li><a href="{{ url('adminvocomfest17/semnas') }}"><i class="fa fa-users"></i><span>Semnas Attenders</span></a></li>
+					<li><a href="{{ url('adminvocomfest17/semnas/create') }}"><i class="fa fa-check"></i><span>SemnasVerifier™</span></a></li>
 				</ul>
 			    </div>
 			  </div>
@@ -54,7 +56,7 @@
 		<div class="overlay bk-gr-overlay"  style=""></div>
 		<section class="header-text">
 			<div class="top-header">
-				<span>Hello, Administrator Name | <a class="a-fa" href="./login.html"><i class="fa fa-sign-out"></i> Logout</a></span>
+				<span>Hello, {{ Auth::user()->name }} | <a class="a-fa" href="./login.html"><i class="fa fa-sign-out"></i> Logout</a></span>
 			</div>
 			<h2 class="mont-bold">Teams</h2>
 			<hr class="bl-line-sep">
@@ -80,27 +82,6 @@
 										Teams
 									</div>
 									<div class="panel-body">
-										<div class="row nomag pd-b-10">
-			                            	<div class="col-md-6 nopad">
-				                            	<label>
-				                            		<select class="form-control input-sm">
-				                            			<option value="5">5</option>
-				                            			<option value="10">10</option>
-				                            			<option value="15">15</option>
-				                            			<option value="20">20</option>
-				                            		</select> 
-				                            	</label>
-				                            		<span>records per page</span>
-			                            	</div>
-			                            	<div class="col-md-6 nopad text-right">
-			                            		<label>
-			                            			<input type="text" id="input-search" name="" class="form-control input-sm">
-			                            		</label>
-			                            		<label>
-			                            			<input type="submit" value="Search" name="" class="btn btn-sm btn-info">
-			                            		</label>
-			                            	</div>
-			                            </div>
 										<table class="table table-hover table-bordered table-striped">
 											<thead>
 												<tr>
@@ -126,30 +107,28 @@
 														@elseif($key->team->verified == 2)
 														<a title="Unverify Team" href="{{ url('adminvocomfest17/team/unverify') }}/{{ $key->id }}" class="btn btn-warning btn-sm"><i class="fa fa-remove"></i></a>
 														@endif
+														@if($key->role_id == 2)
+														@if($key->team->progress != 1 && $key->team->progress != 4)
+														<a title="Lolos Babak Selanjutnya" href="{{ url('adminvocomfest17/team/pass') }}/{{ $key->id }}" class="btn btn-success btn-sm"><i class="fa fa-arrow-up"></i></a>
+														@endif
+														@if($key->team->progress != 1 && $key->team->progress != 2)
+														<a title="Mundurkan Satu Babak" href="{{ url('adminvocomfest17/team/unpass') }}/{{ $key->id }}" class="btn btn-warning btn-sm"><i class="fa fa-arrow-down"></i></a>
+														@endif
+														@else
+														@if($key->team->progress != 1 && $key->team->progress != 5)
+														<a title="Lolos Babak Selanjutnya" href="{{ url('adminvocomfest17/team/pass') }}/{{ $key->id }}" class="btn btn-success btn-sm"><i class="fa fa-arrow-up"></i></a>
+														@endif
+														@if($key->team->progress != 1 && $key->team->progress != 2)
+														<a title="Mundurkan Satu Babak" href="{{ url('adminvocomfest17/team/unpass') }}/{{ $key->id }}" class="btn btn-warning btn-sm"><i class="fa fa-arrow-down"></i></a>
+														@endif
+														@endif
 														<a title="View" href="{{ url('adminvocomfest17/team') }}/{{ $key->id }}" class="btn btn-primary btn-sm"><i class="fa fa-eye"></i></a>
 														<a title="Delete" href="{{ url('adminvocomfest17/team/delete') }}/{{ $key->id }}" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
-														</form-->
 													</td>
 												</tr>
 												@endforeach
 											</tbody>
 										</table>
-										<div class="row nomag">
-			                            	<div class="col-md-6 nopad">
-				                            	<span>Showing 1 to 4 from 4 entries</span>
-			                            	</div>
-			                            	<div class="col-md-6 nopad text-right">
-			                            		<ul class="pagination nomag">
-			                            			<li class="disabled"><a href="#">Prev</a></li>
-													<li><a href="#">1</a></li>
-													<li><a href="#">2</a></li>
-													<li><a href="#">3</a></li>
-													<li><a href="#">4</a></li>
-													<li><a href="#">5</a></li>
-													<li><a href="#">Next</a></li>
-												</ul>
-			                            	</div>
-			                            </div>
 									</div>
 								</div>
 							</form>

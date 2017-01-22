@@ -34,7 +34,7 @@ class CreateMobileTeamsTable extends Migration
             $table->string('member3_email')->nullable();
             $table->string('member3_phone')->nullable();
             $table->string('member3_identity')->nullable();
-            $table->integer('progress')->default(1); // 1 if registered, 2 payment confirmed, 3 selection batch 1 pass, 4 finalist
+            $table->integer('progress')->default(1); // 1 if registered, 2 payment confirmed, 3 selection batch 1 pass, 4 finalist, 5 winner
             $table->integer('verified')->default(0); // 0 if unverified, 1 if locked profile (waiting for verification), 2 if verified
             $table->timestamps();
         });

@@ -17,7 +17,7 @@
 			</div>
 			<h3>Administrator</h3>
 			<hr class="line-db">
-			<span>Hello{{ $payment->count() }}, </span>
+			<span>Hello, </span>
 			<h4 class="nomag">{{ Auth::user()->name }}</h4>
 		</div>
 		<!-- nav -->
@@ -40,6 +40,8 @@
 					<li><a href="{{ url('adminvocomfest17/gallery') }}"><i class="fa fa-camera"></i><span>Gallery</span></a></li>
 					<li class="active"><a href="{{ url('adminvocomfest17/payment') }}"><i class="fa fa-credit-card-alt"></i><span>Payments</span></a></li>
 					<li><a href="{{ url('adminvocomfest17/submission') }}"><i class="fa fa-upload"></i><span>Uploads</span></a></li>
+					<li><a href="{{ url('adminvocomfest17/semnas') }}"><i class="fa fa-users"></i><span>Semnas Attenders</span></a></li>
+					<li><a href="{{ url('adminvocomfest17/semnas/create') }}"><i class="fa fa-check"></i><span>SemnasVerifier™</span></a></li>
 				</ul>
 			    </div>
 			  </div>
@@ -105,7 +107,7 @@
 			                            			<td>{{ $it++ }}</td>
 			                            			<td>{{ \App\User::where('id', $key->user_id)->first()->name }}</td>
 			                            			<td>{{ \App\User::where('id', $key->user_id)->first()->getKategori() }}</td>
-			                            			<td>{{ $key->amount }}</td>
+			                            			<td>Rp {{ number_format($key->amount, 2) }}</td>
 			                            			<td>{{ $key->description }}</td>
 			                            			<td>
 			                            				<a href="{{ url('storage/payment_proofs') }}/{{ $key->proof }}" data-rel="lightcase">

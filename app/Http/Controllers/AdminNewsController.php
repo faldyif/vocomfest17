@@ -19,6 +19,9 @@ class AdminNewsController extends Controller
      */
     public function index()
     {
+        if(Auth::user()->role_id != 1) {
+            return redirect('dashboard'); 
+        }
         $news = News::all();
         return View('admin.news.index')->with('news', $news);
     }
@@ -30,6 +33,9 @@ class AdminNewsController extends Controller
      */
     public function create()
     {
+        if(Auth::user()->role_id != 1) {
+            return redirect('dashboard'); 
+        }
         return View('admin.news.create');
     }
 
@@ -41,6 +47,9 @@ class AdminNewsController extends Controller
      */
     public function store(Request $request)
     {
+        if(Auth::user()->role_id != 1) {
+            return redirect('dashboard'); 
+        }
         $this->validate($request, [
             'title' => 'required',
             'thumbnail' => 'required|image',
@@ -82,6 +91,9 @@ class AdminNewsController extends Controller
      */
     public function edit($id)
     {
+        if(Auth::user()->role_id != 1) {
+            return redirect('dashboard'); 
+        }
         $news = News::find($id);
         return View('admin.news.edit')->with('news', $news);
     }
@@ -95,6 +107,9 @@ class AdminNewsController extends Controller
      */
     public function update(Request $request, $id)
     {
+        if(Auth::user()->role_id != 1) {
+            return redirect('dashboard'); 
+        }
         $this->validate($request, [
             'title' => 'required',
             'content' => 'required'
@@ -124,6 +139,9 @@ class AdminNewsController extends Controller
      */
     public function destroy($id)
     {
+        if(Auth::user()->role_id != 1) {
+            return redirect('dashboard'); 
+        }
         $news = News::find($id);
         $news->delete();
 

@@ -68,7 +68,7 @@ class User extends Authenticatable
             } else if($this->team->progress == 3) {
                 return "<span class='label label-success'>Finalis</span>";
             }
-        } else {
+        } else if($this->role_id == 3) {
             if($this->team->progress == 1) {
                 return "<span class='label label-default'>Registered</span>";
             } else if($this->team->progress == 2) {
@@ -77,6 +77,14 @@ class User extends Authenticatable
                 return "<span class='label label-info'>Seleksi Aplikasi</span>";
             } else if($this->team->progress == 4) {
                 return "<span class='label label-success'>Finalis</span>";
+            }
+        } else {
+            if($this->team->progress == 1) {
+                return "<span class='label label-default'>Menunggu Pembayaran</span>";
+            } else if($this->team->progress == 2) {
+                return "<span class='label label-confirm'>Pengambilan Tiket</span>";
+            } else if ($this->team->progress == 3) {
+                return "<span class='label label-info'>Sudah Mengambil Tiket</span>";
             }
         }
         return "";

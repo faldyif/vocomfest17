@@ -56,8 +56,8 @@
             </button>
 					</div>
 				</div>
-				<p class="text-center ">Forgot Password? <a href="">Click here</a>!</p>
-				<p class="text-center ">Don't have any account? <a href="./register.html">Register</a>! or back to <a href="./index.html">home</a>?</p>
+				<p class="text-center ">Forgot Password? <a href="{{ url('password/reset') }}">Click here</a>!</p>
+				<p class="text-center ">Don't have any account? <a href="{{ url('register') }}">Register</a>! or back to <a href="{{ url('/') }}">home</a>?</p>
 			</form>
 		</div>
 	</div>

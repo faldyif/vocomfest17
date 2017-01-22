@@ -1,3 +1,18 @@
+<?php
+	$users = \App\User::whereIn('role_id', [2,3,4]);
+	$feb = $users->whereMonth('created_at', '2')->get();
+	$wdcfeb = $feb->where('role_id', 2)->count();	
+	$madcfeb = $feb->where('role_id', 3)->count();	
+	$semnasfeb = $feb->where('role_id', 4)->count();	
+	$mar = $users->whereMonth('created_at', '3')->get();
+	$wdcmar = $mar->where('role_id', 2)->count();	
+	$madcmar = $mar->where('role_id', 3)->count();	
+	$semnasmar = $mar->where('role_id', 4)->count();	
+	$apr = $users->whereMonth('created_at', '4')->get();
+	$wdcapr = $apr->where('role_id', 2)->count();	
+	$madcapr = $apr->where('role_id', 3)->count();	
+	$semnasapr = $apr->where('role_id', 4)->count();
+?>
 @extends('layouts.main')
 @section('title', 'Vocomfest - Admin Dashboard')
 
@@ -40,6 +55,8 @@
 					<li><a href="{{ url('adminvocomfest17/gallery') }}"><i class="fa fa-camera"></i><span>Gallery</span></a></li>
 					<li><a href="{{ url('adminvocomfest17/payment') }}"><i class="fa fa-credit-card-alt"></i><span>Payments</span></a></li>
 					<li><a href="{{ url('adminvocomfest17/submission') }}"><i class="fa fa-upload"></i><span>Uploads</span></a></li>
+					<li><a href="{{ url('adminvocomfest17/semnas') }}"><i class="fa fa-users"></i><span>Semnas Attenders</span></a></li>
+					<li><a href="{{ url('adminvocomfest17/semnas/create') }}"><i class="fa fa-check"></i><span>SemnasVerifier™</span></a></li>
 				</ul>
 			    </div>
 			  </div>
@@ -69,15 +86,15 @@
 			<section id="summary">
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-md-4 sum-content">
+						<div class="col-md-4 sum-content" style="width: 31%">
 							<h2 class="mont-bold blue"><i class="fa fa-user"></i> {{ \App\User::where('role_id', 2)->count() }}</h2>
 							<p>Pendaftar WDC</p>
 						</div>
-						<div class="col-md-4 sum-content">
+						<div class="col-md-4 sum-content" style="width: 31%">
 							<h2 class="mont-bold emerald"><i class="fa fa-user"></i> {{ \App\User::where('role_id', 3)->count() }}</h2>
 							<p>Pendaftar MADC</p>
 						</div>
-						<div class="col-md-4 sum-content">
+						<div class="col-md-4 sum-content" style="width: 31%">
 							<h2 class="mont-bold turq"><i class="fa fa-user"></i> {{ \App\User::where('role_id', 4)->count() }}</h2>
 							<p>Pendaftar Seminar Nasional</p>
 						</div>
@@ -109,42 +126,20 @@
 											<thead>
 												<tr>
 													<th>No</th>
-													<th class="col-md-3">Team name</th>
+													<th class="col-md-3">Team/Person name</th>
 													<th>Category</th>
 													<th>Recent status</th>
 												</tr>
 											</thead>
 											<tbody>
+												@foreach(\App\User::whereIn('role_id', [2,3,4])->latest()->get() as $key)
 												<tr>
-													<td>1</td>
-													<td>Grafika Coding Addict</td>
-													<td>Web Design Competition</td>
-													<td><span class="label label-success">Finalist</span></td>
+													<td>{{ $loop->iteration }}</td>
+													<td>{{ $key->name }}</td>
+													<td>{{ $key->getKategori() }}</td>
+													<td>{!! $key->getPhase() !!}</td>
 												</tr>
-												<tr>
-													<td>2</td>
-													<td>Pejuang Kode</td>
-													<td>Web Design Competition</td>
-													<td><span class="label label-default">Registered</span></td>
-												</tr>
-												<tr>
-													<td>3</td>
-													<td>Ganteng Ganteng Programmer</td>
-													<td>ACM - ICPC</td>
-													<td><span class="label label-warning">Paid</span></td>
-												</tr>
-												<tr>
-													<td>4</td>
-													<td>Al Ittihadu Assasu An Najah</td>
-													<td>Mobile Apps Design Competition</td>
-													<td><span class="label label-confirm">Confirmed</span></td>
-												</tr>
-												<tr>
-													<td>5</td>
-													<td>Katanya Programmer</td>
-													<td>ACM - ICPC</td>
-													<td><span class="label label-info">Batch 1 Passed</span></td>
-												</tr>
+												@endforeach
 											</tbody>
 										</table>
 									</div>
@@ -154,41 +149,28 @@
 											<thead>
 												<tr>
 													<th>No</th>
-													<th>Team name</th>
+													<th>Team/person name</th>
 													<th>Category</th>
 													<th>Amount</th>
 													<th>Status</th>
 												</tr>
 											</thead>
 											<tbody>
+			                            		@foreach(\App\PaymentConfirmation::latest()->get() as $key)
 												<tr>
-													<td>1</td>
-													<td>Grafika Coding Addict</td>
-													<td>Web Design Competition</td>
-													<td>75.000,00 IDR</td>
-													<td>Paid</td>
+													<td>{{ $loop->iteration }}</td>
+													<td>{{ \App\User::where('id', $key->user_id)->first()->name }}</td>
+													<td>{{ \App\User::where('id', $key->user_id)->first()->getKategori() }}</td>
+													<td>Rp {{ number_format($key->amount, 2) }}</td>
+													<td>
+														@if(\App\User::where('id', $key->user_id)->first()->team->progress == 1)
+														Waiting for verification
+														@else
+														Verified
+														@endif
+													</td>
 												</tr>
-												<tr>
-													<td>2</td>
-													<td>Pejuang Kode</td>
-													<td>Web Design Competition</td>
-													<td>75.000,00 IDR</td>
-													<td>Registered</td>
-												</tr>
-												<tr>
-													<td>3</td>
-													<td>Ganteng Ganteng Programmer</td>
-													<td>ACM - ICPC</td>
-													<td>100.000,00 IDR</td>
-													<td>Paid</td>
-												</tr>
-												<tr>
-													<td>4</td>
-													<td>Al Ittihadu Assasu An Najah</td>
-													<td>Mobile Apps Design Competition</td>
-													<td>20.000,00 IDR</td>
-													<td>Confirmed</td>
-												</tr>
+												@endforeach
 											</tbody>
 										</table>
 									</div>
@@ -278,15 +260,15 @@
 		        },
 		        series: [{
 		            name: 'WDC',
-		            data: [20,20,10]
+		            data: [{{ $wdcfeb }},{{ $wdcmar }},{{ $wdcapr }}]
 
 		        }, {
 		            name: 'MADC',
-		            data: [30,5,2]
+		            data: [{{ $madcfeb }},{{ $madcmar }},{{ $madcapr }}]
 
 		        }, {
 		            name: 'Semnas',
-		            data: [42,80,20]
+		            data: [{{ $semnasfeb }},{{ $semnasmar }},{{ $semnasapr }}]
 
 		        }]
 		    });
