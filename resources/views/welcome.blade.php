@@ -63,7 +63,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="./index.html" class="navbar-brand">
+				<a href="{{ url('/') }}" class="navbar-brand">
 					<img src="{{ url('assets/img/icon-2.png') }}" alt="Vocomfest" class="img-brand">
 					<span class="text-brand">VOCOMFEST</span>
 				</a>
@@ -94,7 +94,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="./index.html" class="navbar-brand">
+				<a href="{{ url('/') }}" class="navbar-brand">
 					<img src="{{ url('assets/img/icon-2.png') }}" alt="Vocomfest" class="img-brand">
 					<span class="text-brand">VOCOMFEST</span>
 				</a>
