@@ -27,11 +27,15 @@ git clone https://github.com/faldyif/vocomfest17.git
 ```
 2. Edit the .env.example file. Change the DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME and DB_PASSWORD parameter as your database configuration.
 3. Save the file as .env
-4. Generate a random key with artisan command
+4. Install the dependencies
+```
+composer install --no-scripts
+``` 
+5. Generate a random key with artisan command
 ```
 php artisan key:generate
 ```
-5. Migrate the tables to database
+6. Migrate the tables to database
 ```
 php artisan migrate
 ```
