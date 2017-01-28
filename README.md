@@ -15,8 +15,8 @@ Laravel is accessible, yet powerful, providing tools needed for large, robust ap
 If you are using Windows, the easiest way to manage all is with (Laragon)[https://laragon.org/]. It's similar to xampp but has all the requirements to run laravel included to the package (cmder, git, composer, php, mysql, etc).
 
 But if you are using another operating system or decide to do it manually on windows, you must have this:
-1. (git)[https://git-scm.com/]
-2. (Composer)[https://getcomposer.org/]
+1. [git](https://git-scm.com/) of course!
+2. [Composer](https://getcomposer.org/) dependency manager
 And add two of thoose with adiition of php binary folder to your PATH system environment variable if you are using windows.
 
 ## How to Install
