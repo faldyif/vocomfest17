@@ -29,6 +29,7 @@ And add two of thoose with adiition of php binary folder to your PATH system env
 4. Install the dependencies: `composer install --no-scripts`
 5. Generate a random key with artisan command `php artisan key:generate`
 6. Migrate the tables to database `php artisan migrate`
+7. For symlinking the storage folder for file uploads, use: `php artisan storage:link`
 
 ## Official Documentation
 
