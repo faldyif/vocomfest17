@@ -94,9 +94,10 @@
 												</tr>
 											</thead>
 											<tbody>
+												<?php $no = 0 ;?>
 												@foreach($team as $key)
 												<tr>
-													<td>1</td>
+													<td>{{ ++$no }}</td>
 													<td><a href="{{ url('adminvocomfest17/team') }}/{{ $key->id }}" class="special blue">{{ $key->name }}</a></td>
 													<td>{{ $key->getKategori() }}</td>
 													<td>{!! $key->getPhase() !!}</td>
@@ -123,7 +124,7 @@
 														@endif
 														@endif
 														<a title="View" href="{{ url('adminvocomfest17/team') }}/{{ $key->id }}" class="btn btn-primary btn-sm"><i class="fa fa-eye"></i></a>
-														<a title="Delete" href="{{ url('adminvocomfest17/team/delete') }}/{{ $key->id }}" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+														<a title="Delete" href="{{ url('adminvocomfest17/team/delete') }}/{{ $key->id }}" class="btn btn-danger btn-sm delete-btn"><i class="fa fa-trash"></i></a>
 													</td>
 												</tr>
 												@endforeach
@@ -139,4 +140,54 @@
 		</div>
 	</div>
 </section>
+<script type="text/javascript">
+	$(document).ready(function(){
+		function delConfirm(e){
+			e.preventDefault() ;
+			swal({
+				title : 'Are you sure?',
+				text : 'You will not be able to recover this object',
+				type : 'warning',
+				showCancelButton : true,
+				confirmButtonColor: "#DD6B55",
+				confirmButtonText: "Yes, delete it!",
+				cancelButtonText: "No, cancel it!",
+				closeOnConfirm: false,
+				closeOnCancel: false
+			},
+				function(isConfirm){
+					if (isConfirm) {
+						swal("Deleted!", "Your imaginary file has been deleted.", "success");
+					} else {
+						swal("Cancelled", "Your imaginary file is safe :)", "error");
+					}
+				}
+			) ;
+		}
+
+		$('.delete-btn').on('click', function(e){
+			e.preventDefault() ;
+			swal({
+				title : 'Are you sure?',
+				text : 'You will not be able to recover this object',
+				type : 'warning',
+				showCancelButton : true,
+				confirmButtonColor: "#DD6B55",
+				confirmButtonText: "Yes, delete it!",
+				cancelButtonText: "No, cancel it!",
+				closeOnConfirm: false,
+				closeOnCancel: false
+			},
+				function(isConfirm){
+					if (isConfirm) {
+						swal("Deleted!", "Your imaginary file has been deleted.", "success");
+					} else {
+						swal("Cancelled", "Your imaginary file is safe :)", "error");
+					}
+				}
+			) ;
+		}) ;
+
+		}) ;
+</script>
 @endsection

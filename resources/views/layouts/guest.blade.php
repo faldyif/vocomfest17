@@ -67,8 +67,12 @@
 						<li><a href="{{ url('/') }}#gallery">GALLERY</a></li>
 						<li><a href="{{ url('/') }}#sponsors">SPONSORS</a></li>
 						<li><a href="{{ url('/') }}#contact">CONTACT</a></li>
+						@if(Auth::guest())
 						<li><a href="{{ url('register') }}">REGISTER</a></li>
 						<li><a href="{{ url('login') }}">LOGIN</a></li>
+						@else
+						<li><a href="{{ url('dashboard') }}">DASHBOARD</a></li>
+						@endif
 					</ul>
 				</div>
 			</div>

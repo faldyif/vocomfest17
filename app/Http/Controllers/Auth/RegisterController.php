@@ -102,7 +102,7 @@ class RegisterController extends Controller
            $web_team = \App\WebTeam::create([
                'user_id' => $user->id,
                'school_name' => $data['instance_name'],
-               'school_address' => $data['instance_name'],
+               'school_address' => $data['instance_address'],
                'leader_name' => $data['leader_name'],
                'leader_phone' => $data['leader_phone'],
                'member1_name' => $data['member1_name'],

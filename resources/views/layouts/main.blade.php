@@ -22,11 +22,13 @@
 	<link rel="stylesheet" href="{{ url('/assets/css/loader.css') }}">
 	<link rel="stylesheet" href="{{ url('/assets/css/owl.carousel.css') }}">
 	<link rel="stylesheet" href="{{ url('/assets/css/owl.theme.css') }}">
+	<link rel="stylesheet" href="{{ url('/assets/css/sweetalert.css') }}">
 	<link rel="stylesheet" href="{{ url('/assets/css/vocomfest-style.css') }}">
 
 	<!-- JAVASCRIPT HERE -->
 	<script type="text/javascript" src="{{ url('/assets/js/jquery.js') }}"></script>
 	<script type="text/javascript" src="{{ url('/assets/js/loader.js') }}"></script>
+	<script type="text/javascript" src="{{ url('/assets/js/sweetalert.min.js') }}"></script>
 
   <!-- Scripts -->
   <script>

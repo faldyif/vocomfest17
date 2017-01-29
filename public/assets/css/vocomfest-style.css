@@ -347,7 +347,7 @@ html, body {
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
   -o-transition: all 0.25s ease-in-out; }
-  .btn-sep:hover {
+  .btn-sep:hover, .btn-sep:active {
     color: #000;
     background: #fff;
     transition: all 0.25s ease-in-out;
@@ -962,6 +962,10 @@ html, body {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out; }
+
+.img-overlay {
+  background-size: cover;
+  background-position: center; }
 
 .bk-overlay {
   background: rgba(0, 0, 0, 0.7); }

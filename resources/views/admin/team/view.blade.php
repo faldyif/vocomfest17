@@ -123,7 +123,7 @@
 													@if($team->role_id == 2)
 													<td>{{ $team->team->school_name }}</td>
 													@elseif($team->role_id == 3)
-													<td>{{ $team->team->instance_address }}</td>
+													<td>{{ $team->team->instance_name }}</td>
 													@endif
 												</tr>
 												<tr>

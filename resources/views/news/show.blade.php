@@ -1,5 +1,5 @@
 @extends('layouts.guest')
-@section('title', 'Vocomfest - ACM ICPC')
+@section('title', 'Vocomfest - '.$news->title.'')
 
 @section('body')
 <section id="news-cover">

@@ -21,7 +21,7 @@
 	<div id="logo" class="pd-20">
 		<div class="row force-center">
 			<a href="../index.html">
-				<img src="../assets/img/logoDb.png" alt="Vocomfest">
+				<img src="{{ asset('assets/img/logoDb.png') }}" alt="Vocomfest">
 			</a>
 		</div>
 	</div>
@@ -67,7 +67,7 @@
 </section>
 <section id="content" class="col-md-10 col-sm-10 nopad">
 	<header class="header-db">
-		<img src="../assets/img/event-cover.jpg" alt="News Vocomfest" class="cover-img">
+		<img src="{{ asset('assets/img/event-cover.jpg') }}" alt="News Vocomfest" class="cover-img">
 		<div class="overlay bk-gr-overlay"  style=""></div>
 		<section class="header-text">
 			<div class="top-header">

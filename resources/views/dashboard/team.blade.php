@@ -206,6 +206,7 @@
 						<img src="{{ url('assets/img/member.jpg') }}">
 					</figure>
 					<span class="text-center">
+						<p class="blue mg-t-15">Member</p>
 						<p class="nomag mont-bold">{{ $user->team->member2_name }}</p>
 						<p class="nomag">{{ $user->team->member2_email }}</p>
 						<p class="nomag">+62 {{ $user->team->member2_phone }}</p>
@@ -493,5 +494,50 @@
 		</div>
 	</div>
 </div>
+<script type="text/javascript">
+	$("document").ready(function(){
+		// wow js
+		new WOW().init() ;
+
+		$('[data-toggle="tooltip"]').tooltip() ;
+
+		//lightcase lightbox
+		$('a[data-rel^=lightcase]').lightcase();
+
+		// nicescroll js
+		$("html").niceScroll({
+			cursorcolor : 'rgba(0,0,0,0.5)',
+			cursorwidth : '5px',
+			cursorborder : 'none',
+			cursorborderradius : '0px' ,
+			zindex : '101'
+		}) ;
+
+		$("#aside").niceScroll({
+			cursorcolor : 'rgba(0,0,0,0.5)',
+			cursorwidth : '3px',
+			cursorborder : 'none',
+			cursorborderradius : '0px' ,
+			zindex : '101'
+		}) ;
+
+		// to ease when click '#' url
+		$(function() {
+            $('a[href*=#]:not([href=#])').click(function() {
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+	}) ;
+</script>
 @endif
 @endsection

@@ -144,6 +144,10 @@ $newgray : #94a4a6 ;
 	margin : 0 ;
 	@include transition(0.3) ;
 }
+.img-overlay{
+	background-size: cover ;
+	background-position: center ;
+}
 .bk-overlay{
 	background: rgba(0,0,0,0.7);
 }

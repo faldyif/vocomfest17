@@ -42,7 +42,7 @@
 				<!-- Tab1 -->
 					<div role="tabpanel" class="tab-pane active" id="competitions">
 						<!-- Main Form -->
-						<div class="col-md-8 wrapReg">
+						<div class="col-md-12 wrapReg">
 							<form class="sign-form" role="form" method="POST" action="{{ url('/register') }}">
                 {{ csrf_field() }}
                 <input type="hidden" name="type" value="competition">
@@ -249,40 +249,12 @@
 							</form>
 						</div>
 						<!-- End of Main Form-->
-						<!-- Description -->
-						<div class="col-md-4 wrapDesc">
-							<section>
-								<h3 class="mont">Web Design Competition</h3>
-								<ul>
-									<li>Eam delectus invenire moderatius ne.</li>
-									<li>An perfecto singulis argumentum pri, animal virtute delectus at est.</li>
-									<li>Natum facer tincidunt eu sea, hinc laboramus est te.</li>
-								</ul>
-							</section>
-							<section>
-								<h3 class="mont">Mobile Apps Development Competition</h3>
-								<ul>
-									<li>Eam delectus invenire moderatius ne.</li>
-									<li>An perfecto singulis argumentum pri, animal virtute delectus at est.</li>
-									<li>Natum facer tincidunt eu sea, hinc laboramus est te.</li>
-								</ul>
-							</section>
-							<section>
-								<h3 class="mont">Competitive Programming</h3>
-								<ul>
-									<li>Eam delectus invenire moderatius ne.</li>
-									<li>An perfecto singulis argumentum pri, animal virtute delectus at est.</li>
-									<li>Natum facer tincidunt eu sea, hinc laboramus est te.</li>
-								</ul>
-							</section>
-						</div>
-						<!-- End of Description-->
 					</div>
 				<!-- End of Tab1 -->
 				<!-- Tab2 -->
 					<div role="tabpanel" class="tab-pane" id="semnas">
 					<!-- Main Form -->
-					<div class="col-md-8 wrapReg">
+					<div class="col-md-12 wrapReg">
 						<form role="form" method="POST" action="{{ url('/register') }}">
             {{ csrf_field() }}
             <input type="hidden" name="type" value="seminar">
@@ -356,25 +328,6 @@
 						</form>
 					</div>
 					<!-- End of Main Form-->
-					<!-- Description -->
-					<div class="col-md-4 wrapDesc">
-							<section>
-								<h3 class="mont">Seminar Nasional</h3>
-								<ul>
-									<li>Eam delectus invenire moderatius ne.</li>
-									<li>An perfecto singulis argumentum pri, animal virtute delectus at est.</li>
-									<li>Natum facer tincidunt eu sea, hinc laboramus est te.</li>
-								</ul>
-							</section>
-							<section>
-								<ul>
-									<li>Eam delectus invenire moderatius ne.</li>
-									<li>An perfecto singulis argumentum pri, animal virtute delectus at est.</li>
-									<li>Natum facer tincidunt eu sea, hinc laboramus est te.</li>
-								</ul>
-							</section>
-					</div>
-					<!-- End of Description-->
 					</div>
 				<!-- End of Tab2 -->
 				</div>

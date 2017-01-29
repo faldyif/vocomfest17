@@ -213,7 +213,7 @@ html, body{
 	padding : 15px 20px ;
 	@include transition(0.25) ;
 
-	&:hover{
+	&:hover, &:active{
 		color : #000 ;
 		background: $white ;
 		@include transition(0.25) ;

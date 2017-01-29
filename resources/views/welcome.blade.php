@@ -54,7 +54,7 @@
 			<div class="container text-center wh isCenter">
 				<div class="col-md-6 col-sm-12 col-xs-12 force-center">
 					<div class="col-sm-10 col-sm-offset-1 pd-bt-20">
-						<a href="#about">
+						<a href="#navbar">
 							<img src="{{ url('assets/img/logo-wh.png') }}" title="Vocomfest 2017" alt="Vocomfest 2017" class="cover-img">
 						</a>
 					</div>
@@ -101,7 +101,7 @@
 					<li><a href="{{ url('register') }}">REGISTER</a></li>
 					<li><a href="{{ url('login') }}">LOGIN</a></li>
 					@else
-					<li><a href="{{ url('/dashboard') }}"></a></li>
+					<li><a href="{{ url('/dashboard') }}">DASHBOARD</a></li>
 					@endif
 				</ul>
 			</div>
@@ -132,8 +132,12 @@
 					<li><a href="#gallery">GALLERY</a></li>
 					<li><a href="#sponsors">SPONSORS</a></li>
 					<li><a href="#contact">CONTACT</a></li>
+					@if(Auth::guest())
 					<li><a href="{{ url('register') }}">REGISTER</a></li>
 					<li><a href="{{ url('login') }}">LOGIN</a></li>
+					@else
+					<li><a href="{{ url('/dashboard') }}">DASHBOARD</a></li>
+					@endif
 				</ul>
 			</div>
 		</div>
@@ -543,8 +547,9 @@
 				@foreach($news as $key)
 				<div class="col-md-3 news-content">
 					<a href="{{ url('news') }}/{{ $key->id }}" alt="News Vocomfest" title="{{ $key->title }}">
+						<div class="overlay img-overlay" style="background-image : url('{{ url('storage/news_thumbs') }}/{{ $key->thumbnail }}')"></div>
 						<div class="overlay bk-gr-overlay"></div>
-						<img src="{{ url('storage/news_thumbs') }}/{{ $key->thumbnail }}" alt="News Vocomfest" class="cover-img">
+						<img src="{{ asset('assets/img/news-img-tr.png') }}" alt="News Vocomfest" class="cover-img">
 						<div class="news-desc">
 							<h4 class="news-title">{{ $key->title }}</h4>
 							<hr class="bl-line-sep">
@@ -577,12 +582,13 @@
 				@foreach($gallery as $key)
 				<div class="col-md-3 gallery-content">
 					<a href="{{ url('storage/gallery') }}/{{ $key->path }}" data-rel="lightcase">
+						<div class="overlay img-overlay" style="background-image : url('{{ url('storage/gallery') }}/{{ $key->path }}')"></div>
 						<div class="gal-overlay">
 							<div class="olay-content text-center">
 								+
 							</div>
 						</div>
-						<img src="{{ url('storage/gallery') }}/{{ $key->path }}" alt="{{ $key->text }}" class="cover-img">
+						<img src="{{ asset('assets/img/gallery-img-tr.png') }}" alt="{{ $key->text }}" class="cover-img">
 					</a>
 				</div>
 				@endforeach
