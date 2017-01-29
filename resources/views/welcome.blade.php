@@ -30,6 +30,23 @@
 </head>
 <body>
 <div class="se-pre-con"></div>
+<!-- Modals -->
+<div class="modal fade" id="trailerModal" role="dialog" tabindex="-1">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="close"><span aria-hidden="true">&times;</span></button>
+				<h4>Vocomfest Trailer</h4>
+			</div>
+			<div class="modal-body">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/B_HO2JKl0Xs" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-primary" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
 <!-- Header, hero content -->
 <section id="header">
 	<div class="hero-cover">
@@ -37,14 +54,16 @@
 			<div class="container text-center wh isCenter">
 				<div class="col-md-6 col-sm-12 col-xs-12 force-center">
 					<div class="col-sm-10 col-sm-offset-1 pd-bt-20">
-						<img src="{{ url('assets/img/logo-wh.png') }}" title="Vocomfest 2017" alt="Vocomfest 2017" class="cover-img">
+						<a href="#about">
+							<img src="{{ url('assets/img/logo-wh.png') }}" title="Vocomfest 2017" alt="Vocomfest 2017" class="cover-img">
+						</a>
 					</div>
 					<h1 class="mont-bold">"Creating Smart Citizen for Social Welfare with Technology"</h1>
 					<div class="mg-t-50 pd-t-50">
 						<ul class="social-links">
-							<li><a href="http://facebook.com/vocomfest" title="Vocomfest 2017"><i class="fa fa-facebook"></a></i></li>
-							<li><a href="http://twitter.com/vocomfest" title="Vocomfest 2017"><i class="fa fa-twitter"></a></i></li>
-							<li><a href="http://instagram.com/vocomfest" title="Vocomfest 2017"><i class="fa fa-instagram"></a></i></li>
+							<li><a href="http://facebook.com/vocomfest" title="Vocomfest 2017" target="_blank"><i class="fa fa-facebook"></a></i></li>
+							<li><a href="http://twitter.com/vocomfest" title="Vocomfest 2017" target="_blank"><i class="fa fa-twitter"></a></i></li>
+							<li><a href="http://instagram.com/vocomfest" title="Vocomfest 2017" target="_blank"><i class="fa fa-instagram"></a></i></li>
 						</ul>
 					</div>
 				</div>
@@ -78,8 +97,12 @@
 					<li><a href="#gallery">GALLERY</a></li>
 					<li><a href="#sponsors">SPONSORS</a></li>
 					<li><a href="#contact">CONTACT</a></li>
+					@if(Auth::guest())
 					<li><a href="{{ url('register') }}">REGISTER</a></li>
 					<li><a href="{{ url('login') }}">LOGIN</a></li>
+					@else
+					<li><a href="{{ url('/dashboard') }}"></a></li>
+					@endif
 				</ul>
 			</div>
 		</div>
@@ -158,7 +181,7 @@
 					Penasaran dengan perhelatan Vocomfest 2017 ini? Vocomfest kali ini telah menginjak 5 tahun penyelenggaraan Vocomfest loh. Kalau kamu belum tahu Vocomfest, sangat disayangkan. Coba cek aja!
 				</p>
 				<p class="pd-t-25">
-					<a href="http://youtube.com" target="_blank" class="btn btn-sep">WATCH TRAILER <span class="text-right"><i class="fa fa-play"></i></span></a>
+					<a href="http://youtube.com" target="_blank" class="btn btn-sep" data-toggle="modal" data-target="#trailerModal">WATCH TRAILER <span class="text-right"><i class="fa fa-play"></i></span></a>
 				</p>
 			</div>
 		</div>
@@ -277,35 +300,66 @@
 
 				  <!-- Tab panes -->
 				  <div class="tab-content">
+				  <!-- Timeline WDC -->
 				    <div role="tabpanel" class="tab-pane active" id="wdc">
 				    	<div class="row pd-bt-30">
 				    		<div class="col-md-10 col-md-offset-1">
 				    			<ul class="event-schedule">
 				    				<li>
-				    					<p class="mont-bold big"><i class="fa fa-calendar"></i> &nbsp;<span class="blue">1 Februari 2017</span></p>
-				    					<h3 class="mont">Pembukaan Pendaftaran</h3>
+				    					<p class="mont-bold big"><i class="fa fa-calendar"></i> &nbsp;<span class="blue">1 Februari 2017 - 15 Maret 2017</span></p>
+				    					<h3 class="mont">Pendaftaran</h3>
 				    					<p>
-				    						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dolorem id quasi earum suscipit iure, facilis eveniet corrupti, numquam, quidem possimus praesentium cum doloribus voluptas quos ipsa. Error, commodi nostrum!
+				    						Pendaftaran online dan pengumpulan website. Jangan lupa untuk menyelesaikan administrasi berupa Kartu Pelajar dan Bukti Transfer setelah mendaftar.
 				    					</p>
 				    				</li>
 				    				<li>
-				    					<p class="mont-bold big"><i class="fa fa-calendar"></i> &nbsp;<span class="blue">13 Februari 2017</span></p>
-				    					<h3 class="mont">Batas Pendaftaran</h3>
+				    					<p class="mont-bold big"><i class="fa fa-calendar"></i> &nbsp;<span class="blue">20 Maret 2017</span></p>
+				    					<h3 class="mont">Batas Pengumpulan Website</h3>
 				    					<p>
-				    						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dolorem id quasi earum suscipit iure, facilis eveniet corrupti, numquam, quidem possimus praesentium cum doloribus voluptas quos ipsa. Error, commodi nostrum!
+				    						Batas akhir pengumpulan website
 				    					</p>
 				    				</li>
 				    				<li>
-				    					<p class="mont-bold big"><i class="fa fa-calendar"></i> &nbsp;<span class="blue">17 Februari 2017</span></p>
-				    					<h3 class="mont">Pengumpulan Proposal</h3>
+				    					<p class="mont-bold big"><i class="fa fa-calendar"></i> &nbsp;<span class="blue">20 Maret 2017 - 23 Maret 2017</span></p>
+				    					<h3 class="mont">Penilaian Website</h3>
 				    					<p>
-				    						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dolorem id quasi earum suscipit iure, facilis eveniet corrupti, numquam, quidem possimus praesentium cum doloribus voluptas quos ipsa. Error, commodi nostrum!
+				    						Penilaian website oleh tim penilai
+				    					</p>
+				    				</li>
+				    				<li>
+				    					<p class="mont-bold big"><i class="fa fa-calendar"></i> &nbsp;<span class="blue">24 Maret 2017</span></p>
+				    					<h3 class="mont">Pengumuman Kelolosan</h3>
+				    					<p>
+				    						Pengumuman peserta yang lolos tahap penyisihan yang akan diundang langsung ke Universitas Gadjah Mada
+				    					</p>
+				    				</li>
+				    				<li>
+				    					<p class="mont-bold big"><i class="fa fa-calendar"></i> &nbsp;<span class="blue">31 Maret 2017 - 6 April 2017</span></p>
+				    					<h3 class="mont">Penyempurnaan Website</h3>
+				    					<p>
+				    						Apabila merasa ada hal-hal minor di website yang telah lolos diperbolehkan untuk disempurnakan dalam jangka waktu ini
+				    					</p>
+				    				</li>
+				    				<li>
+				    					<p class="mont-bold big"><i class="fa fa-calendar"></i> &nbsp;<span class="blue">8 April 2017</span></p>
+				    					<h3 class="mont">Technical Meeting</h3>
+				    					<p>
+				    						Technical Meeting Web Design Competition di Gedung Perpustakaan Sekolah Vokasi Universitas Gadjah Mada
+				    					</p>
+				    				</li>
+				    				<li>
+				    					<p class="mont-bold big"><i class="fa fa-calendar"></i> &nbsp;<span class="blue">9 April 2017</span></p>
+				    					<h3 class="mont">Final WDC</h3>
+				    					<p>
+				    						Babak final Web Design Competition sekaligus pengumumgan pemenang di akhir acara. Siapkan presentasi terbaikmu!
 				    					</p>
 				    				</li>
 				    			</ul>
 				    		</div>
 				    	</div>
 				    </div>
+				    <!-- /Timeline WDC -->
+				    <!-- Timeline ICPC -->
 				    <div role="tabpanel" class="tab-pane" id="icpc">
 				    	<div class="row pd-bt-30">
 				    		<div class="col-md-10 col-md-offset-1">
@@ -317,6 +371,8 @@
 				    		</div>
 				    	</div>
 				    </div>
+				    <!-- /Timeline ICPC -->
+				    <!-- Timeline MADC -->
 				    <div role="tabpanel" class="tab-pane" id="madc">
 				    	<div class="row pd-bt-30">
 				    		<div class="col-md-10 col-md-offset-1">
@@ -388,6 +444,8 @@
 				    		</div>
 				    	</div>
 				    </div>
+				    <!-- /Timeline MADC -->
+				    <!-- Timeline Semnas -->
 				    <div role="tabpanel" class="tab-pane" id="semnas">
 				    	<div class="row pd-bt-30">
 				    		<div class="col-md-10 col-md-offset-1">
@@ -399,6 +457,7 @@
 				    		</div>
 				    	</div>
 				    </div>
+				    <!-- /Timeline Semnas -->
 				  </div>
 
 				</div>
@@ -420,10 +479,10 @@
 			<div class="col-md-10 owl-carousel" id="testimonies">
 				<div class="testimoni">
 					<p class="testi-msg text-center">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur optio, ipsam, delectus dolore perspiciatis ratione voluptate est illum, cupiditate eum debitis recusandae dignissimos voluptas dolor in, rem sapiente. Officia, expedita!
+						Acaranya bagus dan seru, have fun. Harapannya tahun depan bisa berpartisipasi lagi di VOCOMFEST. Semoga tidak ada penurunan dari segi apapun itu, dari segi peserta, panitia, kelangsungan acara. Saya yakin HIMAKOMSI bisa terus menjadi lebih baik dan semoga yang terlibat di acara mulai dari peserta, panitia, juri bisa mengambil pelajaran yang baik dari acara ini.
 						<br>
 						<br>
-						- Onno W Purbo, <strong>Pakar IT</strong> -
+						- Arief Ramadhan Demiawansyah, <strong>Juri WDC 2016</strong> -
 					</p>
 					<p class="text-center pd-t-20">
 						<img src="{{ url('assets/img/onno.jpg') }}" alt="Onno W Purbo" class="testi-img">
@@ -432,10 +491,10 @@
 
 				<div class="testimoni">
 					<p class="testi-msg text-center">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur optio, ipsam, delectus dolore perspiciatis ratione voluptate est illum, cupiditate eum debitis recusandae dignissimos voluptas dolor in, rem sapiente. Officia, expedita!
+						Dalam acara VOCOMFEST ini, kita bisa melihat ide-ide yang bagus, sekaligus belajar. Event yang seperti ini sangat penting agar mahasiswa tahu bagaimana rasanya mengembangkan suatu aplikasi yang mungkin bisa bermanfaat atau bisa digunakan sehari-hari. Saya harap acara ini jangan sampai mati di tahun-tahun kedepan, harus ada lagi, dan tentu lebih bagus.
 						<br>
 						<br>
-						- Wikan Sakarinto, <strong>Pakar IT</strong> -
+						- Sunu Pinastika Fajar, <strong>Qiscus & Juri MADC 2016</strong> -
 					</p>
 					<p class="text-center pd-t-20">
 						<img src="{{ url('assets/img/onno.jpg') }}" alt="Onno W Purbo" class="testi-img">
@@ -444,10 +503,22 @@
 
 				<div class="testimoni">
 					<p class="testi-msg text-center">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur optio, ipsam, delectus dolore perspiciatis ratione voluptate est illum, cupiditate eum debitis recusandae dignissimos voluptas dolor in, rem sapiente. Officia, expedita!
+						Menarik dan saya senang bisa menjadi salah satu pembicara di VOCOMFEST ini. Overall saya sangat senang dan salut dengan panitia, semoga nantinya bisa melaksanakan hal yang serupa yang tentunya lebih baik lagi.
 						<br>
 						<br>
-						- Sigit Priyanta, <strong>Pakar IT</strong> -
+						- Ruby Alamsyah, <strong>Pakar Digital Forensik & Pembicara Seminar Nasional Vocomfest 2016</strong> -
+					</p>
+					<p class="text-center pd-t-20">
+						<img src="{{ url('assets/img/onno.jpg') }}" alt="Onno W Purbo" class="testi-img">
+					</p>
+				</div>
+
+				<div class="testimoni">
+					<p class="testi-msg text-center">
+						Himakomsi merupakan himpunan mahasiswa yang kreatif, inovatif, berdedikasi, siap bekerja keras dalam setiap kegiatan yang dilakukan. Beberapa kegiatan yang sudah dilakukan menunjukan semangat muda yang selalu muncul dalam memperjuangkan keberhasilan kegiatan, sehingga mudah-mudahan hal ini bisa selalu dijaga dalam kegiatan kegiatan berikutnya.
+						<br>
+						<br>
+						- Sigit Priyanta, <strong>Kepala Program Studi Ilmu Komputer dan Sistem Informasi</strong> -
 					</p>
 					<p class="text-center pd-t-20">
 						<img src="{{ url('assets/img/onno.jpg') }}" alt="Onno W Purbo" class="testi-img">
@@ -555,7 +626,7 @@
 			<div class="col-md-12 pd-t-25">
 				<h2 class="mont-bold text-center">SPONSORS</h2>
 				<!-- Main sponsors -->
-				<div class="row pd-bt-15">
+				<!-- <div class="row pd-bt-15">
 					<div class="col-md-4">
 						<img src="{{ url('assets/img/sponsors/main-1.jpg') }}" alt="Lorem Ipsum" class="sponsor-image">
 					</div>
@@ -599,11 +670,11 @@
 					<div class="col-md-2">
 						<img src="{{ url('assets/img/sponsors/second-4.jpg') }}" alt="Lorem Ipsum" class="sponsor-image">
 					</div>
-				</div>
+				</div> -->
 				<div class="col-md-12 pd-t-25">
 				<h2 class="mont-bold text-center">MEDIA PARTNERS</h2>
 				<!-- Media Partners -->
-				<div class="row pd-bt-15">
+				<!-- <div class="row pd-bt-15">
 					<div class="col-md-3">
 						<img src="{{ url('assets/img/sponsors/second-3.jpg') }}" alt="Lorem Ipsum" class="sponsor-image">
 					</div>
@@ -628,7 +699,7 @@
 					<div class="col-md-3">
 						<img src="{{ url('assets/img/sponsors/second-4.jpg') }}" alt="Lorem Ipsum" class="sponsor-image">
 					</div>
-				</div>
+				</div> -->
 			</div>
 			</div>
 		</div>
@@ -751,9 +822,9 @@
 			<div class="row pd-bt-10">
 				<div class="col-md-3">
 					<ul class="social-links">
-						<li><a href="http://facebook.com/vocomfest" title="Vocomfest 2017"><i class="fa fa-facebook"></a></i></li>
-						<li><a href="http://twitter.com/vocomfest" title="Vocomfest 2017"><i class="fa fa-twitter"></a></i></li>
-						<li><a href="http://instagram.com/vocomfest" title="Vocomfest 2017"><i class="fa fa-instagram"></a></i></li>
+						<li><a href="http://facebook.com/vocomfest" title="Vocomfest 2017" target="_blank"><i class="fa fa-facebook"></a></i></li>
+						<li><a href="http://twitter.com/vocomfest" title="Vocomfest 2017" target="_blank"><i class="fa fa-twitter"></a></i></li>
+						<li><a href="http://instagram.com/vocomfest" title="Vocomfest 2017" target="_blank"><i class="fa fa-instagram"></a></i></li>
 					</ul>
 				</div>
 				<div class="col-md-3 pull-right text-right">
@@ -822,7 +893,9 @@
 		  e.preventDefault()
 		  $(this).tab('show')
 		})
+		$('#header').on('click', function(){
 
+		})
 
 		// to ease when click '#' url
 		$(function() {

@@ -85,9 +85,9 @@
 
 				<h4>Contact Person</h4>
 				<address>
-					<p class="special">Dandy Ari Ramadhan</p>
-					<p>HP	: 081289327417</p>
-					<p>LINE	: dendidondoo</p>
+					<p class="special">Asti Nugraheni</p>
+					<p>HP	: 087736283156</p>
+					<p>LINE	: astinugraheni</p>
 				</address>
 			</div>
 			<!-- /one -->
@@ -164,8 +164,6 @@
 						<li>Mempersiapkan :
 							<ol>
 								<li>Scan ktm semua anggota</li>
-								<li>Foto 3x4 semua anggota (background bebas)</li>
-								<li>Biodata diri (Nama, TTL, No.Telp, Alamat)</li>
 							</ol>
 						</li>
 					</ul>
@@ -176,9 +174,9 @@
 					<ol>
 						<li>Peserta melakukan pendaftaran di <a href="http://www.vocomfest.com/register">www.vocomfest.com/register</a></li>
 						<li>Peserta mengisi form registrasi yang tersedia dengan data yang sebenarnya-benarnya.</li>
-						<li>Peserta melakukan pembayaran sebesar Rp, 20.000 di transfer ke nomor rekening : ( ________)</li>
-						<li>Setelah selesai melakukan registrasi dan pembayaran, peserta mengirimkan scan Kartu Tanda Mahasiswa (KTM) ketua dan anggota serta Scan Bukti pemvayaran  ke email madc@vocomfest.com dengan Subyek “Scan KTM dan Bukti Pembayaran (Nama Tim)”.</li>
-						<li>Setelah selesai mengirimkan scan Kartu Tanda Mahasiswa (KTM) dan Bukti Pembayaran, peserta mengkonfirmasi di nomor (No. hp TS) bahwa kelompok tersebut telah mengirim scan Kartu Tanda Mahasiswa (KTM) dan Bukti Transfer.</li>
+						<li>Peserta melakukan pembayaran sebesar Rp, 20.000 di transfer ke nomor rekening : (_di Nitha_)</li>
+						<li>Setelah selesai melakukan registrasi dan pembayaran, peserta mengirimkan scan Kartu Tanda Mahasiswa (KTM) ketua dan anggota serta Scan Bukti pemvayaran  ke email (_di Rosma_) dengan Subyek “Scan KTM dan Bukti Pembayaran (Nama Tim)”.</li>
+						<li>Setelah selesai mengirimkan scan Kartu Tanda Mahasiswa (KTM) dan Bukti Pembayaran, peserta mengkonfirmasi di nomor (_di Nitha_) bahwa kelompok tersebut telah mengirim scan Kartu Tanda Mahasiswa (KTM) dan Bukti Transfer.</li>
 						<li>Akun peserta akan diaktifasi oleh panitia, setelah peserta mengirim scan Kartu Tanda Mahasiswa (KTM) dan Bukti Transfer.</li>
 						<li>Setelah akun diaktifasi, peserta dapat melakukan login di <a href="http://www.vocomfest.com/login">www.vocomfest.com/login</a></li>
 					</ol>
@@ -186,7 +184,7 @@
 					<h5>Offline</h5>
 					<ol>
 						<li>Periode pendaftaran	: 1 Februari – 6 Maret 2017</li>
-						<li>Lokasi pendaftaran	: Sekretariat Himakomsi SV UGM, Gedung Sekolah Vokasi Sekip I.</li>
+						<li>Lokasi pendaftaran	: Lobby KPTU SV UGM, Gedung Sekolah Vokasi Sekip I.</li>
 						<li>Waktu pendaftaran	: Pukul 09.00 – 17.00 WIB setiap hari Senin – Sabtu.</li>
 						<li>Menyiapkan berkas pendaftaran untuk diletakkan pada formulir pendaftaran, yaitu:
 							<ul>
@@ -196,7 +194,7 @@
 							</ul>
 						</li>
 						<li>Kemudian mengisi formulir yang disediakan serta membayar biaya pendaftaran.</li>
-						<li>Jika berkas telah sesuai persyaratan dan lengkap, peserta akan mendapatkan email konfirmasi bahwa sudah terdaftar sebagai.</li>
+						<li>f.	Jika berkas telah sesuai persyaratan dan lengkap, peserta akan mendapatkan email konfirmasi bahwa sudah terdaftar sebagai peserta MADC Vocomfest 2017.</li>
 					</ol>
 
 				<h4>Contact Person</h4>
@@ -298,4 +296,20 @@
 		</div>
 	</div>
 </section>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('body').scrollspy({
+			target : '#asideNav'
+		}) ;
+		//fixed nav
+        $(window).scroll(function(){
+        	if($(window).scrollTop()>320){
+        		$('#asideNav').addClass('fixedNav');
+        	}
+        	if($(window).scrollTop()<320){
+        		$('#asideNav').removeClass('fixedNav');
+        	}
+        });
+	})
+</script>
 @endsection

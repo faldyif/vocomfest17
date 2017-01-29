@@ -161,9 +161,9 @@
 			<div class="row pd-bt-10">
 				<div class="col-md-3">
 					<ul class="social-links">
-						<li><a href="http://facebook.com/vocomfest" title="Vocomfest 2017"><i class="fa fa-facebook"></a></i></li>
-						<li><a href="http://twitter.com/vocomfest" title="Vocomfest 2017"><i class="fa fa-twitter"></a></i></li>
-						<li><a href="http://instagram.com/vocomfest" title="Vocomfest 2017"><i class="fa fa-instagram"></a></i></li>
+						<li><a href="http://facebook.com/vocomfest" title="Vocomfest 2017" target="_blank"><i class="fa fa-facebook"></a></i></li>
+						<li><a href="http://twitter.com/vocomfest" title="Vocomfest 2017" target="_blank"><i class="fa fa-twitter"></a></i></li>
+						<li><a href="http://instagram.com/vocomfest" title="Vocomfest 2017" target="_blank"><i class="fa fa-instagram"></a></i></li>
 					</ul>
 				</div>
 				<div class="col-md-3 pull-right text-right">
