@@ -231,7 +231,7 @@
 					<span class="title-sec-db"><i class="fa fa-hourglass-half"></i>News</span>
 					@if($news->count() >= 1)
 					<div class="div-content-db">
-						<a href="blog.html" alt="News Vocomfest" title="News Vocomfest">
+						<a href="{{ url('news') }}/{{$news->first()->id}}" alt="News Vocomfest" title="{{$news->first()->title}}" target="_blank">
 							<div class="news-db"  style="">
 								<div class="overlay bk-gr-overlay"  style=""></div>
 								<img src="{{ url('storage/news_thumbs') }}/{{ $news->first()->thumbnail }}" alt="News Vocomfest" class="cover-img">
@@ -247,7 +247,7 @@
 					@if($news->count() >= 2)
 					<div class="row pd-t-15">
 						<div class="col-md-6 add-pd-b">
-							<a href="blog.html" alt="News Vocomfest" title="News Vocomfest">
+							<a href="{{ url('news') }}/{{$news[1]->id}}" alt="News Vocomfest" title="{{$news[1]->title}}" target="_blank">
 								<div class="news-db">
 									<div class="overlay bk-gr-overlay"></div>
 									<img src="{{ url('storage/news_thumbs') }}/{{ $news[1]->thumbnail }}" alt="News Vocomfest" class="cover-img">
@@ -262,7 +262,7 @@
 						</div>
 						@if($news->count() >= 3)
 						<div class="col-md-6">
-							<a href="blog.html" alt="News Vocomfest" title="News Vocomfest">
+							<a href="{{ url('news') }}/{{$news[2]->id}}" alt="News Vocomfest" title="{{$news[2]->title}}" target="_blank">
 								<div class="news-db">
 									<div class="overlay bk-gr-overlay"></div>
 									<img src="{{ url('storage/news_thumbs') }}/{{ $news[2]->thumbnail }}" alt="News Vocomfest" class="cover-img">
@@ -288,7 +288,7 @@
 					<div class="div-content-db">
 						<h2 class="mont-bold blue nomag">WDC</h2>
 						<h3 class="mont normal nomag">Web Design Competition</h3>
-						<p class="mg-bt-20">Lorem ipsum dolor sit amet, labore aliquam mnesarchum pri ei, in vim dicit petentium, feugiat utroque facilisis no vim. Vidit dolores noluisse usu cu, an voluptua expetenda expetendis mel, malis lobortis torquatos et mea. </p>
+						<p class="mg-bt-20">Web Design Competition (WDC) merupakan bagian dari seluruh rangkaian acara Vocomfest 2017 sekaligus membuka serangkaian acara Vocomfest 2017. Dalam kompetisi ini peserta diajak turut serta menuangkan ide kreatifnya untuk memberikan pengajaran kepada masyarakat melalui desain web...</p>
 						<div>
 							<a href="{{ url('wdc') }}" class="btn btn-default btn-sm">READ MORE</a>
 						</div>
@@ -297,7 +297,7 @@
 					<div class="div-content-db">
 						<h2 class="mont-bold blue nomag">MADC</h2>
 						<h3 class="mont normal nomag">Mobile App Development Competition</h3>
-						<p class="mg-bt-20">Lorem ipsum dolor sit amet, labore aliquam mnesarchum pri ei, in vim dicit petentium, feugiat utroque facilisis no vim. Vidit dolores noluisse usu cu, an voluptua expetenda expetendis mel, malis lobortis torquatos et mea. </p>
+						<p class="mg-bt-20">Mobile Apps Development Competition (MADC) merupakan rangkaian acara kedua dari VOCOMFEST 2017, MADC merupakan kompetisi membangun aplikasi mobile berbasis platform Android yang bertujuan memberikan konstribusi bagi generasi baru developer aplikasi mobile.</p>
 						<div>
 							<a href="{{ url('madc') }}" class="btn btn-default btn-sm">READ MORE</a>
 						</div>
@@ -306,7 +306,7 @@
 					<div class="div-content-db">
 						<h2 class="mont-bold blue nomag">Semnas</h2>
 						<h3 class="mont normal nomag">Seminar Nasional</h3>
-						<p class="mg-bt-20">Lorem ipsum dolor sit amet, labore aliquam mnesarchum pri ei, in vim dicit petentium, feugiat utroque facilisis no vim. Vidit dolores noluisse usu cu, an voluptua expetenda expetendis mel, malis lobortis torquatos et mea. </p>
+						<p class="mg-bt-20">Puncak acara Vocomfest sekaligus penutup seluruh rangkaian acara Vocomfest 2017 dengan seminar nasional bertemakan <span class="special">"Improving Indonesia's Economy through Creative Technopreneurship"</span> </p>
 						<div>
 							<a href="{{ url('semnas') }}" class="btn btn-default btn-sm">READ MORE</a>
 						</div>

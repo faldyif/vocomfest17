@@ -27,8 +27,9 @@
 				@foreach($news as $key)
 				<div class="col-md-3 news-content">
 					<a href="{{ url('news') }}/{{ $key->id }}" alt="News Vocomfest" title="{{ $key->title }}">
+						<div class="overlay img-overlay" style="background-image : url('{{ url('storage/news_thumbs') }}/{{ $key->thumbnail }}')"></div>
 						<div class="overlay bk-gr-overlay"></div>
-						<img src="{{ url('storage/news_thumbs') }}/{{ $key->thumbnail }}" alt="News Vocomfest" class="cover-img">
+						<img src="{{ asset('assets/img/news-img-tr.png') }}" alt="{{ $key->title }}" class="cover-img">
 						<div class="news-desc">
 							<h4 class="news-title">{{ $key->title }}</h4>
 							<hr class="bl-line-sep">

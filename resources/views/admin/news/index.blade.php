@@ -107,7 +107,39 @@
 	                                            	<br>
 	                                            	<span>
 	                                            		<a href="{{ url('news') }}/{{ $key->id }}">View</a> |
-	                                            		<a href="{{ url('adminvocomfest17/news') }}/{{ $key->id }}/edit">Edit</a> | <a href="{{ url('adminvocomfest17/news/delete') }}/{{ $key->id }}">Delete</a>
+	                                            		<a href="{{ url('adminvocomfest17/news') }}/{{ $key->id }}/edit">Edit</a> | <a href="#" onclick="
+	                                            			$().ready(function(e){
+																swal({
+																	title : 'Are you sure?',
+																	text : 'You will not be able to recover this object',
+																	type : 'warning',
+																	showCancelButton : true,
+																	confirmButtonColor: '#DD6B55',
+																	confirmButtonText: 'Yes, delete it!',
+																	cancelButtonText: 'No, cancel it!',
+																	closeOnConfirm: false,
+																	closeOnCancel: false,
+																	showLoaderOnConfirm : true
+																},
+																	function(isConfirm){
+																		if(isConfirm){
+																			$.get('<?php echo url('adminvocomfest17/news/delete').'/'.$key->id?>', function(){
+																					swal({
+																						title : 'Deleted!',
+																						text : 'Your news has been deleted!',
+																						type : 'success'
+																					},function(){
+																						location.reload() ;
+																					});
+																			}) ;
+																		}else{
+																			swal('Cancelled', 'Your news is safe :)', 'error');
+																		}
+																	}
+																)
+
+															}) ;
+	                                            		">Delete</a>
 	                                            	</span>
 	                                            </td>
 	                                            <td>Administrator</td>
