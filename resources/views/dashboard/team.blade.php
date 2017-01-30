@@ -224,6 +224,7 @@
 						<img src="{{ url('assets/img/member.jpg') }}">
 					</figure>
 					<span class="text-center">
+						<p class="blue mg-t-15">Member</p>
 						<p class="nomag mont-bold">{{ $user->team->member3_name }}</p>
 						<p class="nomag">{{ $user->team->member3_email }}</p>
 						<p class="nomag">+62 {{ $user->team->member3_phone }}</p>
