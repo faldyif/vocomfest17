@@ -96,7 +96,7 @@
 			                            			<th>Keterangan</th>
 			                            			<th class="col-md-3">Bukti Bayar</th>
 			                            			<th>Status</th>
-			                            			<th>Aksi</th>
+			                            			<th>Aksi{{ $payment->count() }}</th>
 			                            		</tr>
 			                            	</thead>
 			                            	<tbody>

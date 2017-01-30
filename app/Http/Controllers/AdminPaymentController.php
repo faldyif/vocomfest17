@@ -22,7 +22,6 @@ class AdminPaymentController extends Controller
         if(Auth::user()->role_id != 1) {
             return redirect('dashboard'); 
         }
-        $team = User::select('id')->whereIn('role_id', [2,3,4])->get()->toArray();
         $payment = PaymentConfirmation::get();
         return View('admin.payment.index')->with('payment', $payment);
     }
