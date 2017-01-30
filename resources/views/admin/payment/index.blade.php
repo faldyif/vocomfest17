@@ -93,34 +93,37 @@
 			                            			<th>No</th>
 			                            			<th>Nama Tim</th>
 			                            			<th>Kategori</th>
-			                            			<th>Jumlah</th>
 			                            			<th>Keterangan</th>
 			                            			<th class="col-md-3">Bukti Bayar</th>
-			                            			<th>Aksi</th>
+			                            			<th>Status</th>
+			                            			<th>Aksi{{ $payment->count() }}</th>
 			                            		</tr>
 			                            	</thead>
 			                            	<tbody>
-			                            		<?php $it = 1; ?>
 			                            		@foreach($payment as $key)
-			                            		@if(\App\User::where('id', $key->user_id)->first()->team->progress == 1)
 			                            		<tr>
-			                            			<td>{{ $it++ }}</td>
-			                            			<td>{{ \App\User::where('id', $key->user_id)->first()->name }}</td>
+			                            			<td>{{ $loop->iteration }}</td>
+			                            			<td><a href="{{ url('adminvocomfest17/team') }}/{{ \App\User::where('id', $key->user_id)->first()->id }}" class="special blue">{{ \App\User::where('id', $key->user_id)->first()->name }}</a></td>
 			                            			<td>{{ \App\User::where('id', $key->user_id)->first()->getKategori() }}</td>
-			                            			<td>Rp {{ number_format($key->amount, 2) }}</td>
 			                            			<td>{{ $key->description }}</td>
 			                            			<td>
 			                            				<a href="{{ url('storage/payment_proofs') }}/{{ $key->proof }}" data-rel="lightcase">
 															<img src="{{ url('storage/payment_proofs') }}/{{ $key->proof }}" class="cover-img">
 														</a>
 			                            			</td>
+			                            			@if(\App\User::where('id', $key->user_id)->first()->team->progress == 1)
+			                            			<td>Belum Dikonfirmasi</td>
+			                            			@else
+			                            			<td>Terbayar</td>
+			                            			@endif
 			                            			<td>
+			                            				@if(\App\User::where('id', $key->user_id)->first()->team->progress == 1)
 			                            				<a href="{{ url('adminvocomfest17/payment/confirm') }}/{{ $key->id }}" class="btn btn-success btn-sm" alt="Confirm Payment"><i class="fa fa-check"></i></a>
+			                            				@endif
 														<a href="{{ url('storage/payment_proofs') }}/{{ $key->proof }}" data-rel="lightcase" class="btn btn-primary btn-sm"><i class="fa fa-eye"></i></a>
 														<a href="{{ url('adminvocomfest17/payment/delete') }}/{{ $key->id }}" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
 			                            			</td>
 			                            		</tr>
-			                            		@endif
 			                            		@endforeach
 			                            	</tbody>
 			                            </table>

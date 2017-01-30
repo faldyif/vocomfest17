@@ -82,6 +82,10 @@ Route::group(['prefix' => 'adminvocomfest17'], function () {
 		Route::resource('semnas', 'AdminSemnasController', ['only' => [
 			'index', 'create', 'store'
 		]]);
+		Route::get('download/wdc', 'DownloadController@wdc_team');
+		Route::get('download/madc', 'DownloadController@madc_team');
+		Route::get('download/semnas', 'DownloadController@semnas');
+
 		Route::post('semnas/put', 'AdminSemnasController@put')->name('semnasput');
 		Route::get('payment/delete/{id}', 'AdminPaymentController@destroy');
 		Route::get('submission/delete/{id}', 'AdminSubmissionController@destroy');

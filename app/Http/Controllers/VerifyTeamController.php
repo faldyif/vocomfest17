@@ -19,7 +19,7 @@ class VerifyTeamController extends Controller
     	$team->verified = 1;
     	$team->save();
 
-        Session::flash('message', 'Berhasil mengunci data! Silahkan tunggu maksimal 1x24 jam untuk verifikasi dari panitia.');
+        Session::flash('message', 'Berhasil mengunci data! Anda dapat melanjutkan ke tahap pembayaran.');
         return redirect('dashboard');
     }
 

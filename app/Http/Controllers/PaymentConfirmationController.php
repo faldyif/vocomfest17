@@ -41,13 +41,11 @@ class PaymentConfirmationController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'amount' => 'required',
             'proof' => 'required|image'
         ]);
 
         $paymentconfirmation = new PaymentConfirmation;
         $paymentconfirmation->user_id = Auth::user()->id;
-        $paymentconfirmation->amount = $request->amount;
         $paymentconfirmation->description = $request->description;
         if($request->hasFile('proof') && $request->file('proof')->isValid()) {
            $destinationPath = 'public/payment_proofs';

@@ -98,13 +98,6 @@ class AdminTeamController extends Controller
         if(Auth::user()->role_id != 1) {
             return redirect('dashboard'); 
         }
-        if(User::find($id) == 2) {
-            WebTeam::where('user_id', $id)->delete();
-        } else if(User::find($id) == 3) {
-            MobileTeam::where('user_id', $id)->delete();
-        } else {
-            SeminarRegistration::where('user_id', $id)->delete();
-        }
         User::destroy($id);
 
         Session::flash('message', 'Berhasil menghapus tim!');

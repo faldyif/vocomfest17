@@ -86,6 +86,8 @@
 										Teams
 									</div>
 									<div class="panel-body">
+										<a class="btn btn-info" href="{{ url('adminvocomfest17/download/wdc') }}">Download WDC</a>
+										<a class="btn btn-info" href="{{ url('adminvocomfest17/download/madc') }}">Download MADC</a>
 										<table class="table table-hover table-bordered table-striped">
 											<thead>
 												<tr>
@@ -100,6 +102,7 @@
 											<tbody>
 												<?php $no = 0 ;?>
 												@foreach($team as $key)
+												<div id="dummy{{ $key->id }}" style="width: 0; height: 0"></div>
 												<tr>
 													<td>{{ ++$no }}</td>
 													<td><a href="{{ url('adminvocomfest17/team') }}/{{ $key->id }}" class="special blue">{{ $key->name }}</a></td>
@@ -107,11 +110,6 @@
 													<td>{!! $key->getPhase() !!}</td>
 													<td>{!! $key->verify() !!}</td>
 													<td>
-														@if($key->team->verified == 1)
-														<a title="Verify Team" href="{{ url('adminvocomfest17/team/verify') }}/{{ $key->id }}" class="btn btn-success btn-sm"><i class="fa fa-check"></i></a>
-														@elseif($key->team->verified == 2)
-														<a title="Unverify Team" href="{{ url('adminvocomfest17/team/unverify') }}/{{ $key->id }}" class="btn btn-warning btn-sm"><i class="fa fa-remove"></i></a>
-														@endif
 														@if($key->role_id == 2)
 														@if($key->team->progress != 1 && $key->team->progress != 4)
 														<a title="Lolos Babak Selanjutnya" href="{{ url('adminvocomfest17/team/pass') }}/{{ $key->id }}" class="btn btn-success btn-sm"><i class="fa fa-arrow-up"></i></a>
@@ -145,8 +143,9 @@
 															},
 																function(isConfirm){
 																	if(isConfirm){
-																		$.post('<?php echo url('adminvocomfest17/team').'/'.$key->id?>', function(){
+																		$('#dummy{{$key->id}}').load('{{ url('adminvocomfest17/team/delete/').'/'.$key->id }}', function(){
 																				swal('Deleted!', 'Your imaginary file has been deleted.', 'success');
+																				location.reload();
 																		}) ;
 																	}else{
 																		swal('Cancelled', 'Your imaginary file is safe :)', 'error');

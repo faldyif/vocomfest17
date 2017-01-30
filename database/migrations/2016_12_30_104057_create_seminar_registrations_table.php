@@ -16,7 +16,7 @@ class CreateSeminarRegistrationsTable extends Migration
         Schema::create('seminar_registrations', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('phone');
             $table->integer('category'); // 1 for mahasiswa/pelajar, 2 for umum
             $table->integer('progress')->default(1); // 1 if unpayed, 2 if payment done. 3 ticket picked up

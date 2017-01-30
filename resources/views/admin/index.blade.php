@@ -151,7 +151,6 @@
 													<th>No</th>
 													<th>Team/person name</th>
 													<th>Category</th>
-													<th>Amount</th>
 													<th>Status</th>
 												</tr>
 											</thead>
@@ -161,7 +160,6 @@
 													<td>{{ $loop->iteration }}</td>
 													<td>{{ \App\User::where('id', $key->user_id)->first()->name }}</td>
 													<td>{{ \App\User::where('id', $key->user_id)->first()->getKategori() }}</td>
-													<td>Rp {{ number_format($key->amount, 2) }}</td>
 													<td>
 														@if(\App\User::where('id', $key->user_id)->first()->team->progress == 1)
 														Waiting for verification
