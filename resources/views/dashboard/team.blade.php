@@ -443,13 +443,6 @@
 							<input type="text" name="team" id="team" value="{{ $user->name }}" class="form-control" disabled>
 						</div>
 						<div class="form-group">
-							<label for="amout" class="control-label">Jumlah * : </label>
-							<div class="input-group">
-								<span class="input-group-addon">Rp</span>
-								<input type="text" name="amount" id="amount" placeholder="{{ $arr_jml_bayar[$user->role_id] }}" class="form-control">
-							</div>
-						</div>
-						<div class="form-group">
 							<label for="payment" class="control-label">Bukti pembayaran (jpeg, png, bmp, gif, atau svg) * :</label>
 							<input type="file" id="payment" name="proof" class="form-control" />
 						</div>

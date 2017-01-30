@@ -93,7 +93,6 @@
 			                            			<th>No</th>
 			                            			<th>Nama Tim</th>
 			                            			<th>Kategori</th>
-			                            			<th>Jumlah</th>
 			                            			<th>Keterangan</th>
 			                            			<th class="col-md-3">Bukti Bayar</th>
 			                            			<th>Aksi</th>
@@ -107,7 +106,6 @@
 			                            			<td>{{ $it++ }}</td>
 			                            			<td>{{ \App\User::where('id', $key->user_id)->first()->name }}</td>
 			                            			<td>{{ \App\User::where('id', $key->user_id)->first()->getKategori() }}</td>
-			                            			<td>Rp {{ number_format($key->amount, 2) }}</td>
 			                            			<td>{{ $key->description }}</td>
 			                            			<td>
 			                            				<a href="{{ url('storage/payment_proofs') }}/{{ $key->proof }}" data-rel="lightcase">
