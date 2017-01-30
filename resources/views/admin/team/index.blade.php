@@ -144,8 +144,13 @@
 																function(isConfirm){
 																	if(isConfirm){
 																		$.get('<?php echo url('adminvocomfest17/team/delete/').'/'.$key->id ?>', function(){
-																				swal('Deleted!', 'Your imaginary file has been deleted.', 'success');
-																				location.reload();
+																				swal({
+																					title : 'Deleted',
+																					text : 'The team data has been deleted',
+																					type : 'success'
+																				},function(){
+																					location.reload();
+																				});
 																		}) ;
 																	}else{
 																		swal('Cancelled', 'Your imaginary file is safe :)', 'error');

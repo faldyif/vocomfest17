@@ -8,10 +8,13 @@
 			<div class="news-desc">
 				<p class="big" style="letter-spacing: 3px;">GALLERY</p>
 				<hr class="bl-line-sep">
+				<h2 class="news-title"><a href="{{ url('storage/gallery') }}/{{ $gallery->first()->path }}" data-rel="lightcase">{{ $gallery->first()->text }}</a></h2>
+				<p class="news-date big">{{ $gallery->first()->created_at->format('F jS, Y') }}</p>
 			</div>
 		</div>
 	</div>
-	<img src="{{ url('assets/img/event-cover.jpg') }}" class="cover-img">
+	<img src="{{ url('storage/gallery') }}/{{ $gallery->first()->path }}" class="cover-img">
+	<!-- <img src="./assets/img/event-cover.jpg" class="cover-img"> -->
 </section>
 <section id="news-body">
 	<div class="container-fluid pd-bt-20">
