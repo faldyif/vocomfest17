@@ -41,7 +41,6 @@ class PaymentConfirmationController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'amount' => 'required',
             'proof' => 'required|image'
         ]);
 
