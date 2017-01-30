@@ -201,6 +201,13 @@
 			cursorborderradius : '0px' ,
 			zindex : '101'
 		}) ;
+		$("#aside").niceScroll({
+			cursorcolor : 'rgba(0,0,0,0.5)',
+			cursorwidth : '3px',
+			cursorborder : 'none',
+			cursorborderradius : '0px' ,
+			zindex : '101'
+		}) ;
 
 		// to ease when click '#' url
 		$(function() {
