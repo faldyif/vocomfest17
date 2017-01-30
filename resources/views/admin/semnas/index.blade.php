@@ -82,6 +82,7 @@
 										Semnas Attenders
 									</div>
 									<div class="panel-body">
+										<a class="btn btn-info" href="{{ url('adminvocomfest17/download/semnas') }}">Download Semnas</a>
 										<table class="table table-hover table-bordered table-striped">
 											<thead>
 												<tr>

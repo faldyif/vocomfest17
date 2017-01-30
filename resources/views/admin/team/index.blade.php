@@ -82,6 +82,8 @@
 										Teams
 									</div>
 									<div class="panel-body">
+										<a class="btn btn-info" href="{{ url('adminvocomfest17/download/wdc') }}">Download WDC</a>
+										<a class="btn btn-info" href="{{ url('adminvocomfest17/download/madc') }}">Download MADC</a>
 										<table class="table table-hover table-bordered table-striped">
 											<thead>
 												<tr>
