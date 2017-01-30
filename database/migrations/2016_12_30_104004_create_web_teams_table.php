@@ -16,7 +16,7 @@ class CreateWebTeamsTable extends Migration
         Schema::create('web_teams', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('school_name');
             $table->string('school_address');
             $table->string('leader_name');

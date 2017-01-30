@@ -16,7 +16,7 @@ class CreateMobileTeamsTable extends Migration
         Schema::create('mobile_teams', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('instance_name');
             $table->string('instance_address');
             $table->string('leader_name');
