@@ -143,7 +143,7 @@
 															},
 																function(isConfirm){
 																	if(isConfirm){
-																		$('#dummy{{$key->id}}').load('{{ url('adminvocomfest17/team/delete/').'/'.$key->id }}', function(){
+																		$.get('<?php echo url('adminvocomfest17/team/delete/').'/'.$key->id ?>', function(){
 																				swal('Deleted!', 'Your imaginary file has been deleted.', 'success');
 																				location.reload();
 																		}) ;

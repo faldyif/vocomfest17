@@ -96,7 +96,7 @@
 			                            			<th>Keterangan</th>
 			                            			<th class="col-md-3">Bukti Bayar</th>
 			                            			<th>Status</th>
-			                            			<th>Aksi{{ $payment->count() }}</th>
+			                            			<th>Aksi</th>
 			                            		</tr>
 			                            	</thead>
 			                            	<tbody>
@@ -121,7 +121,38 @@
 			                            				<a href="{{ url('adminvocomfest17/payment/confirm') }}/{{ $key->id }}" class="btn btn-success btn-sm" alt="Confirm Payment"><i class="fa fa-check"></i></a>
 			                            				@endif
 														<a href="{{ url('storage/payment_proofs') }}/{{ $key->proof }}" data-rel="lightcase" class="btn btn-primary btn-sm"><i class="fa fa-eye"></i></a>
-														<a href="{{ url('adminvocomfest17/payment/delete') }}/{{ $key->id }}" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+														<a href="#" class="btn btn-danger btn-sm" onclick="
+															$().ready(function(){
+																swal({
+																	title : 'Are you sure?',
+																	text : 'You will not be able to recover this',
+																	type : 'warning',
+																	showCancelButton : true,
+																	confirmButtonColor : '#DD6B55',
+																	confirmButtonText : 'Yes, delete it!',
+																	cancelButtonText : 'No, cancel it!',
+																	closeOnConfirm : false,
+																	closeOnCancel : false,
+																	showLoaderOnConfirm : true
+																},
+																	function(isConfirm){
+																		if(isConfirm){
+																			$.get('<?php echo url('adminvocomfest17/payment/delete').'/'.$key->id ;?>', function(){
+																				swal({
+																					title : 'Deleted',
+																					text : 'Your transfer proof has been deleted',
+																					type : 'success'
+																				}, function(){
+																					location.reload() ;
+																				}) ;
+																			}) ;
+																		}else{
+																			swal('Canceled', 'Your image is safe!', 'error') ;
+																		}
+																	}
+																)
+															}) ;
+														"><i class="fa fa-trash"></i></a>
 			                            			</td>
 			                            		</tr>
 			                            		@endforeach
