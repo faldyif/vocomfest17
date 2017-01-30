@@ -103,7 +103,7 @@
 			                            		@foreach($payment as $key)
 			                            		<tr>
 			                            			<td>{{ $loop->iteration }}</td>
-			                            			<td>{{ \App\User::where('id', $key->user_id)->first()->name }}</td>
+			                            			<td><a href="{{ url('adminvocomfest17/team') }}/{{ \App\User::where('id', $key->user_id)->first()->id }}" class="special blue">{{ \App\User::where('id', $key->user_id)->first()->name }}</a></td>
 			                            			<td>{{ \App\User::where('id', $key->user_id)->first()->getKategori() }}</td>
 			                            			<td>{{ $key->description }}</td>
 			                            			<td>
