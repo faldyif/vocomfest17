@@ -95,15 +95,14 @@
 			                            			<th>Kategori</th>
 			                            			<th>Keterangan</th>
 			                            			<th class="col-md-3">Bukti Bayar</th>
+			                            			<th>Status</th>
 			                            			<th>Aksi</th>
 			                            		</tr>
 			                            	</thead>
 			                            	<tbody>
-			                            		<?php $it = 1; ?>
 			                            		@foreach($payment as $key)
-			                            		@if(\App\User::where('id', $key->user_id)->first()->team->progress == 1)
 			                            		<tr>
-			                            			<td>{{ $it++ }}</td>
+			                            			<td>{{ $loop->iteration }}</td>
 			                            			<td>{{ \App\User::where('id', $key->user_id)->first()->name }}</td>
 			                            			<td>{{ \App\User::where('id', $key->user_id)->first()->getKategori() }}</td>
 			                            			<td>{{ $key->description }}</td>
@@ -112,13 +111,17 @@
 															<img src="{{ url('storage/payment_proofs') }}/{{ $key->proof }}" class="cover-img">
 														</a>
 			                            			</td>
+			                            			@if(\App\User::where('id', $key->user_id)->first()->team->progress == 1)
+			                            			<td>Terbayar</td>
+			                            			@else
+			                            			<td>Belum Dikonfirmasi</td>
+			                            			@endif
 			                            			<td>
 			                            				<a href="{{ url('adminvocomfest17/payment/confirm') }}/{{ $key->id }}" class="btn btn-success btn-sm" alt="Confirm Payment"><i class="fa fa-check"></i></a>
 														<a href="{{ url('storage/payment_proofs') }}/{{ $key->proof }}" data-rel="lightcase" class="btn btn-primary btn-sm"><i class="fa fa-eye"></i></a>
 														<a href="{{ url('adminvocomfest17/payment/delete') }}/{{ $key->id }}" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
 			                            			</td>
 			                            		</tr>
-			                            		@endif
 			                            		@endforeach
 			                            	</tbody>
 			                            </table>
