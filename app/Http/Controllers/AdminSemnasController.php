@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 // custom namespace
 use App\User;
 use Session;
+use Illuminate\Support\Facades\Auth;
 
 class AdminSemnasController extends Controller
 {
