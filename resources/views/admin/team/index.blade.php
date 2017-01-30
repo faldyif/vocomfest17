@@ -56,7 +56,11 @@
 		<div class="overlay bk-gr-overlay"  style=""></div>
 		<section class="header-text">
 			<div class="top-header">
-				<span>Hello, {{ Auth::user()->name }} | <a class="a-fa" href="./login.html"><i class="fa fa-sign-out"></i> Logout</a></span>
+				<span>Hello, {{ Auth::user()->name }} | <a class="a-fa" href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-sign-out"></i> Logout</a>
+			        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+			            {{ csrf_field() }}
+			        </form>
+	        	</span>
 			</div>
 			<h2 class="mont-bold">Teams</h2>
 			<hr class="bl-line-sep">
@@ -123,7 +127,7 @@
 														<a title="Mundurkan Satu Babak" href="{{ url('adminvocomfest17/team/unpass') }}/{{ $key->id }}" class="btn btn-warning btn-sm"><i class="fa fa-arrow-down"></i></a>
 														@endif
 														@endif
-														<a title="View" href="{{ url('adminvocomfest17/team') }}/{{ $key->id }}" class="btn btn-primary btn-sm"><i class="fa fa-eye"></i></a>
+														<a title="View" href="{{ url('adminvocomfest17/team') }}/{{ $key->id }}" class="btn btn-primary btn-sm" target="_blank"><i class="fa fa-eye"></i></a>
 														<a title="Delete" href="#" class="btn btn-danger btn-sm delete-btn" 
 														onclick="
 														$().ready(function(e){

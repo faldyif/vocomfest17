@@ -56,7 +56,11 @@
 		<div class="overlay bk-gr-overlay"  style=""></div>
 		<section class="header-text">
 			<div class="top-header">
-				<span>Hello, {{ Auth::user()->name }} | <a class="a-fa" href="./login.html"><i class="fa fa-sign-out"></i> Logout</a></span>
+				<span>Hello, {{ Auth::user()->name }} | <a class="a-fa" href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-sign-out"></i> Logout</a>
+			        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+			            {{ csrf_field() }}
+			        </form>
+	        </span>
 			</div>
 			<h2 class="mont-bold">SemnasVerifier™</h2>
 			<hr class="bl-line-sep">
