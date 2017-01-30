@@ -1,6 +1,6 @@
 <?php
 	$user = Auth::user();
-	$arr_type = array("", "Website", "Proposal", "Aplikasi");
+	$arr_type = array("", "source code Website", "Proposal", "Aplikasi");
 	$arr_jml_bayar = array(0, 0, 100000, 50000, 50000);
 	$arr_progress = array("", "Menunggu pembayaran", "Seleksi website", "Seleksi proposal", "Seleksi aplikasi", "Finalis", "Penukaran Tiket", "Tiket sudah diambil");
 	$arr_submission_type = array(0, 0, 1, 2, 3, 0, 0);
@@ -101,7 +101,7 @@
 							<input type="text" name="team" id="team" value="{{ Auth::user()->name }}" class="form-control" disabled>
 						</div>
 						<div class="form-group">
-							<label for="fileLink" class="control-label">Link {{ $arr_type[$type] }}  * :</label>
+							<label for="fileLink" class="control-label">Link {{ $arr_type[$type] }} (dengan http:// atau https://)  * :</label>
 							<input type="text" id="fileLink" name="path_url" class="form-control" />
 						</div>
 						<div class="form-group">
