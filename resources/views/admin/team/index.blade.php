@@ -103,11 +103,6 @@
 													<td>{!! $key->getPhase() !!}</td>
 													<td>{!! $key->verify() !!}</td>
 													<td>
-														@if($key->team->verified == 1)
-														<a title="Verify Team" href="{{ url('adminvocomfest17/team/verify') }}/{{ $key->id }}" class="btn btn-success btn-sm"><i class="fa fa-check"></i></a>
-														@elseif($key->team->verified == 2)
-														<a title="Unverify Team" href="{{ url('adminvocomfest17/team/unverify') }}/{{ $key->id }}" class="btn btn-warning btn-sm"><i class="fa fa-remove"></i></a>
-														@endif
 														@if($key->role_id == 2)
 														@if($key->team->progress != 1 && $key->team->progress != 4)
 														<a title="Lolos Babak Selanjutnya" href="{{ url('adminvocomfest17/team/pass') }}/{{ $key->id }}" class="btn btn-success btn-sm"><i class="fa fa-arrow-up"></i></a>

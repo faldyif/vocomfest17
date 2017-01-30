@@ -108,6 +108,7 @@ class AdminPaymentController extends Controller
         if($user->role_id == 4) {
             $user->team->hash = crypt($user->name . $user->created_at, 'vocomfest2017');
         }
+        $user->team->verified = 2;
         $user->team->progress = 2;
         $user->team->save();
 

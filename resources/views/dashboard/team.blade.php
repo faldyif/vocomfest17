@@ -158,9 +158,6 @@
 			<div class="sec-content-db add-member" style="display: block;">
 				@if($user->team->verified == 0)
 				<button id="myBtn" type="button" class="btn btn-primary btn-circle" data-toggle="modal" data-target="#editTeam"><i class="fa fa-edit"></i></button>
-				<a href="{{ url('dashboard/team/lock') }}" class="btn btn-success" style="font-size: 2.5em; margin-left: 20px;"><i class="fa fa-check"></i> Lock data to be verified</a>
-				@elseif($user->team->verified == 1)
-				<a href="{{ url('dashboard/team/unlock') }}" class="btn btn-warning" style="font-size: 2.5em; margin-left: 20px;"><i class="fa fa-unlock"></i> Unlock data</a>
 				@endif
 			</div>
 		</div>
@@ -250,6 +247,9 @@
 				<h3 class="modal-title">Edit Team Details</h3>
 			</div>
 			<div class="modal-body">
+				<div class="alert alert-warning">
+				  <strong>Perhatian!</strong> Anda harus menyimpan data terlebih dahulu sebelum menguncinya.
+				</div>
 				<div class="col-md-12">
 					@if($user->role_id == 2)
 						{{ Form::model($user->team, array('route' => array('webteam.update', $user->team->id), 'method' => 'PUT', 'enctype' => 'multipart/form-data')) }}
@@ -408,6 +408,9 @@
 							</div>
 							<div class="form-group">
 								<input type="submit" name="submit" class="btn btn-info" value="Simpan" />
+								<button type="button" class="btn btn-info" data-toggle="modal" data-target="#lockAlertModal">
+									Kunci Data
+								</button>
 							</div>
 						{{ Form::close() }}
 					@endif
@@ -416,8 +419,28 @@
 		</div>
 	</div>
 </div>
+								
 <!-- /add members-->
 <!-- Modals -->
+@if($user->team->verified == 0)
+<div id="lockAlertModal" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h3 class="modal-title">Kunci Data</h3>
+			</div>
+			<div class="modal-body">
+				<div class="alert alert-warning">
+				  <strong>Warning!</strong> Apakah anda yakin untuk mengunci data? Data yang sudah dikunci sudah tidak dapat diubah lagi.
+				</div>
+				<a href="{{ url('dashboard/team/lock') }}" class="btn btn-info">Ya, Data saya sudah lengkap</a>
+				<a data-toggle="modal" data-target="#lockAlertModal" href="{{ url('dashboard/team/lock') }}" class="btn btn-info">Batal</a>
+			</div>
+		</div>
+	</div>
+</div>
+@endif
 @if($user->team->progress == 1)
 <div id="paymentModal" class="modal fade">
 	<div class="modal-dialog">
