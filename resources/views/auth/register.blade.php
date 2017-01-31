@@ -5,7 +5,7 @@
 <div class="wrapLogin">
 <!-- HEADER -->
 <header id="sign-header">
-	<a href="{{ url('/index.html') }}" class="navbar-brand">
+	<a href="{{ url('/') }}" class="navbar-brand">
 					<img src="{{ url('/assets/img/icon-2.png') }}" alt="Vocomfest" class="img-brand">
 					<span class="text-brand mont-bold">VOCOMFEST</span>
 				</a>

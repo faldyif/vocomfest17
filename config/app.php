@@ -179,6 +179,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         Collective\Html\HtmlServiceProvider::class,
+        Petehouston\Tinymce\TinymceServiceProvider::class,
         'Maatwebsite\Excel\ExcelServiceProvider',
 
     ],

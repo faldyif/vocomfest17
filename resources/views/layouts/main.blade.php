@@ -100,7 +100,6 @@
 			}
 		});
 
-
 		// to ease when click '#' url
 		$(function() {
             $('a[href*=#]:not([href=#])').click(function() {

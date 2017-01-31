@@ -47,7 +47,6 @@ class DownloadController extends Controller
         })->export('xls');
     }
 
-
     public function semnas()
     {
         if(Auth::user()->role_id != 1) {
@@ -59,6 +58,22 @@ class DownloadController extends Controller
 
         Excel::create('Semnas_List', function($excel) use($data) {
             $excel->sheet('Daftar Peserta', function($sheet) use($data) {
+                $sheet->fromModel($data);
+            });
+        })->export('xls');
+    }
+
+    public function payment()
+    {
+        if(Auth::user()->role_id != 1) {
+            return redirect('dashboard'); 
+        }
+        $data = User::whereIn('role_id', [2,3,4])
+            ->join('payment_confirmations', 'users.id', '=', 'payment_confirmations.user_id')
+            ->get();
+
+        Excel::create('Payment_List', function($excel) use($data) {
+            $excel->sheet('Daftar Pembayaran', function($sheet) use($data) {
                 $sheet->fromModel($data);
             });
         })->export('xls');

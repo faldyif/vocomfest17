@@ -54,5 +54,12 @@ tinymce.init({
 			{title: "Right", icon: "alignright", format: "alignright"},
 			{title: "Justify", icon: "alignjustify", format: "alignjustify"}
 		]}
-	]
+	],
+
+	// direct image upload
+	relative_urls: false,
+	file_browser_callback: function(field_name, url, type, win) {
+		// trigger file upload form
+		if (type == 'image') $('#formUpload input').click();
+	}
 });

@@ -56,7 +56,7 @@ class PaymentConfirmationController extends Controller
         }
         $paymentconfirmation->save();
 
-        Session::flash('message', 'Konfirmasi pembayaran anda telah berhasil dikirimkan! Silahkan tunggu 1x24 jam untuk menunggu verifikasi dari panitia.');
+        Session::flash('message', 'Konfirmasi pembayaran anda telah berhasil dikirimkan! Silahkan menunggu verifikasi dari panitia.');
         return redirect('dashboard');
     }
 

@@ -2,6 +2,7 @@
 @section('title', 'Vocomfest - Gallery')
 
 @section('body')
+@if($gallery->count() != 0)
 <section id="news-cover">
 	<div class="overlay bk-overlay">
 		<div class="news-container">
@@ -16,6 +17,18 @@
 	<img src="{{ url('storage/gallery') }}/{{ $gallery->first()->path }}" class="cover-img">
 	<!-- <img src="./assets/img/event-cover.jpg" class="cover-img"> -->
 </section>
+@else
+<section id="news-cover">
+	<div class="overlay bk-overlay">
+		<div class="news-container">
+			<div class="news-desc">
+				<p class="big" style="letter-spacing: 3px;">GALLERY</p>
+			</div>
+		</div>
+	</div>
+	<img src="./assets/img/event-cover.jpg" class="cover-img">
+</section>
+@endif
 <section id="news-body">
 	<div class="container-fluid pd-bt-20">
 		<div class="row pd-bt-20">

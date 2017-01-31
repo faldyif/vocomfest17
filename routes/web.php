@@ -85,6 +85,7 @@ Route::group(['prefix' => 'adminvocomfest17'], function () {
 		Route::get('download/wdc', 'DownloadController@wdc_team');
 		Route::get('download/madc', 'DownloadController@madc_team');
 		Route::get('download/semnas', 'DownloadController@semnas');
+		Route::get('download/payment', 'DownloadController@payment');
 
 		Route::post('semnas/put', 'AdminSemnasController@put')->name('semnasput');
 		Route::get('payment/delete/{id}', 'AdminPaymentController@destroy');

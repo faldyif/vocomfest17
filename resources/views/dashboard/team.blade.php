@@ -318,6 +318,9 @@
 							</div>
 							<div class="form-group">
 								<input type="submit" name="submit" class="btn btn-info" value="Simpan" />
+								<button type="button" class="btn btn-info" data-toggle="modal" data-target="#lockAlertModal">
+									Kunci Data
+								</button>
 							</div>
 						{{ Form::close() }}
 					@else
@@ -450,6 +453,12 @@
 				<h3 class="modal-title">Payment Upload</h3>
 			</div>
 			<div class="modal-body">
+				@if ($user->team->verified == 0 && Auth::user()->role_id != 4)
+				<div class="alert alert-danger">
+					<p><strong>Data tim anda belum dikunci!</strong></p>
+					<p>BLengkapi terlebih dahulu identitas diri (Kartu tanda mahasiswa / Kartu pelajar) dan kunci untuk dapat melanjutkan ke tahap pembayaran. Klik di<a href="{{ url('dashboard/team') }}">sini</a> untuk melakukannya.</p>
+				</div>
+				@else
 				<div class="alert alert-info">
 					<p>Silahkan membayar sebesar Rp {{ number_format($arr_jml_bayar[$user->role_id], 2) }} ke rekening dibawah ini. Jika sudah, lakukan konfirmasi pembayaran pada form yang telah disediakan.</p>
 					<br/>
@@ -460,7 +469,6 @@
 				</div>
 				<div class="col-md-8">
 					{!! Form::open(array('route' => 'payment.store', 'enctype' => 'multipart/form-data')) !!}
-					<form method="POST" action="">
 						<div class="form-group">
 							<label class="control-label">Nama Tim * : </label>
 							<input type="text" name="team" id="team" value="{{ $user->name }}" class="form-control" disabled>
@@ -478,6 +486,7 @@
 						</div>
 					{!! Form::close() !!}
 				</div>
+				@endif
 			</div>
 		</div>
 	</div>
