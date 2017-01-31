@@ -174,9 +174,9 @@
 					<ol>
 						<li>Peserta melakukan pendaftaran di <a href="http://www.vocomfest.com/register">www.vocomfest.com/register</a></li>
 						<li>Peserta mengisi form registrasi yang tersedia dengan data yang sebenarnya-benarnya.</li>
-						<li>Peserta melakukan pembayaran sebesar Rp, 20.000 di transfer ke nomor rekening : (_di Nitha_)</li>
-						<li>Setelah selesai melakukan registrasi dan pembayaran, peserta mengirimkan scan Kartu Tanda Mahasiswa (KTM) ketua dan anggota serta Scan Bukti pemvayaran  ke email (_di Rosma_) dengan Subyek “Scan KTM dan Bukti Pembayaran (Nama Tim)”.</li>
-						<li>Setelah selesai mengirimkan scan Kartu Tanda Mahasiswa (KTM) dan Bukti Pembayaran, peserta mengkonfirmasi di nomor (_di Nitha_) bahwa kelompok tersebut telah mengirim scan Kartu Tanda Mahasiswa (KTM) dan Bukti Transfer.</li>
+						<li>Peserta melakukan pembayaran sebesar Rp, 20.000 di transfer ke nomor rekening : (Bank BRI) 0033-01-071149-50-9 (a/n. Naila Elma Nuarisya)</li>
+						<li>Setelah selesai melakukan registrasi dan pembayaran, peserta mengirimkan scan Kartu Tanda Mahasiswa (KTM) ketua dan anggota serta Scan Bukti pemvayaran  ke email madc@vocomfest.com dengan Subyek “Scan KTM dan Bukti Pembayaran (Nama Tim)”.</li>
+						<li>Setelah selesai mengirimkan scan Kartu Tanda Mahasiswa (KTM) dan Bukti Pembayaran, peserta mengkonfirmasi di nomor 085700697207 bahwa kelompok tersebut telah mengirim scan Kartu Tanda Mahasiswa (KTM) dan Bukti Transfer.</li>
 						<li>Akun peserta akan diaktifasi oleh panitia, setelah peserta mengirim scan Kartu Tanda Mahasiswa (KTM) dan Bukti Transfer.</li>
 						<li>Setelah akun diaktifasi, peserta dapat melakukan login di <a href="http://www.vocomfest.com/login">www.vocomfest.com/login</a></li>
 					</ol>

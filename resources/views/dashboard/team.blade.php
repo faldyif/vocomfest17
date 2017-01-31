@@ -58,7 +58,7 @@
 			<h3>{{ Auth::user()->name }}</h3>
 			<hr class="line-db">
 			@if(Auth::user()->role_id != 4)
-				<span>Leader</span>
+				<span>Keuta Tim</span>
 				<h4 class="nomag">{{ Auth::user()->team->leader_name }}</h4>
 			@endif
 		</div>
@@ -125,7 +125,7 @@
 	        </form>
 				</span>
 			</div>
-			<h2 class="mont-bold">Team Members</h2>
+			<h2 class="mont-bold">Anggota Tim</h2>
 			<hr class="bl-line-sep">
 		</section>
 	</header>
@@ -168,12 +168,12 @@
 						<img src="{{ url('assets/img/leader.jpg') }}">
 					</figure>
 					<span class="text-center">
-						<p class="blue mg-t-15">Leader</p>
+						<p class="blue mg-t-15">Ketua Tim</p>
 						<p class="nomag mont-bold">{{ $user->team->leader_name }}</p>
 						<p class="nomag">{{ $user->email }}</p>
 						<p class="nomag">+62 {{ Auth::user()->team->leader_phone }}</p>
 						@if($user->team->leader_identity != NULL)
-						<p class="nomag"><a href="{{ url('storage/identity_scans') }}/{{ $user->team->leader_identity }}" data-rel="lightcase">Identity Scan</a></p>
+						<p class="nomag"><a href="{{ url('storage/identity_scans') }}/{{ $user->team->leader_identity }}" data-rel="lightcase">Scan Identitas</a></p>
 						@endif
 					</span>
 				</div>
@@ -185,12 +185,12 @@
 						<img src="{{ url('assets/img/member.jpg') }}">
 					</figure>
 					<span class="text-center">
-						<p class="blue mg-t-15">Member</p>
+						<p class="blue mg-t-15">Anggota</p>
 						<p class="nomag mont-bold">{{ $user->team->member1_name }}</p>
 						<p class="nomag">{{ $user->team->member1_email }}</p>
 						<p class="nomag">+62 {{ $user->team->member1_phone }}</p>
 						@if($user->team->member1_identity != NULL)
-						<p class="nomag"><a href="{{ url('storage/identity_scans') }}/{{ $user->team->member1_identity }}" data-rel="lightcase">Identity Scan</a></p>
+						<p class="nomag"><a href="{{ url('storage/identity_scans') }}/{{ $user->team->member1_identity }}" data-rel="lightcase">Scan Identitas</a></p>
 						@endif
 					</span>
 				</div>
@@ -203,12 +203,12 @@
 						<img src="{{ url('assets/img/member.jpg') }}">
 					</figure>
 					<span class="text-center">
-						<p class="blue mg-t-15">Member</p>
+						<p class="blue mg-t-15">Anggota</p>
 						<p class="nomag mont-bold">{{ $user->team->member2_name }}</p>
 						<p class="nomag">{{ $user->team->member2_email }}</p>
 						<p class="nomag">+62 {{ $user->team->member2_phone }}</p>
 						@if($user->team->member2_identity != NULL)
-						<p class="nomag"><a href="{{ url('storage/identity_scans') }}/{{ $user->team->member2_identity }}" data-rel="lightcase">Identity Scan</a></p>
+						<p class="nomag"><a href="{{ url('storage/identity_scans') }}/{{ $user->team->member2_identity }}" data-rel="lightcase">Scan Identitas</a></p>
 						@endif
 					</span>
 				</div>
@@ -221,12 +221,12 @@
 						<img src="{{ url('assets/img/member.jpg') }}">
 					</figure>
 					<span class="text-center">
-						<p class="blue mg-t-15">Member</p>
+						<p class="blue mg-t-15">Anggota</p>
 						<p class="nomag mont-bold">{{ $user->team->member3_name }}</p>
 						<p class="nomag">{{ $user->team->member3_email }}</p>
 						<p class="nomag">+62 {{ $user->team->member3_phone }}</p>
 						@if($user->team->member3_identity != NULL)
-						<p class="nomag"><a href="{{ url('storage/identity_scans') }}/{{ $user->team->member3_identity }}" data-rel="lightcase">Identity Scan</a></p>
+						<p class="nomag"><a href="{{ url('storage/identity_scans') }}/{{ $user->team->member3_identity }}" data-rel="lightcase">Scan Identitas</a></p>
 						@endif
 					</span>
 				</div>
@@ -255,64 +255,64 @@
 						{{ Form::model($user->team, array('route' => array('webteam.update', $user->team->id), 'method' => 'PUT', 'enctype' => 'multipart/form-data')) }}
 							<div class="col-md-4">
 								<div class="form-group">
-									<label class="control-label">Leader Name : </label>
+									<label class="control-label">Nama Ketua : </label>
 									{{ Form::text('leader_name', null, array('class' => 'form-control')) }}
 								</div>
 								<div class="form-group">
-									<label class="control-label">Leader Email : </label>
+									<label class="control-label">Email Ketua : </label>
 									<input type="text" name="team" id="team" value="{{ $user->email }}" class="form-control" disabled>
 								</div>
 								<div class="form-group">
-									<label for="amout" class="control-label">Leader Phone Number : </label>
+									<label for="amout" class="control-label">Nomor Handphone Ketua : </label>
 									<div class="input-group">
 										<span class="input-group-addon">+62</span>
 										{{ Form::text('leader_phone', null, array('class' => 'form-control')) }}
 									</div>
 								</div>
 								<div class="form-group">
-									<label for="payment" class="control-label">Leader Identity Scan :</label>
+									<label for="payment" class="control-label">Scan Identitas Ketua :</label>
 									<input type="file" id="identity" name="id_leader" class="form-control" />
 								</div>
 							</div>
 							<div class="col-md-4">
 								<div class="form-group">
-									<label class="control-label">Member #1 Name : </label>
+									<label class="control-label">Anggota #1 Name : </label>
 									{{ Form::text('member1_name', null, array('class' => 'form-control')) }}
 								</div>
 								<div class="form-group">
-									<label class="control-label">Member #1 Email : </label>
+									<label class="control-label">Anggota #1 Email : </label>
 									{{ Form::email('member1_email', null, array('class' => 'form-control')) }}
 								</div>
 								<div class="form-group">
-									<label for="amout" class="control-label">Member #1 Phone Number : </label>
+									<label for="amout" class="control-label">Anggota #1 Phone Number : </label>
 									<div class="input-group">
 										<span class="input-group-addon">+62</span>
 										{{ Form::text('member1_phone', null, array('class' => 'form-control')) }}
 									</div>
 								</div>
 								<div class="form-group">
-									<label for="payment" class="control-label">Member #1 Identity Scan :</label>
+									<label for="payment" class="control-label">Anggota #1 Scan Identitas :</label>
 									<input type="file" id="identity" name="id_member1" class="form-control" />
 								</div>
 							</div>
 							<div class="col-md-4">
 								<div class="form-group">
-									<label class="control-label">Member #2 Name : </label>
+									<label class="control-label">Anggota #2 Name : </label>
 									{{ Form::text('member2_name', null, array('class' => 'form-control')) }}
 								</div>
 								<div class="form-group">
-									<label class="control-label">Member #2 Email : </label>
+									<label class="control-label">Anggota #2 Email : </label>
 									{{ Form::email('member2_email', null, array('class' => 'form-control')) }}
 								</div>
 								<div class="form-group">
-									<label for="amout" class="control-label">Member #2 Phone Number : </label>
+									<label for="amout" class="control-label">Anggota #2 Phone Number : </label>
 									<div class="input-group">
 										<span class="input-group-addon">+62</span>
 										{{ Form::text('member2_phone', null, array('class' => 'form-control')) }}
 									</div>
 								</div>
 								<div class="form-group">
-									<label for="payment" class="control-label">Member #2 Identity Scan :</label>
+									<label for="payment" class="control-label">Anggota #2 Scan Identitas :</label>
 									<input type="file" id="identity" name="id_member2" class="form-control" />
 								</div>
 							</div>
@@ -342,70 +342,70 @@
 									</div>
 								</div>
 								<div class="form-group">
-									<label for="payment" class="control-label">Leader Identity Scan :</label>
+									<label for="payment" class="control-label">Leader Scan Identitas :</label>
 									<input type="file" id="identity" name="id_leader" class="form-control" />
 								</div>
 							</div>
 							<div class="col-md-3">
 								<div class="form-group">
-									<label class="control-label">Member #1 Name : </label>
+									<label class="control-label">Anggota #1 Name : </label>
 									{{ Form::text('member1_name', null, array('class' => 'form-control')) }}
 								</div>
 								<div class="form-group">
-									<label class="control-label">Member #1 Email : </label>
+									<label class="control-label">Anggota #1 Email : </label>
 									{{ Form::email('member1_email', null, array('class' => 'form-control')) }}
 								</div>
 								<div class="form-group">
-									<label for="amout" class="control-label">Member #1 Phone Number : </label>
+									<label for="amout" class="control-label">Anggota #1 Phone Number : </label>
 									<div class="input-group">
 										<span class="input-group-addon">+62</span>
 										{{ Form::text('member1_phone', null, array('class' => 'form-control')) }}
 									</div>
 								</div>
 								<div class="form-group">
-									<label for="payment" class="control-label">Member #1 Identity Scan :</label>
+									<label for="payment" class="control-label">Anggota #1 Scan Identitas :</label>
 									<input type="file" id="identity" name="id_member1" class="form-control" />
 								</div>
 							</div>
 							<div class="col-md-3">
 								<div class="form-group">
-									<label class="control-label">Member #2 Name : </label>
+									<label class="control-label">Anggota #2 Name : </label>
 									{{ Form::text('member2_name', null, array('class' => 'form-control')) }}
 								</div>
 								<div class="form-group">
-									<label class="control-label">Member #2 Email : </label>
+									<label class="control-label">Anggota #2 Email : </label>
 									{{ Form::email('member2_email', null, array('class' => 'form-control')) }}
 								</div>
 								<div class="form-group">
-									<label for="amout" class="control-label">Member #2 Phone Number : </label>
+									<label for="amout" class="control-label">Anggota #2 Phone Number : </label>
 									<div class="input-group">
 										<span class="input-group-addon">+62</span>
 										{{ Form::text('member2_phone', null, array('class' => 'form-control')) }}
 									</div>
 								</div>
 								<div class="form-group">
-									<label for="payment" class="control-label">Member #2 Identity Scan :</label>
+									<label for="payment" class="control-label">Anggota #2 Scan Identitas :</label>
 									<input type="file" id="identity" name="id_member2" class="form-control" />
 								</div>
 							</div>
 							<div class="col-md-3">
 								<div class="form-group">
-									<label class="control-label">Member #3 Name : </label>
+									<label class="control-label">Anggota #3 Name : </label>
 									{{ Form::text('member3_name', null, array('class' => 'form-control')) }}
 								</div>
 								<div class="form-group">
-									<label class="control-label">Member #3 Email : </label>
+									<label class="control-label">Anggota #3 Email : </label>
 									{{ Form::email('member3_email', null, array('class' => 'form-control')) }}
 								</div>
 								<div class="form-group">
-									<label for="amout" class="control-label">Member #3 Phone Number : </label>
+									<label for="amout" class="control-label">Anggota #3 Phone Number : </label>
 									<div class="input-group">
 										<span class="input-group-addon">+62</span>
 										{{ Form::text('member3_phone', null, array('class' => 'form-control')) }}
 									</div>
 								</div>
 								<div class="form-group">
-									<label for="payment" class="control-label">Member #3 Identity Scan :</label>
+									<label for="payment" class="control-label">Anggota #3 Scan Identitas :</label>
 									<input type="file" id="identity" name="id_member3" class="form-control" />
 								</div>
 							</div>
@@ -456,16 +456,14 @@
 				@if ($user->team->verified == 0 && Auth::user()->role_id != 4)
 				<div class="alert alert-danger">
 					<p><strong>Data tim anda belum dikunci!</strong></p>
-					<p>BLengkapi terlebih dahulu identitas diri (Kartu tanda mahasiswa / Kartu pelajar) dan kunci untuk dapat melanjutkan ke tahap pembayaran. Klik di<a href="{{ url('dashboard/team') }}">sini</a> untuk melakukannya.</p>
+					<p>Lengkapi terlebih dahulu identitas diri (Kartu tanda mahasiswa / Kartu pelajar) dan kunci untuk dapat melanjutkan ke tahap pembayaran. Klik di<a href="{{ url('dashboard/team') }}">sini</a> untuk melakukannya.</p>
 				</div>
 				@else
 				<div class="alert alert-info">
 					<p>Silahkan membayar sebesar Rp {{ number_format($arr_jml_bayar[$user->role_id], 2) }} ke rekening dibawah ini. Jika sudah, lakukan konfirmasi pembayaran pada form yang telah disediakan.</p>
 					<br/>
 					<strong>Daftar Bank Vocomfest</strong>
-					<p>Bank BCA: 12345 (a/n. Lorem Ipsum)</p>
-					<p>Bank Mandiri: 12345 (a/n. Lorem Ipsum)</p>
-					<p>Bank BNI: 12345 (a/n. Lorem Ipsum)</p>
+					<p>Bank BRI: 0033-01-071149-50-9 (a/n. Naila Elma Nuarisya)</p>
 				</div>
 				<div class="col-md-8">
 					{!! Form::open(array('route' => 'payment.store', 'enctype' => 'multipart/form-data')) !!}

@@ -56,16 +56,14 @@
 				@if ($user->team->verified == 0 && Auth::user()->role_id != 4)
 				<div class="alert alert-danger">
 					<p><strong>Data tim anda belum dikunci!</strong></p>
-					<p>BLengkapi terlebih dahulu identitas diri (Kartu tanda mahasiswa / Kartu pelajar) dan kunci untuk dapat melanjutkan ke tahap pembayaran. Klik di<a href="{{ url('dashboard/team') }}">sini</a> untuk melakukannya.</p>
+					<p>Lengkapi terlebih dahulu identitas diri (Kartu tanda mahasiswa / Kartu pelajar) dan kunci untuk dapat melanjutkan ke tahap pembayaran. Klik di<a href="{{ url('dashboard/team') }}">sini</a> untuk melakukannya.</p>
 				</div>
 				@else
 				<div class="alert alert-info">
 					<p>Silahkan membayar sebesar Rp {{ number_format($arr_jml_bayar[$user->role_id], 2) }} ke rekening dibawah ini. Jika sudah, lakukan konfirmasi pembayaran pada form yang telah disediakan.</p>
 					<br/>
 					<strong>Daftar Bank Vocomfest</strong>
-					<p>Bank BCA: 12345 (a/n. Lorem Ipsum)</p>
-					<p>Bank Mandiri: 12345 (a/n. Lorem Ipsum)</p>
-					<p>Bank BNI: 12345 (a/n. Lorem Ipsum)</p>
+					<p>Bank BRI: 0033-01-071149-50-9 (a/n. Naila Elma Nuarisya)</p>
 				</div>
 				<div class="col-md-8">
 					{!! Form::open(array('route' => 'payment.store', 'enctype' => 'multipart/form-data')) !!}
@@ -137,7 +135,7 @@
 			<h3>{{ Auth::user()->name }}</h3>
 			<hr class="line-db">
 			@if(Auth::user()->role_id != 4)
-				<span>Leader</span>
+				<span>Ketua Tim</span>
 				<h4 class="nomag">{{ Auth::user()->team->leader_name }}</h4>
 			@endif
 		</div>
@@ -326,7 +324,7 @@
 									</figure>
 									<span class="col-md-9 col-sm-4 col-xs-6 span-right">
 										<div class="pd-l-15">
-											<p class="nomag mont-bold">Leader</p>
+											<p class="nomag mont-bold">Ketua Tim</p>
 											<p class="nomag"><span class="blue">{{ Auth::user()->team->leader_name }}</span> | {{ Auth::user()->email }}</p>
 											<p class="nomag">+62 {{ Auth::user()->team->leader_phone }}</p>
 										</div>
@@ -339,7 +337,7 @@
 									</figure>
 									<span class="col-md-9 col-sm-4 col-xs-6 span-right">
 										<div class="pd-l-15">
-											<p class="nomag mont-bold">Member 1</p>
+											<p class="nomag mont-bold">Anggota 1</p>
 											<p class="nomag"><span class="blue">{{ Auth::user()->team->member1_name }}</span> | {{ Auth::user()->team->member1_email }}</p>
 											<p class="nomag">+62 {{ Auth::user()->team->member1_phone }}</p>
 										</div>
@@ -353,7 +351,7 @@
 									</figure>
 									<span class="col-md-9 col-sm-4 col-xs-6 span-right">
 										<div class="pd-l-15">
-											<p class="nomag mont-bold">Member 2</p>
+											<p class="nomag mont-bold">Anggota 2</p>
 											<p class="nomag"><span class="blue">{{ Auth::user()->team->member2_name }}</span> | {{ Auth::user()->team->member2_email }}</p>
 											<p class="nomag">+62 {{ Auth::user()->team->member2_phone }}</p>
 										</div>
@@ -367,7 +365,7 @@
 									</figure>
 									<span class="col-md-9 col-sm-4 col-xs-6 span-right">
 										<div class="pd-l-15">
-											<p class="nomag mont-bold">Leader</p>
+											<p class="nomag mont-bold">Ketua Tim</p>
 											<p class="nomag"><span class="blue">{{ Auth::user()->team->leader_name }}</span> | {{ Auth::user()->email }}</p>
 											<p class="nomag">+62 {{ Auth::user()->team->leader_phone }}</p>
 										</div>
@@ -380,7 +378,7 @@
 									</figure>
 									<span class="col-md-9 col-sm-4 col-xs-6 span-right">
 										<div class="pd-l-15">
-											<p class="nomag mont-bold">Member 1</p>
+											<p class="nomag mont-bold">Anggota 1</p>
 											<p class="nomag"><span class="blue">{{ Auth::user()->team->member1_name }}</span> | {{ Auth::user()->team->member1_email }}</p>
 											<p class="nomag">+62 {{ Auth::user()->team->member1_phone }}</p>
 										</div>
@@ -408,7 +406,7 @@
 									</figure>
 									<span class="col-md-9 col-sm-4 col-xs-6 span-right">
 										<div class="pd-l-15">
-											<p class="nomag mont-bold">Member 3</p>
+											<p class="nomag mont-bold">Anggota 3</p>
 											<p class="nomag"><span class="blue">{{ Auth::user()->team->member3_name }}</span> | {{ Auth::user()->team->member3_email }}</p>
 											<p class="nomag">+62 {{ Auth::user()->team->member3_phone }}</p>
 										</div>

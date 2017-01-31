@@ -55,7 +55,7 @@
 					</div>
 				</div>
 				<p class="text-center ">Lupa password? <a href="{{ url('password/reset') }}">Klik disini</a>!</p>
-				<p class="text-center ">Belum punya akun? <a href="{{ url('register') }}">Register</a>! atau kembali ke <a href="{{ url('/') }}">home</a>?</p>
+				<p class="text-center ">Belum punya akun? <a href="{{ url('register') }}">Register</a>! atau kembali ke <a href="{{ url('/') }}">halaman utama</a>?</p>
 			</form>
 		</div>
 	</div>

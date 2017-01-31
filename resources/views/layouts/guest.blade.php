@@ -91,7 +91,7 @@
 					<div class="col-md-10">
 						<img src="{{ url('assets/img/logo.png') }}" alt="Vocomfest" title="Vocomfest" class="foot-logo mg-bt-20">
 						<p class="small">
-							Vocational Computer Festival (VOCOMFEST) merupakan salah satu acara terbesar yang diselenggarakan oleh Himpunan Maasiswa Komputer dan Sistem Informasi SV UGM. Mengangkat tema <span class="special">"Creating Smart Citizen for Social Welfare with Technology"</span>
+							Vocational Computer Festival (VOCOMFEST) merupakan salah satu acara terbesar yang diselenggarakan oleh Himpunan Mahasiswa Ilmu Komputer dan Sistem Informasi SV UGM. Mengangkat tema <span class="special">"Creating Smart Citizen for Social Welfare with Technology"</span>
 						</p>
 					</div>
 				</div>
@@ -110,36 +110,6 @@
 						</div>
 					</div>
 					@endforeach
-					<!-- <table class="recents" cellspacing="3">
-						<tr>
-							<td class="col-md-3">
-								<img src="./assets/img/sep-2.jpg" class="recent-img">
-							</td>
-							<td class="col-md-9">
-								<a href="blog.html" class="recent-link">Lorem Ipsum Dolorsit Amet</a>
-								<p class="small mont">1 Februari 2017</p>
-							</td>
-						</tr>
-						<tr>
-							<td class="col-md-3">
-								<img src="./assets/img/sep-2.jpg" class="recent-img">
-							</td>
-							<td class="col-md-9">
-								<a href="blog.html" class="recent-link">Lorem Ipsum Dolorsit Amet</a>
-								<p class="small mont">1 Februari 2017</p>
-							</td>
-						</tr>
-						<tr>
-							<td class="col-md-3">
-								<img src="./assets/img/sep-2.jpg" class="recent-img">
-							</td>
-							<td class="col-md-9">
-								<a href="blog.html" class="recent-link">Lorem Ipsum Dolorsit Amet</a>
-								<p class="small mont">1 Februari 2017</p>
-							</td>
-						</tr>
-					</table>
-					-->
 				</div>
 				<div class="col-md-4">
 					<h5 class="mont-bold">
