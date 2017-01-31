@@ -493,7 +493,7 @@
 										<p class="nomag mont-bold">File {{ $arr_type[$type] }}</p>
 										<p class="nomag">Status : 
 										@if(\App\Submission::where('user_id', Auth::user()->id)->where('type', $arr_submission_type[$progress])->count() >= 1)
-											Submitted (<a href="{{ \App\Submission::where('user_id', Auth::user()->id)->where('type', $arr_submission_type[$progress])->latest()->first()->path_url }}">Link</a>)
+											Submitted (<a target="_blank" href="{{ \App\Submission::where('user_id', Auth::user()->id)->where('type', $arr_submission_type[$progress])->latest()->first()->path_url }}">Link</a>)
 											</p>
 											<p><a href="#" data-toggle="modal" data-target="#uploadModal"><i class="fa fa-edit"></i>Revisi</a></p>
 										@else

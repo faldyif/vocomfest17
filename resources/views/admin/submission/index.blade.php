@@ -108,7 +108,7 @@
 			                            			<td>{!! \App\User::where('id', $key->user_id)->first()->getPhase() !!}</td>
 			                            			<td>{{ $key->path_url }}</td>
 			                            			<td>
-			                            				<a href="{{ $key->path_url }}" class="btn btn-primary btn-sm"><i class="fa fa-eye"></i></a>
+			                            				<a target="_blank" href="{{ $key->path_url }}" class="btn btn-primary btn-sm"><i class="fa fa-eye"></i></a>
 			                            				<a href="{{ url('adminvocomfest17/submission/delete') }}/{{ $key->id }}" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
 			                            			</td>
 			                            		</tr>
