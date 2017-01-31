@@ -39,7 +39,8 @@
 				<h4>Vocomfest Trailer</h4>
 			</div>
 			<div class="modal-body">
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/B_HO2JKl0Xs" frameborder="0" allowfullscreen></iframe>
+				<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/B_HO2JKl0Xs" frameborder="0" allowfullscreen></iframe> -->
+				<h1 class="special">Trailer is on the way!</h1>
 			</div>
 			<div class="modal-footer">
 				<button class="btn btn-primary" data-dismiss="modal">Close</button>
@@ -810,12 +811,11 @@
 					</h5>
 					<p>
 						<ul class="inlinks">
-							<li><a href="#">HOME</a></li>
-							<li><a href="#">FAQ</a></li>
-							<li><a href="#">LOREM</a></li>
-							<li><a href="#">IPSUM</a></li>
-							<li><a href="#">DOLORSIT</a></li>
-							<li><a href="#">AMET</a></li>
+							<li><a href="{{ url('/') }}">HOME</a></li>
+							<li><a href="{{ url('/wdc') }}">WDC</a></li>
+							<li><a href="{{ url('/madc') }}">MADC</a></li>
+							<li><a href="{{ url('/icpc') }}">ICPC</a></li>
+							<li><a href="{{ url('/semnas') }}">SEMNAS</a></li>
 						</ul>
 					</p>
 				</div>

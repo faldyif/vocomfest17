@@ -44,7 +44,7 @@
 				<div class="row">
 					<div class="col-md-8 col-md-offset-4">
 						<input type="checkbox" name="remember" id="remember">
-							<label for="remember"> Remember me </label>
+							<label for="remember"> Ingat saya </label>
 					</div>
 				</div>
 				<div class="row">
@@ -54,8 +54,8 @@
             </button>
 					</div>
 				</div>
-				<p class="text-center ">Forgot Password? <a href="{{ url('password/reset') }}">Click here</a>!</p>
-				<p class="text-center ">Don't have any account? <a href="{{ url('register') }}">Register</a>! or back to <a href="{{ url('/') }}">home</a>?</p>
+				<p class="text-center ">Lupa password? <a href="{{ url('password/reset') }}">Klik disini</a>!</p>
+				<p class="text-center ">Belum punya akun? <a href="{{ url('register') }}">Register</a>! atau kembali ke <a href="{{ url('/') }}">home</a>?</p>
 			</form>
 		</div>
 	</div>

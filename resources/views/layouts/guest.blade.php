@@ -147,12 +147,11 @@
 					</h5>
 					<p>
 						<ul class="inlinks">
-							<li><a href="#">HOME</a></li>
-							<li><a href="#">FAQ</a></li>
-							<li><a href="#">LOREM</a></li>
-							<li><a href="#">IPSUM</a></li>
-							<li><a href="#">DOLORSIT</a></li>
-							<li><a href="#">AMET</a></li>
+							<li><a href="{{ url('/') }}">HOME</a></li>
+							<li><a href="{{ url('/wdc') }}">WDC</a></li>
+							<li><a href="{{ url('/madc') }}">MADC</a></li>
+							<li><a href="{{ url('/icpc') }}">ICPC</a></li>
+							<li><a href="{{ url('/semnas') }}">SEMNAS</a></li>
 						</ul>
 					</p>
 				</div>
