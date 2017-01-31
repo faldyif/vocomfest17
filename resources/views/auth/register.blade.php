@@ -1,5 +1,5 @@
 @extends('layouts.main')
-@section('title', 'Login Vocomfest')
+@section('title', 'Vocomfest - Pendaftaran')
 
 @section('body')
 <div class="wrapLogin">
@@ -12,14 +12,14 @@
 </header>
 <!-- REGISTER -->
 	<div class="container col-md-12 col-xs-12">
-		<h1 class="mg-b-15 text-center blue mont-bold he-1">Register to Vocomfest</h1>
+		<h1 class="mg-b-15 text-center blue mont-bold he-1">Pendaftaran Vocomfest</h1>
 		<!-- FORM REGISTER -->
 		<div class="mg-b-10 col-md-12">
 			<!-- Nav tabs -->
 				  <ul class="nav nav-tabs" role="tablist" id="myTabs">
 				    <li role="presentation" class="active">
 				    	<a href="#competitions" aria-controls="home" role="tab" data-toggle="tab">
-				    		<span class="mont-bold big">Competitions</span>
+				    		<span class="mont-bold big">Perlombaan</span>
 				    	</a>
 				    </li>
 				    <li role="presentation">
@@ -49,7 +49,7 @@
 								<div class="row">
 									<div class="col-md-6 col-sm-6 mg-b-20">
 										<div class="col-md-5">
-											Team Name
+											Nama Tim
 										</div>
 										<div class="col-md-7">
 											: <input type="text" placeholder="team name" name="name">
@@ -57,7 +57,7 @@
 									</div>
 									<div class="col-md-6 col-sm-6 mg-b-20">
 										<div class="col-md-5">
-											Leader email
+											Email ketua
 										</div>
 										<div class="col-md-7">
 											: <input type="email" placeholder="email" name="email">
@@ -76,7 +76,7 @@
 									</div>
 									<div class="col-md-6 col-sm-6 mg-b-20">
 										<div class="col-md-5">
-											Confirm Password
+											Konfirmasi Password
 										</div>
 										<div class="col-md-7">
 											: <input type="password" placeholder="confirm password" name="password_confirmation">
@@ -87,7 +87,7 @@
 								<div class="row">
 									<div class="col-md-6 col-sm-6 mg-b-20">
 										<div class="col-md-5">
-											Instance Name
+											Nama Instansi
 										</div>
 										<div class="col-md-7">
 											: <input type="text" placeholder="Instance Name" name="instance_name">
@@ -95,7 +95,7 @@
 									</div>
 									<div class="col-md-6 col-sm-6 mg-b-20">
 										<div class="col-md-5">
-											Instance Address
+											Alamat Instansi
 										</div>
 										<div class="col-md-7">
 											: <input type="text" placeholder="Instance Address" name="instance_address">
@@ -117,7 +117,7 @@
 								<div class="row">
 									<div class="col-md-6 col-sm-6 mg-b-20">
 										<div class="col-md-5">
-											Leader Name
+											Nama Ketua
 										</div>
 										<div class="col-md-7">
 											: <input type="text" placeholder="Leader Name" name="leader_name">
@@ -125,7 +125,7 @@
 									</div>
 									<div class="col-md-6 col-sm-6 mg-b-20">
 										<div class="col-md-5">
-											Phone Number
+											Nomor Handphone
 										</div>
 										<div class="inNum col-md-7">
 											: +62 <input type="number" placeholder="phone number" name="leader_phone">
@@ -135,11 +135,11 @@
 
 								<div class="row">
 									<div class="col-md-6 col-sm-6 mg-b-20">
-										<h4 class="mont">Member Team Data #1</h4>
+										<h4 class="mont">Data Anggota #1</h4>
 										<div class="col-md-12 mg-b-20">
 											<div class="row">
 												<div class="col-md-5">
-													Member Name
+													Nama Anggota
 												</div>
 												<div class="col-md-7">
 													: <input type="text" placeholder="Member Name" name="member1_name">
@@ -149,7 +149,7 @@
 										<div class="col-md-12 mg-b-20">
 											<div class="row">
 												<div class="col-md-5">
-													Member Email
+													Email Anggota
 												</div>
 												<div class="col-md-7">
 													: <input type="email" placeholder="member email" name="member1_email">
@@ -159,7 +159,7 @@
 										<div class="col-md-12 mg-b-20">
 											<div class="row">
 												<div class="col-md-5">
-													Phone Number
+													Nomor Handphone
 												</div>
 												<div class="inNum col-md-7">
 													: +62 <input type="number" placeholder="phone number" name="member1_phone">
@@ -168,11 +168,11 @@
 										</div>
 									</div>
 									<div class="col-md-6 col-sm-6 mg-b-20">
-										<h4 class="mont">Member Team Data #2</h4>
+										<h4 class="mont">Data Anggota #2</h4>
 										<div class="col-md-12 mg-b-20">
 											<div class="row">
 												<div class="col-md-5">
-													Member Name
+													Nama Anggota
 												</div>
 												<div class="col-md-7">
 													: <input type="text" placeholder="Member Name" name="member2_name">
@@ -182,7 +182,7 @@
 										<div class="col-md-12 mg-b-20">
 											<div class="row">
 												<div class="col-md-5">
-													Member Email
+													Email Anggota
 												</div>
 												<div class="col-md-7">
 													: <input type="email" placeholder="member email" name="member2_email">
@@ -192,7 +192,7 @@
 										<div class="col-md-12 mg-b-20">
 											<div class="row">
 												<div class="col-md-5">
-													Phone Number
+													Nomor Handphone
 												</div>
 												<div class="inNum col-md-7">
 													: +62 <input type="number" placeholder="phone number" name="member2_phone">
@@ -201,11 +201,11 @@
 										</div>
 									</div>
 									<div class="col-md-6 col-sm-6 mg-b-20" id="newmember">
-										<h4 class="mont">Member Team Data #3</h4>
+										<h4 class="mont">Data Anggota #3</h4>
 										<div class="col-md-12 mg-b-20">
 											<div class="row">
 												<div class="col-md-5">
-													Member Name
+													Nama Anggota
 												</div>
 												<div class="col-md-7">
 													: <input type="text" placeholder="Member Name" name="member3_name">
@@ -215,7 +215,7 @@
 										<div class="col-md-12 mg-b-20">
 											<div class="row">
 												<div class="col-md-5">
-													Member Email
+													Email Anggota
 												</div>
 												<div class="col-md-7">
 													: <input type="email" placeholder="member email" name="member3_email">
@@ -255,77 +255,78 @@
 					<div role="tabpanel" class="tab-pane" id="semnas">
 					<!-- Main Form -->
 					<div class="col-md-12 wrapReg">
-						<form role="form" method="POST" action="{{ url('/register') }}">
-            {{ csrf_field() }}
-            <input type="hidden" name="type" value="seminar">
-								<div class="row">
-									<div class="col-md-6 col-sm-6 mg-b-20">
-										<div class="col-md-5">
-											Full Name
-										</div>
-										<div class="col-md-7">
-											: <input type="text" placeholder="Full Name" name="name">
-										</div>
+						<h1 class="special">We are coming really soon</h1>
+						<!-- <form role="form" method="POST" action="{{ url('/register') }}">
+				            {{ csrf_field() }}
+				            <input type="hidden" name="type" value="seminar">
+							<div class="row">
+								<div class="col-md-6 col-sm-6 mg-b-20">
+									<div class="col-md-5">
+										Nama Lengkap
 									</div>
-									<div class="col-md-6 col-sm-6 mg-b-20">
-										<div class="col-md-5">
-											Email Address
-										</div>
-										<div class="col-md-7">
-											: <input type="email" placeholder="email" name="email">
-										</div>
+									<div class="col-md-7">
+										: <input type="text" placeholder="Full Name" name="name">
 									</div>
 								</div>
-
-								<div class="row">
-									<div class="col-md-6 col-sm-6 mg-b-20">
-										<div class="col-md-5">
-											Phone Number
-										</div>
-										<div class="inNum col-md-7">
-											: +62 <input type="text" placeholder="phone number" name="phone">
-										</div>
+								<div class="col-md-6 col-sm-6 mg-b-20">
+									<div class="col-md-5">
+										Alamat Email
 									</div>
-									<div class="col-md-6 col-sm-6 mg-b-20">
-										<div class="col-md-5">
-											Category
-										</div>
-										<div class="col-md-7">
-											: 	<select name="category" required>
-													<option value="1">Mahasiswa/Pelajar</option>
-													<option value="2">Umum</option>
-												</select>
-										</div>
+									<div class="col-md-7">
+										: <input type="email" placeholder="email" name="email">
 									</div>
 								</div>
+							</div>
 
-
-								<div class="row">
-									<div class="col-md-6 col-sm-6 mg-b-20">
-										<div class="col-md-5">
-											Password
-										</div>
-										<div class="col-md-7">
-											: <input type="password" placeholder="password" name="password">
-										</div>
+							<div class="row">
+								<div class="col-md-6 col-sm-6 mg-b-20">
+									<div class="col-md-5">
+										Nomor Handphone
 									</div>
-									<div class="col-md-6 col-sm-6 mg-b-20">
-										<div class="col-md-5">
-											Confirm Password
-										</div>
-										<div class="col-md-7">
-											: <input type="password" placeholder="confirm password" name="password_confirmation">
-										</div>
+									<div class="inNum col-md-7">
+										: +62 <input type="text" placeholder="phone number" name="phone">
 									</div>
 								</div>
-
-								<div class="row">
-									<div class="col-md-3">
-										<input class="no-m btn btn-more mg-bt-15" type="submit" value="REGISTER" name="">
+								<div class="col-md-6 col-sm-6 mg-b-20">
+									<div class="col-md-5">
+										Kategori
+									</div>
+									<div class="col-md-7">
+										: 	<select name="category" required>
+												<option value="1">Mahasiswa/Pelajar</option>
+												<option value="2">Umum</option>
+											</select>
 									</div>
 								</div>
+							</div>
 
-						</form>
+
+							<div class="row">
+								<div class="col-md-6 col-sm-6 mg-b-20">
+									<div class="col-md-5">
+										Password
+									</div>
+									<div class="col-md-7">
+										: <input type="password" placeholder="password" name="password">
+									</div>
+								</div>
+								<div class="col-md-6 col-sm-6 mg-b-20">
+									<div class="col-md-5">
+										Konfirmasi Password
+									</div>
+									<div class="col-md-7">
+										: <input type="password" placeholder="confirm password" name="password_confirmation">
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-md-3">
+									<input class="no-m btn btn-more mg-bt-15" type="submit" value="REGISTER" name="">
+								</div>
+							</div>
+
+						</form> -->
 					</div>
 					<!-- End of Main Form-->
 					</div>

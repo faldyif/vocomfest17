@@ -489,7 +489,7 @@
 						- Arief Ramadhan Demiawansyah, <strong>Juri WDC 2016</strong> -
 					</p>
 					<p class="text-center pd-t-20">
-						<img src="{{ url('assets/img/onno.jpg') }}" alt="Onno W Purbo" class="testi-img">
+						<img src="{{ url('assets/img/arief.jpg') }}" alt="Arief Ramadhan Demiawansyah" class="testi-img">
 					</p>
 				</div>
 
@@ -501,7 +501,7 @@
 						- Sunu Pinastika Fajar, <strong>Qiscus & Juri MADC 2016</strong> -
 					</p>
 					<p class="text-center pd-t-20">
-						<img src="{{ url('assets/img/onno.jpg') }}" alt="Onno W Purbo" class="testi-img">
+						<img src="{{ url('assets/img/sunu.jpg') }}" alt="Sunu Pinastika Fajar" class="testi-img">
 					</p>
 				</div>
 
@@ -513,7 +513,7 @@
 						- Ruby Alamsyah, <strong>Pakar Digital Forensik & Pembicara Seminar Nasional Vocomfest 2016</strong> -
 					</p>
 					<p class="text-center pd-t-20">
-						<img src="{{ url('assets/img/onno.jpg') }}" alt="Onno W Purbo" class="testi-img">
+						<img src="{{ url('assets/img/ruby.jpg') }}" alt="Ruby Alamsyah" class="testi-img">
 					</p>
 				</div>
 
@@ -525,7 +525,7 @@
 						- Sigit Priyanta, <strong>Kepala Program Studi Ilmu Komputer dan Sistem Informasi</strong> -
 					</p>
 					<p class="text-center pd-t-20">
-						<img src="{{ url('assets/img/onno.jpg') }}" alt="Onno W Purbo" class="testi-img">
+						<img src="{{ url('assets/img/sigit.jpg') }}" alt="Sigit Priyanta" class="testi-img">
 					</p>
 				</div>
 			</div>
