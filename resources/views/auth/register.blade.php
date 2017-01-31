@@ -335,7 +335,7 @@
 		<!-- END OF FORM REGISTER -->
 
 		<!-- Footer -->
-		<p class="text-center ">Want to back <a href="{{ url('/') }}">home</a>? Or you already have accout? <a href="{{ url('/login') }}">Login here</a>.</p>
+		<p class="text-center ">Want to back <a href="{{ url('/') }}">home</a>? Or you already have account? <a href="{{ url('/login') }}">Login here</a>.</p>
 	</div>
 </div>
 @endsection
