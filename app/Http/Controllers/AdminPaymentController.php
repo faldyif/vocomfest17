@@ -20,7 +20,7 @@ class AdminPaymentController extends Controller
     public function index()
     {
         if(Auth::user()->role_id != 1) {
-            return redirect('dashboard'); 
+            return redirect('dashboard');
         }
         $payment = PaymentConfirmation::get();
         return View('admin.payment.index')->with('payment', $payment);
@@ -90,7 +90,7 @@ class AdminPaymentController extends Controller
     public function destroy($id)
     {
         if(Auth::user()->role_id != 1) {
-            return redirect('dashboard'); 
+            return redirect('dashboard');
         }
         $payment = PaymentConfirmation::find($id);
         $payment->delete();
@@ -102,13 +102,15 @@ class AdminPaymentController extends Controller
     public function confirm($id)
     {
         if(Auth::user()->role_id != 1) {
-            return redirect('dashboard'); 
+            return redirect('dashboard');
         }
         $user = User::find(PaymentConfirmation::find($id)->user_id);
         if($user->role_id == 4) {
             $user->team->hash = crypt($user->name . $user->created_at, 'vocomfest2017');
         }
-        $user->team->verified = 2;
+        if($user->role_id != 4) {
+            $user->team->verified = 2;
+        }
         $user->team->progress = 2;
         $user->team->save();
 
