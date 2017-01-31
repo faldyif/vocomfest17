@@ -1,5 +1,5 @@
 @extends('layouts.main')
-@section('title', 'Login Vocomfest')
+@section('title', 'Vocomfest - Login')
 
 @section('body')
 <div class="wrapLogin">
@@ -26,28 +26,26 @@
 			<form class="sign-form" role="form" method="POST" action="{{ url('/login') }}">
         {{ csrf_field() }}
         <div class="row mg-b-20">
-					<div class="col-md-5">
+					<div class="col-md-4">
 						Email
 					</div>
-					<div class="col-md-7">
+					<div class="col-md-8">
 						: <input type="text" placeholder="email" name="email">
 					</div>
 				</div>
 				<div class="row mg-b-20">
-					<div class="col-md-5">
+					<div class="col-md-4">
 						Password
 					</div>
-					<div class="col-md-7">
+					<div class="col-md-8">
 						: <input type="password" placeholder="password" name="password">
 					</div>
 				</div>
 				<div class="row">
-					<label>
-						<div class="col-md-6 col-md-offset-6">
-							<input type="checkbox" name="remember">
-						Remember me
-						</div>
-					</label>
+					<div class="col-md-8 col-md-offset-4">
+						<input type="checkbox" name="remember" id="remember">
+							<label for="remember"> Remember me </label>
+					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-6 force-center">
