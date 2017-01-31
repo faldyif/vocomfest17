@@ -105,4 +105,5 @@
 	</div>
 <!-- /NEWS CONTENT -->
 </section>
+@include('mceImageUpload::upload_form')
 @endsection
