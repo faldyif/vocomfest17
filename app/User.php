@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Carbon\Carbon;
 
 class User extends Authenticatable
 {
@@ -60,10 +61,16 @@ class User extends Authenticatable
 
     public function getPhase()
     {
+        $now = Carbon::now();
         if($this->role_id == 2) {
             if($this->team->progress == 1) {
                 return "<span class='label label-default'>Registered</span>";
             } else if($this->team->progress == 2) {
+                // Tanggal deadline pengumuman kelolosan 24 maret 2017
+                $due = Carbon::createFromDate(2017, 3, 25, 'Asia/Jakarta');
+                if($now->diffInDays($due, false) < 0) {
+                    return "<span class='label label-danger'>Tidak Lolos Seleksi Website</span>";
+                }
                 return "<span class='label label-confirm'>Seleksi Website</span>";
             } else if($this->team->progress == 3) {
                 return "<span class='label label-success'>Finalis</span>";
@@ -72,8 +79,18 @@ class User extends Authenticatable
             if($this->team->progress == 1) {
                 return "<span class='label label-default'>Registered</span>";
             } else if($this->team->progress == 2) {
+                // Tanggal deadline pengumuman kelolosan 20 maret 2017
+                $due = Carbon::createFromDate(2017, 3, 21, 'Asia/Jakarta');
+                if($now->diffInDays($due, false) < 0) {
+                    return "<span class='label label-danger'>Tidak Lolos Seleksi Proposal</span>";
+                }
                 return "<span class='label label-confirm'>Seleksi Proposal</span>";
             } else if ($this->team->progress == 3) {
+                // Tanggal deadline pengumuman kelolosan 7 april 2017
+                $due = Carbon::createFromDate(2017, 4, 8, 'Asia/Jakarta');
+                if($now->diffInDays($due, false) < 0) {
+                    return "<span class='label label-danger'>Tidak Lolos Seleksi Aplikasi</span>";
+                }
                 return "<span class='label label-info'>Seleksi Aplikasi</span>";
             } else if($this->team->progress == 4) {
                 return "<span class='label label-success'>Finalis</span>";
