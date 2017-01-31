@@ -20,7 +20,7 @@
 <section id="aside" class="col-md-2 col-sm-2 nopad">
 	<div id="logo" class="pd-20">
 		<div class="row force-center">
-			<a href="../index.html">
+			<a href="{{ url('/adminvocomfest17') }}">
 				<img src="{{ asset('assets/img/logoDb.png') }}" alt="Vocomfest">
 			</a>
 		</div>
