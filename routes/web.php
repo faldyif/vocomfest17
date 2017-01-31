@@ -120,6 +120,3 @@ Route::resource('news', 'NewsController', ['only' => [
 Route::resource('gallery', 'GalleryController', ['only' => [
 	'index'
 ]]);
-Route::get('/tinymce_example', function () {
-    return view('mceImageUpload::example');
-});

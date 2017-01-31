@@ -53,6 +53,12 @@
 				<h3 class="modal-title">Payment Upload</h3>
 			</div>
 			<div class="modal-body">
+				@if ($user->team->verified == 0 && Auth::user()->role_id != 4)
+				<div class="alert alert-danger">
+					<p><strong>Data tim anda belum dikunci!</strong></p>
+					<p>BLengkapi terlebih dahulu identitas diri (Kartu tanda mahasiswa / Kartu pelajar) dan kunci untuk dapat melanjutkan ke tahap pembayaran. Klik di<a href="{{ url('dashboard/team') }}">sini</a> untuk melakukannya.</p>
+				</div>
+				@else
 				<div class="alert alert-info">
 					<p>Silahkan membayar sebesar Rp {{ number_format($arr_jml_bayar[$user->role_id], 2) }} ke rekening dibawah ini. Jika sudah, lakukan konfirmasi pembayaran pada form yang telah disediakan.</p>
 					<br/>
@@ -80,6 +86,7 @@
 						</div>
 					{!! Form::close() !!}
 				</div>
+				@endif
 			</div>
 		</div>
 	</div>
