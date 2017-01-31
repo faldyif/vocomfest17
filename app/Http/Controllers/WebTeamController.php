@@ -97,14 +97,14 @@ class WebTeamController extends Controller
         if($request->hasFile('id_member1') && $request->file('id_member1')->isValid()) {
            $destinationPath = 'public/identity_scans';
            $extension = $request->id_member1->extension();
-           $fileName = date('YmdHms').'_'.Auth::user()->id .'_leader.'.$extension;
+           $fileName = date('YmdHms').'_'.Auth::user()->id .'_member1.'.$extension;
            $request->id_member1->storeAs($destinationPath, $fileName);
            $team->member1_identity = $fileName;
         }
         if($request->hasFile('id_member2') && $request->file('id_member2')->isValid()) {
            $destinationPath = 'public/identity_scans';
            $extension = $request->id_member2->extension();
-           $fileName = date('YmdHms').'_'.Auth::user()->id .'_leader.'.$extension;
+           $fileName = date('YmdHms').'_'.Auth::user()->id .'_member2.'.$extension;
            $request->id_member2->storeAs($destinationPath, $fileName);
            $team->member2_identity = $fileName;
         }
