@@ -87,6 +87,7 @@
 										All payments
 									</div>
 									<div class="panel-body">
+										<a class="btn btn-info" href="{{ url('adminvocomfest17/download/payment') }}">Download Payment List</a>
 			                            <table class="table table-bordered table-striped table-hover">
 			                            	<thead>
 			                            		<tr>
