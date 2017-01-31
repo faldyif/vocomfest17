@@ -595,7 +595,7 @@
 			</div>
 			<div class="col-md-12 pd-t-20">
 				<p class="text-center">
-					<a href="{{ url('gallery-content') }}" class="btn btn-more">LOAD MORE &nbsp; <i class="fa fa-arrow-right"></i></a>
+					<a href="{{ url('gallery') }}" class="btn btn-more">LOAD MORE &nbsp; <i class="fa fa-arrow-right"></i></a>
 				</p>
 			</div>
 		</div>
