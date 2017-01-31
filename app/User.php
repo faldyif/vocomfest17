@@ -61,14 +61,14 @@ class User extends Authenticatable
 
     public function getPhase()
     {
-        $now = Carbon::now();
+        $now = Carbon::now('Asia/Jakarta');
         if($this->role_id == 2) {
             if($this->team->progress == 1) {
                 return "<span class='label label-default'>Registered</span>";
             } else if($this->team->progress == 2) {
                 // Tanggal deadline pengumuman kelolosan 24 maret 2017
-                $due = Carbon::createFromDate(2017, 3, 25, 'Asia/Jakarta');
-                if($now->diffInDays($due, false) < 0) {
+                $due = Carbon::createFromDate(2017, 3, 24, 'Asia/Jakarta');
+                if($now->diffInDays($due, false) <= 0) {
                     return "<span class='label label-danger'>Tidak Lolos Seleksi Website</span>";
                 }
                 return "<span class='label label-confirm'>Seleksi Website</span>";
@@ -80,15 +80,15 @@ class User extends Authenticatable
                 return "<span class='label label-default'>Registered</span>";
             } else if($this->team->progress == 2) {
                 // Tanggal deadline pengumuman kelolosan 20 maret 2017
-                $due = Carbon::createFromDate(2017, 3, 21, 'Asia/Jakarta');
-                if($now->diffInDays($due, false) < 0) {
+                $due = Carbon::createFromDate(2017, 3, 20, 'Asia/Jakarta');
+                if($now->diffInDays($due, false) <= 0) {
                     return "<span class='label label-danger'>Tidak Lolos Seleksi Proposal</span>";
                 }
                 return "<span class='label label-confirm'>Seleksi Proposal</span>";
             } else if ($this->team->progress == 3) {
                 // Tanggal deadline pengumuman kelolosan 7 april 2017
-                $due = Carbon::createFromDate(2017, 4, 8, 'Asia/Jakarta');
-                if($now->diffInDays($due, false) < 0) {
+                $due = Carbon::createFromDate(2017, 4, 7, 'Asia/Jakarta');
+                if($now->diffInDays($due, false) <= 0) {
                     return "<span class='label label-danger'>Tidak Lolos Seleksi Aplikasi</span>";
                 }
                 return "<span class='label label-info'>Seleksi Aplikasi</span>";
