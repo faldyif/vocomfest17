@@ -253,7 +253,7 @@
 					<p class="small">WDC merupakan kompetisi mendesain website yang merupakan salah satu rangkaian acara terbesar KOMSI SV UGM yaitu VOCOMFEST.</p>
 				</blockquote>
 				<blockquote>
-					<p class="special">Ada tahapannya ga?</p>
+					<p class="special">Ada tahapannya tidak?</p>
 					<p class="small">Ada dua tahap,yaitu pertama tahap seleksi website tahap awal, dan yang kedua seleksi final dengan mempresentasikan website yang telah dibuat.</p>
 				</blockquote>
 				<blockquote>
@@ -269,16 +269,12 @@
 					<p class="small">Boleh, tapi tidak keseluruhan, mungkin lebih mudahnya dapat dikatakan menyempurnakan website yang lolos tersebut apabila memang masih banyak kekurangannya. </p>
 				</blockquote>
 				<blockquote>
-					<p class="special">Ada biaya pendaftarannya ga?</p>
+					<p class="special">Ada biaya pendaftarannya tidak?</p>
 					<p class="small">Biaya pendaftaran cuma Rp.75.000/Tim hehe</p>
 				</blockquote>
 				<blockquote>
 					<p class="special">Babak finalnya kapan?</p>
 					<p class="small">9 April 2017</p>
-				</blockquote>
-				<blockquote>
-					<p class="special">WDC keren ya?</p>
-					<p>Iya dong, mantap jiwa...</p>
 				</blockquote>
 			</div>	
 			<!-- /Six -->
