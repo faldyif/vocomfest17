@@ -219,7 +219,7 @@
 						<section class="col-md-4 col-sm-4 col-xs-6 pd-t-15 pd-lr-15">
 							<div class="sec-content-db">
 								<figure class="img-profile">
-									@if($team->team->member2_identity == NULL)
+									@if($team->team->member3_identity == NULL)
 										<img src="{{ url('assets/img/leader.jpg') }}">
 									@else
 										<a href="{{ url('storage/identity_scans') }}/{{ $team->team->member3_identity }}" data-rel="lightcase">

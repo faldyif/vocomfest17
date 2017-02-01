@@ -170,7 +170,13 @@
 		 	<section class="col-md-3 col-sm-3 col-xs-6 pd-t-15 pd-lr-15">
 				<div class="sec-content-db">
 					<figure class="img-profile">
-						<img src="{{ url('assets/img/leader.jpg') }}">
+						@if($user->team->leader_identity == NULL)
+							<img src="{{ url('assets/img/leader.jpg') }}">
+						@else
+							<a href="{{ url('storage/identity_scans') }}/{{ $user->team->leader_identity }}" data-rel="lightcase">
+							<img src="{{ url('storage/identity_scans') }}/{{ $user->team->leader_identity }}">
+							</a>
+						@endif
 					</figure>
 					<span class="text-center">
 						<p class="blue mg-t-15">Ketua Tim</p>
@@ -187,7 +193,13 @@
 			<section class="col-md-3 col-sm-3 col-xs-6 pd-t-15 pd-lr-15">
 				<div class="sec-content-db">
 					<figure class="img-profile">
-						<img src="{{ url('assets/img/member.jpg') }}">
+						@if($user->team->member1_identity == NULL)
+							<img src="{{ url('assets/img/member.jpg') }}">
+						@else
+							<a href="{{ url('storage/identity_scans') }}/{{ $user->team->member1_identity }}" data-rel="lightcase">
+							<img src="{{ url('storage/identity_scans') }}/{{ $user->team->member1_identity }}">
+							</a>
+						@endif
 					</figure>
 					<span class="text-center">
 						<p class="blue mg-t-15">Anggota</p>
@@ -205,7 +217,13 @@
 			<section class="col-md-3 col-sm-3 col-xs-6 pd-t-15 pd-lr-15">
 				<div class="sec-content-db">
 					<figure class="img-profile">
-						<img src="{{ url('assets/img/member.jpg') }}">
+						@if($user->team->member2_identity == NULL)
+							<img src="{{ url('assets/img/member.jpg') }}">
+						@else
+							<a href="{{ url('storage/identity_scans') }}/{{ $user->team->member2_identity }}" data-rel="lightcase">
+							<img src="{{ url('storage/identity_scans') }}/{{ $user->team->member2_identity }}">
+							</a>
+						@endif
 					</figure>
 					<span class="text-center">
 						<p class="blue mg-t-15">Anggota</p>
@@ -223,7 +241,13 @@
 			<section class="col-md-3 col-sm-3 col-xs-6 pd-t-15 pd-lr-15">
 				<div class="sec-content-db">
 					<figure class="img-profile">
-						<img src="{{ url('assets/img/member.jpg') }}">
+						@if($user->team->member3_identity == NULL)
+							<img src="{{ url('assets/img/member.jpg') }}">
+						@else
+							<a href="{{ url('storage/identity_scans') }}/{{ $user->team->member3_identity }}" data-rel="lightcase">
+							<img src="{{ url('storage/identity_scans') }}/{{ $user->team->member3_identity }}">
+							</a>
+						@endif
 					</figure>
 					<span class="text-center">
 						<p class="blue mg-t-15">Anggota</p>
