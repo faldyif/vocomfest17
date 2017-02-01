@@ -224,11 +224,8 @@
 				</p>
 				<p>Folder yang akan di kirimkan harus di zip terlebih dahulu. Yang <span class="special">harus</span> ada dalam folder zip tersebut adalah:</p>
 					<ul>
-<<<<<<< HEAD
 						<li><i>Screenshoot</i> website</li>
-=======
 						<li>Screenshot website</li>
->>>>>>> 4715a90a422aad1e9f7884f81b3ef2a328012383
 						<li>File website disimpan dalam satu folder dengan nama folder <strong>WDC_nama tim_nama website</strong>, kemudian dikompres dengan format zip.</li>
 					</ul>
 				<p class="small">Catatan : Untuk link file yang telah diupload di Google Drive diubah menjadi shareable link sehingga dapat diakses oleh publik.</p>
