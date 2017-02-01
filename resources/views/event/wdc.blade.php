@@ -104,17 +104,16 @@
 						<li>Tim mendaftar secara online di website <a href="./register.html">www.vocomfest.com/register</a> atau mendaftar pada stand di lobby KPTU Sekolah Vokasi Universitas Gadjah Mada Sekip Unit I Yogyakarta.</li>
 						<li>Peserta harus melunasi biaya pendaftaran sebesar Rp 75.000,00.</li>
 						<li>Ketentuan dan persyaratan yang belum tercantum akan ditambahkan kemudian hari bila diperlukan.</li>
-						<li>Peraturan yang belum tercantum akan ditambahkan kemudian hari bila diperlukan.</li>
 					</ol>
 				<h4>Ketentuan Web</h4>
 					<p>Bentuk web yang dibuat merupakan sebuah web statis dengan penjelasannya sebagai berikut:</p>
 					<p>
-						Web statis adalah website yang mana pengguna tidak bisa mengubah konten dari web tersebut secara langsung menggunakan browser. Interaksi yang terjadi antara pengguna dan server hanyalah seputar pemrosesan link saja. Halaman-halaman web tersebut tidak memiliki database, data dan informasi dalam web statis tidak berubah-ubah kecuali diubah syntaxnya.
+						Web statis adalah website yang mana pengguna tidak bisa mengubah konten dari web tersebut secara langsung menggunakan browser. Interaksi yang terjadi antara pengguna dan <i>server</i> hanyalah seputar pemrosesan link saja. Halaman-halaman web tersebut tidak memiliki <i>database</i>, data dan informasi dalam web statis tidak berubah-ubah kecuali diubah <i>syntax</i> nya.
 					</p>
 					<p>Dengan ketentuan penilaian seperti yang tercantum dibawah ini : </p>
 					<ol>
 						<li>Teknik pembuatan web bebas.</li>
-						<li>Dilarang menggunakan framework css (bootstrap, foundation, less framework, amazium, skeleton, dan lain-lain) maupun template dari orang lain.</li>
+						<li>Dilarang menggunakan <i>framework css</i> (<i>bootstrap, foundation, less framework, amazium, skeleton</i>, dan lain-lain) maupun <i>template</i> dari orang lain.</li>
 						<li>Website yang dibuat oleh peserta harus interaktif dan informatif.</li>
 						<li>Design sesuai dengan tema.</li>
 						<li>Website yang diikut sertakan dalam lomba belum pernah diikut sertakan pada kompetisi manapun.</li>
@@ -142,7 +141,7 @@
 							</ul>
 						</li>
 						<li>
-							Fitur Website
+							Fitur-fitur Website
 							<ul>
 								<li>Dapat menampilkan halaman untuk menambahkan cerita pada laman edukatif</li>
 								<li>Dapat menampilkan halaman untuk menambahkan foto pada gallery inspiratif</li>
@@ -224,7 +223,7 @@
 				</p>
 				<p>Yang harus disertakan dalam pengumpulan hasil karya:</p>
 					<ul>
-						<li>Screenshoot website</li>
+						<li><i>Screenshoot</i> website</li>
 						<li>File website disimpan dalam satu folder dengan nama folder <strong>WDC_nama tim_nama website</strong>, kemudian dikompres dengan format zip.</li>
 					</ul>
 			</div>	
@@ -250,7 +249,7 @@
 				<hr class="bl-line-sep">
 				<blockquote>
 					<p class="special">WDC itu apa?</p>
-					<p class="small">WDC merupakan kompetisi mendesain website yang merupakan salah satu rangkaian acara terbesar KOMSI SV UGM yaitu VOCOMFEST.</p>
+					<p class="small">WDC merupakan salah satu dari rangkaian acara VOCOMFEST, yaitu berupa kompetisi mendesain website yang kali ini mengangkat tema “Innovative Website to Educate Moral Citizen” yang ditujukan untuk pelajar SMA/SMK/MA sederajat baik yang sudah bisa maupun masih belajar dalam mengembangkan website</p>
 				</blockquote>
 				<blockquote>
 					<p class="special">Ada tahapannya tidak?</p>
@@ -270,11 +269,11 @@
 				</blockquote>
 				<blockquote>
 					<p class="special">Ada biaya pendaftarannya tidak?</p>
-					<p class="small">Biaya pendaftaran cuma Rp.75.000/Tim hehe</p>
+					<p class="small">Biaya pendaftaran cuma Rp.75.000/Tim aja kok</p>
 				</blockquote>
 				<blockquote>
 					<p class="special">Babak finalnya kapan?</p>
-					<p class="small">9 April 2017</p>
+					<p class="small">Tanggal 9 April 2017</p>
 				</blockquote>
 			</div>	
 			<!-- /Six -->
