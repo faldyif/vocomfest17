@@ -17,7 +17,7 @@ class VerifyTeamController extends Controller
     {
     	$team = Auth::user()->team;
         if($team->leader_identity == NULL) {
-            Session::flash('message', 'Anda harus mengupload scan identitas terlebih dahulu.');
+            Session::flash('error', 'Anda harus mengupload scan identitas terlebih dahulu.');
             return redirect('dashboard/team');
         }
     	$team->verified = 1;
