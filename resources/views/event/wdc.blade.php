@@ -213,14 +213,14 @@
 				<p>
 					Hasil karya diupload ke Google Drive dimasukan ke dalam satu folder dengan nama folder:
 					<br><span class="special">WDC_nama tim</span>
-					<br>Contoh : WDC_TimA.
-					<br>
+					<br>Contoh : WDC_TimA. Kemudian link drive dikirim ke website <a href="www.vocomfest.com/dashboard">www.vocomfest.com/dashboard</a>
 				</p>
-				<p>Yang harus disertakan dalam pengumpulan hasil karya:</p>
+				<p>Folder yang akan di kirimkan harus di zip terlebih dahulu. Yang <span class="special">harus</span> ada dalam folder zip tersebut adalah:</p>
 					<ul>
-						<li>Screenshoot website</li>
+						<li>Screenshot website</li>
 						<li>File website disimpan dalam satu folder dengan nama folder <strong>WDC_nama tim_nama website</strong>, kemudian dikompres dengan format zip.</li>
 					</ul>
+				<p class="small">Catatan : Untuk link file yang telah diupload di Google Drive diubah menjadi shareable link sehingga dapat diakses oleh publik.</p>
 			</div>
 			<!-- /Four -->
 			<!-- Five -->
