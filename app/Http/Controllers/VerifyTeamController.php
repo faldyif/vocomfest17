@@ -16,6 +16,10 @@ class VerifyTeamController extends Controller
     public function lock()
     {
     	$team = Auth::user()->team;
+        if($team->leader_identity == NULL) {
+            Session::flash('message', 'Anda harus mengupload scan identitas terlebih dahulu.');
+            return redirect('dashboard/team');
+        }
     	$team->verified = 1;
     	$team->save();
 

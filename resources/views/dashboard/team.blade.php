@@ -142,6 +142,13 @@
     </div>
 </div>
 @endif
+@if (Session::has('error'))
+<div class="row">
+    <div class="alert alert-danger">
+        <div class="sb-msg"><i class="icon-thumbs-up"></i>{{ Session::get('error') }}</div>
+    </div>
+</div>
+@endif
 @if ($user->team->verified == 0 && Auth::user()->role_id != 4)
 <div class="row">
     <div class="alert alert-danger">
