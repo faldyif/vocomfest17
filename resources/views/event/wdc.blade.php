@@ -224,7 +224,6 @@
 				</p>
 				<p>Folder yang akan di kirimkan harus di zip terlebih dahulu. Yang <span class="special">harus</span> ada dalam folder zip tersebut adalah:</p>
 					<ul>
-						<li><i>Screenshoot</i> website</li>
 						<li>Screenshot website</li>
 						<li>File website disimpan dalam satu folder dengan nama folder <strong>WDC_nama tim_nama website</strong>, kemudian dikompres dengan format zip.</li>
 					</ul>
