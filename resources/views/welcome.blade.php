@@ -386,42 +386,42 @@
 				    					<p class="mont-bold big"><i class="fa fa-calendar"></i> &nbsp;<span class="blue">1 Februari 2017 - 6 Maret 2017</span></p>
 				    					<h3 class="mont">Pendaftaran</h3>
 				    					<p>
-				    						Pendaftaran online dan pengumpulan proposal dan video secara online.
+				    						Pendaftaran online dan pengumpulan proposal secara online.
 				    					</p>
 				    				</li>
 				    				<li>
 				    					<p class="mont-bold big"><i class="fa fa-calendar"></i> &nbsp;<span class="blue">15 Maret 2017</span></p>
 				    					<h3 class="mont">Batas Pengumpulan Proposal</h3>
 				    					<p>
-				    						Batas akhir pengumpulan proposal dan video MADC
+				    						Batas akhir pengumpulan proposal MADC
 				    					</p>
 				    				</li>
 				    				<li>
 				    					<p class="mont-bold big"><i class="fa fa-calendar"></i> &nbsp;<span class="blue">16 Maret 2017 - 20 Maret 2017</span></p>
 				    					<h3 class="mont">Penjurian Tahap 1</h3>
 				    					<p>
-				    						Penilaian proposal dan video MADC oleh tim penilai
+				    						Penilaian proposal MADC oleh tim penilai
 				    					</p>
 				    				</li>
 				    				<li>
 				    					<p class="mont-bold big"><i class="fa fa-calendar"></i> &nbsp;<span class="blue">20 Maret 2017</span></p>
-				    					<h3 class="mont">Pengumuan Tahap 1</h3>
+				    					<h3 class="mont">Pengumuman Tahap 1</h3>
 				    					<p>
-				    						Pengumuman peserta yang lolos penjurian proposal dan video, selanjutnya peserta bisa mulai mengerjakan dan mengumpulkan aplikasi.
+				    						Pengumuman peserta yang lolos penjurian proposal, selanjutnya peserta bisa mulai mengerjakan dan mengumpulkan aplikasi.
 				    					</p>
 				    				</li>
 				    				<li>
 				    					<p class="mont-bold big"><i class="fa fa-calendar"></i> &nbsp;<span class="blue">20 Maret 2017 - 4 April 2017</span></p>
 				    					<h3 class="mont">Pengumpulan Aplikasi</h3>
 				    					<p>
-				    						Jangka waktu pengumpulan aplikasi yang lolos seleksi tahap 1 yang dikumpulkan secara online
+				    						Jangka waktu pengumpulan aplikasi dan video yang lolos seleksi tahap 1 yang dikumpulkan secara online
 				    					</p>
 				    				</li>
 				    				<li>
 				    					<p class="mont-bold big"><i class="fa fa-calendar"></i> &nbsp;<span class="blue">4 April 2017 - 7 April 2017</span></p>
 				    					<h3 class="mont">Penjurian Tahap 2</h3>
 				    					<p>
-				    						Penilaian aplikasi oleh tim penilai
+				    						Penilaian aplikasi dan video oleh tim penilai
 				    					</p>
 				    				</li>
 				    				<li>
@@ -439,7 +439,7 @@
 				    					</p>
 				    				</li>
 				    				<li>
-				    					<p class="mont-bold big"><i class="fa fa-calendar"></i> &nbsp;<span class="blue">15 April 2017</span></p>
+				    					<p class="mont-bold big"><i class="fa fa-calendar"></i> &nbsp;<span class="blue">16 April 2017</span></p>
 				    					<h3 class="mont">Final MADC</h3>
 				    					<p>
 				    						Babak final Mobile Apps Development Competition sekaligus pengumuman pemenang di akhir acara

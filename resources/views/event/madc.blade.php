@@ -78,7 +78,7 @@
 						</tr>
 						<tr>
 							<th>Best Application</th>
-							<td>500.000,00</td>
+							<td>Rp500.000,00</td>
 						</tr>
 					</table>
 				</p>

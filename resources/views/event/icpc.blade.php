@@ -77,7 +77,7 @@
 						</tr>
 						<tr>
 							<th>Juara III</th>
-							<td>1.000.000,00</td>
+							<td>Rp1.000.000,00</td>
 						</tr>
 					</table>
 				</p>
