@@ -95,6 +95,7 @@
 			                            			<th>Kategori</th>
 			                            			<th>File</th>
 			                            			<th>File URL</th>
+			                            			<th>Waktu Upload</th>
 			                            			<th>Aksi</th>
 			                            		</tr>
 			                            	</thead>
@@ -107,6 +108,7 @@
 			                            			<td>{{ \App\User::where('id', $key->user_id)->first()->getKategori() }}</td>
 			                            			<td>{!! $key->getCategory() !!}</td>
 			                            			<td>{{ $key->path_url }}</td>
+			                            			<td>{{ $key->created_at->diffForHumans() }}</td>
 			                            			<td>
 			                            				<a target="_blank" href="{{ $key->path_url }}" class="btn btn-primary btn-sm"><i class="fa fa-eye"></i></a>
 			                            				<a href="{{ url('adminvocomfest17/submission/delete') }}/{{ $key->id }}" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>

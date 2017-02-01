@@ -97,6 +97,7 @@
 			                            			<th>Keterangan</th>
 			                            			<th class="col-md-3">Bukti Bayar</th>
 			                            			<th>Status</th>
+			                            			<th>Waktu Konfirmasi</th>
 			                            			<th>Aksi</th>
 			                            		</tr>
 			                            	</thead>
@@ -117,6 +118,7 @@
 			                            			@else
 			                            			<td>Terbayar</td>
 			                            			@endif
+			                            			<td>{{ $key->created_at->diffForHumans() }}</td>
 			                            			<td>
 			                            				@if(\App\User::where('id', $key->user_id)->first()->team->progress == 1)
 			                            				<a href="{{ url('adminvocomfest17/payment/confirm') }}/{{ $key->id }}" class="btn btn-success btn-sm" alt="Confirm Payment"><i class="fa fa-check"></i></a>
