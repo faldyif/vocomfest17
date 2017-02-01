@@ -22,7 +22,7 @@ class AdminSubmissionController extends Controller
         if(Auth::user()->role_id != 1) {
             return redirect('dashboard'); 
         }
-        $submission = Submission::latest();
+        $submission = Submission::latest()->get();
         return View('admin.submission.index')->with('submission', $submission);
     }
 
