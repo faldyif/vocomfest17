@@ -50,8 +50,7 @@
 				<p class="text-center">
 					<img src="./assets/img/news-cover.jpg" class="news-img-inside">
 					<span class="small">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua.
+						International Collegiate Programming Contest Vocational Computer Festival 2017
 					</span>
 				</p>
 				<p>
