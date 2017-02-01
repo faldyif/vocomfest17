@@ -100,7 +100,7 @@
 						<li>Peserta merupakan siswa SMA/SMK sederajat dan masih berstatus pelajar aktif.</li>
 						<li>Setiap Sekolah diperbolehkan untuk mendaftarkan lebih dari satu tim.</li>
 						<li>Tidak diperkenankan ada peserta yang terdaftar dalam dua tim yang berbeda.</li>
-						<li>Tim mendaftar secara online di website <a href="./register.html">www.vocomfest.com/register</a> atau mendaftar pada stand di lobby KPTU Sekolah Vokasi Universitas Gadjah Mada Sekip Unit I Yogyakarta.</li>
+						<li>Tim mendaftar secara online di website <a href="{{url('/dashboard')}}">www.vocomfest.com/register</a> atau mendaftar pada stand di lobby KPTU Sekolah Vokasi Universitas Gadjah Mada Sekip Unit I Yogyakarta.</li>
 						<li>Peserta harus melunasi biaya pendaftaran sebesar Rp 75.000,00.</li>
 						<li>Ketentuan dan persyaratan yang belum tercantum akan ditambahkan kemudian hari bila diperlukan.</li>
 					</ol>
@@ -176,7 +176,7 @@
 				<h4>Mekanisme Pendaftaran</h4>
 					<h5>Online</h5>
 					<ol>
-						<li>Peserta melakukan pendaftaran di <a href="http://www.vocomfest.com/register">www.vocomfest.com/register</a></li>
+						<li>Peserta melakukan pendaftaran di <a href="{{url('/register')}}">www.vocomfest.com/register</a></li>
 						<li>Peserta melengkapi data tim dan mengupload scan Kartu Pelajar.</li>
 						<li>Setelah melengkapi data tim dengan sebenar-benarnya peserta dapat mengunci detail tim.</li>
 						<li>Peserta melakukan pembayaran sebesar Rp, 75.000 di transfer ke nomor rekening : (Bank BRI) 0033-01-071149-50-9 (a/n. Naila Elma Nuarisya)</li>
@@ -220,7 +220,7 @@
 				<p>
 					Hasil karya diupload ke Google Drive dimasukan ke dalam satu folder dengan nama folder:
 					<br><span class="special">WDC_nama tim</span>
-					<br>Contoh : WDC_TimA. Kemudian link drive dikirim ke website <a href="www.vocomfest.com/dashboard">www.vocomfest.com/dashboard</a>
+					<br>Contoh : WDC_TimA. Kemudian link drive dikirim ke website <a href="{{url('/dashboard')}}">www.vocomfest.com/dashboard</a>
 				</p>
 				<p>Folder yang akan di kirimkan harus di zip terlebih dahulu. Yang <span class="special">harus</span> ada dalam folder zip tersebut adalah:</p>
 					<ul>
