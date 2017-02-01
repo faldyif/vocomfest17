@@ -395,7 +395,7 @@
 									<label for="amout" class="control-label">Anggota #1 Phone Number : </label>
 									<div class="input-group">
 										<span class="input-group-addon">+62</span>
-										{{ Form::text('member1_phone', null, array('class' => 'form-control')) }}
+										{{ Form::number('member1_phone', null, array('class' => 'form-control')) }}
 									</div>
 								</div>
 								<div class="form-group">
@@ -416,7 +416,7 @@
 									<label for="amout" class="control-label">Anggota #2 Phone Number : </label>
 									<div class="input-group">
 										<span class="input-group-addon">+62</span>
-										{{ Form::text('member2_phone', null, array('class' => 'form-control')) }}
+										{{ Form::number('member2_phone', null, array('class' => 'form-control')) }}
 									</div>
 								</div>
 								<div class="form-group">
@@ -437,7 +437,7 @@
 									<label for="amout" class="control-label">Anggota #3 Phone Number : </label>
 									<div class="input-group">
 										<span class="input-group-addon">+62</span>
-										{{ Form::text('member3_phone', null, array('class' => 'form-control')) }}
+										{{ Form::number('member3_phone', null, array('class' => 'form-control')) }}
 									</div>
 								</div>
 								<div class="form-group">

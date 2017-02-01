@@ -49,7 +49,7 @@
 				<h3 class="mont-bold">Deskripsi</h3>
 				<hr class="bl-line-sep">
 				<p class="text-center">
-					<img src="./assets/img/news-cover.jpg" class="news-img-inside">
+					<img src="./assets/img/madc-cover.jpg" class="news-img-inside">
 					<span class="small">
 						Mobile Apps Development Competition Vocational Computer Festival 2017
 					</span>
