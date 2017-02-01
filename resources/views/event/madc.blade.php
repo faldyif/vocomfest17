@@ -49,17 +49,20 @@
 				<h3 class="mont-bold">Deskripsi</h3>
 				<hr class="bl-line-sep">
 				<p class="text-center">
-					<img src="./assets/img/news-cover.jpg" class="news-img-inside">
+					<img src="./assets/img/madc-cover.jpg" class="news-img-inside">
 					<span class="small">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua.
+						Mobile Apps Development Competition Vocational Computer Festival 2017
 					</span>
 				</p>
 				<p>
 					Mobile Apps Development Competition (MADC) merupakan rangkaian acara kedua dari VOCOMFEST 2017, MADC merupakan kompetisi membangun aplikasi mobile berbasis platform Android yang bertujuan memberikan konstribusi bagi generasi baru developer aplikasi mobile.
 				</p>
 				<p>
+<<<<<<< HEAD
 					MADC ditujukan untuk mahasiswa aktif sarjana dan diploma diseluruh Indonesia. Peserta berkompetisi dalam tim yang beranggotakan maksimal empat orang. MADC ini dilaksanakan dalam 3 babak, yaitu babak penyisihan proposal, peserta mengirimkan proposal tentang aplikasi yang akan dikembangkan, peserta yang lolos seleksi proposal selanjutnya masuk ke babak penyisihan aplikasi dengan mingirimkan prototype atau aplikasi jadi untuk diseleksi lagi menuju babak final. Terakhir babak final, peserta melakukan presentasi di depan dewan juri serta menampilkan karya mereka di Expo MADC.
+=======
+					MADC ditujukan untuk mahasiswa aktif sarjana dan diploma diseluruh Indonesia. Peserta berkompetisi dalam tim yang beranggotakan maksimal empat orang. MADC ini dilaksanakan dalam 3 babak, yaitu babak penyisihan proposal, peserta mengirimkan proposal tentang aplikasi yang akan dikembangkan, peserta yang lolos seleksi proposal selanjutnya masuk ke babak penyisihan aplikasi dengan mingirimkan prototype atau aplikasi jadi dan video demo aplikasi untuk diseleksi lagi menuju babak final. Terakhir babak final, peserta melakukan presentasi di depan dewan juri serta menampilkan karya mereka di Expo MADC.
+>>>>>>> 4715a90a422aad1e9f7884f81b3ef2a328012383
 				</p>
 
 				<h4>Tema</h4>
@@ -124,11 +127,19 @@
 					<ol>
 						<li>Nama aplikasi.</li>
 						<li>Deskripsi aplikasi.</li>
+<<<<<<< HEAD
 						<li>Latar belakang aplikasi (eritakan latar belakang yang mendorong anda untuk membuat aplikasi tersebut).</li>
 						<li>Tujuan pembuatan aplikasi(Ceritakan tujuan anda membuat aplikasi tersebut.).</li>
 						<li>Teknologi yang digunakan(Sebutkan teknologi (software) yang menunjang pengembangan aplikasi anda).</li>
 						<li>Dokumentasi (bisa berupa mock up atau desain aplikasi yang akan diterapkan pada aplikasi anda).</li>
 						<li>Penjelasan fitur yang akan digunakan(Jelaskan fitur fitur apa saja yang akan anda gunakan dalam aplikasi yang anda kembangkan secara singkat).</li>
+=======
+						<li>Latar belakang aplikasi. (ceritakan latar belakang yang mendorong anda untuk membuat aplikasi tersebut)</li>
+						<li>Tujuan pembuatan aplikasi. (ceritakan tujuan anda membuat aplikasi tersebut)</li>
+						<li>Teknologi yang digunakan. (sebutkan teknologi (software) yang menunjang pengembangan aplikasi anda)</li>
+						<li>Dokumentasi (bisa berupa mock up atau desain aplikasi yang akan diterapkan pada aplikasi anda).</li>
+						<li>Penjelasan fitur yang akan digunakan. (jelaskan fitur fitur apa saja yang akan anda gunakan dalam aplikasi yang anda kembangkan secara singkat)</li>
+>>>>>>> 4715a90a422aad1e9f7884f81b3ef2a328012383
 						<li>Proposal ide aplikasi dikumpulkan dengan format .pdf.</li>
 					</ol>
 
@@ -171,7 +182,11 @@
 						<li>Peserta melakukan pendaftaran di <a href="http://www.vocomfest.com/register">www.vocomfest.com/register</a></li>
 						<li>Peserta melengkapi data tim dan mengupload scan Kartu Tanda Mahasiswa.</li>
 						<li>Setelah melengkapi data tim dengan sebenar-benarnya peserta dapat mengunci detail tim.</li>
+<<<<<<< HEAD
 						<li>Peserta melakukan pembayaran sebesar Rp. 25.000 di transfer ke nomor rekening : (Bank BRI) 0033-01-071149-50-9 (a/n. Naila Elma Nuarisya)</li>
+=======
+						<li>Peserta melakukan pembayaran sebesar Rp, 25.000 ditransfer ke nomor rekening : (Bank BRI) 0033-01-071149-50-9 (a/n. Naila Elma Nuarisya).</li>
+>>>>>>> 4715a90a422aad1e9f7884f81b3ef2a328012383
 						<li>Peserta dapat mengupload scan Bukti Pembayaran.</li>
 						<li>Setelah mengupload scan Bukti Pembayaran, menunggu diverifikasi oleh panitia untuk selanjutnya peserta dapat mengupload link drive Proposalnya.</li>
 					</ol>
@@ -188,7 +203,11 @@
 						</li>
 						<li>Menyiapkan berkas pendaftaran untuk diletakkan pada formulir pendaftaran, yaitu:
 							<ul>
+<<<<<<< HEAD
 								<li>Fotocopy ktm semua anggota</li>
+=======
+								<li>Scan ktm semua anggota</li>
+>>>>>>> 4715a90a422aad1e9f7884f81b3ef2a328012383
 							</ul>
 						</li>
 						<li>Kemudian mengisi formulir yang disediakan serta membayar biaya pendaftaran.</li>
@@ -209,6 +228,7 @@
 				<hr class="bl-line-sep">
 				<h4>Proposal</h4>
 					<p>
+<<<<<<< HEAD
 						Proposal ide diupload ke Google Drive dalam bentuk pdf dengan nama file:
 						<br><span class="special">[MADC17]_[Nama Karya]_[Nama Tim].pdf</span>
 						<br>Kemudian link drive dikirim ke website <a href="http://www.vocomfest.com/dashboard">vocomfest.com/dashboard</a>
@@ -216,6 +236,14 @@
 					</p>
 				<h4>Aplikasi/Prototype</h4>
 					<p>Aplikasi jadi/protype dalam bentuk executable file (.APK) beserta link video demo apps (format .txt .doc atau .docx) dimasukan kedalam satu folder dengan nama folder: <span class="special">Nama_tim(spasi)Nama_aplikasi</span> dan diupload ke Google Drive. Kemudian link drive dikirim ke website <a href="http://www.vocomfest.com/dashboard">vocomfest.com/dashboard</a></p>
+=======
+						Proposal ide diupload ke google drive dalam bentuk pdf dengan nama file:  Kemudian link drive dikirim ke website <a href="http://www.vocomfest.com/dashboard">vocomfest.com/dashboard</a>
+						<br><span class="special">[MADC17]_[Nama Karya]_[Nama Tim].pdf.</span>
+						<br>Contoh : MADC17_AplikasiX_Tim1.pdf
+					</p>
+				<h4>Aplikasi/Prototype</h4>
+					<p>Aplikasi jadi/protype dalam bentuk executable file (.APK) beserta link video demo apps (format .txt .doc atau .docx) dimasukan kedalam satu folder dengan nama folder : <span class="special">Nama_tim(spasi)Nama_aplikasi</span>dan diupload ke google drive. Kemudian link drive dikirim ke website <a href="http://www.vocomfest.com/dashboard">vocomfest.com/dashboard</a></p>
+>>>>>>> 4715a90a422aad1e9f7884f81b3ef2a328012383
 					<p>Folder yang akan di kirimkan harus di zip terlebih dahulu. Yang harus ada dalam folder zip tersebut adalah :</p>
 					<ul>
 						<li>Executable file (.APK)</li>
@@ -224,6 +252,9 @@
 						<li>Deskripsi singkat aplikasi dan target device yang akan dipakai untuk aplikasi (format .txt .doc atau .docx)</li>
 						<li>Link video demo apps (format .txt .doc atau .docx)</li>
 					</ul>
+					<p>
+						Catatan: Untuk link file yang telah diupload di Google Drive diubah menjadi shareable link sehingga dapat diakses oleh publik.
+					</p>
 			</div>
 			<!-- /four -->
 			<!-- five -->
