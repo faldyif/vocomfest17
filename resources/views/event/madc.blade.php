@@ -153,7 +153,7 @@
 				<h3 class="mont-bold">Pendaftaran</h3>
 				<hr class="bl-line-sep">
 				<h4>Biaya</h4>
-					<p>Biaya Pendaftaran lomba adalah Rp. 20.000 / Tim</p>
+					<p>Biaya Pendaftaran lomba adalah Rp. 25.000 / Tim</p>
 
 				<h4>Periode</h4>
 					<p>Tanggal : 1 Februari – 6 Maret 2017</p>
