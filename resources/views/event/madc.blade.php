@@ -58,7 +58,7 @@
 					Mobile Apps Development Competition (MADC) merupakan rangkaian acara kedua dari VOCOMFEST 2017, MADC merupakan kompetisi membangun aplikasi mobile berbasis platform Android yang bertujuan memberikan konstribusi bagi generasi baru developer aplikasi mobile.
 				</p>
 				<p>
-					MADC ditujukan untuk mahasiswa aktif sarjana dan diploma diseluruh Indonesia. Peserta berkompetisi dalam tim yang beranggotakan maksimal empat orang. MADC ini dilaksanakan dalam 3 babak, yaitu babak penyisihan proposal dan video, peserta mengirimkan proposal dan mengunggah video tentang aplikasi yang akan dikembangkan, peserta yang lolos seleksi proposal dan video selanjutnya masuk ke babak penyisihan aplikasi dengan mingirimkan prototype atau aplikasi jadi untuk diseleksi lagi menuju babak final. Terakhir babak final, peserta melakukan presentasi di depan dewan juri serta menampilkan karya mereka di Expo MADC.
+					MADC ditujukan untuk mahasiswa aktif sarjana dan diploma diseluruh Indonesia. Peserta berkompetisi dalam tim yang beranggotakan maksimal empat orang. MADC ini dilaksanakan dalam 3 babak, yaitu babak penyisihan proposal, peserta mengirimkan proposal tentang aplikasi yang akan dikembangkan, peserta yang lolos seleksi proposal selanjutnya masuk ke babak penyisihan aplikasi dengan mingirimkan prototype atau aplikasi jadi dan video demo aplikasi untuk diseleksi lagi menuju babak final. Terakhir babak final, peserta melakukan presentasi di depan dewan juri serta menampilkan karya mereka di Expo MADC.
 				</p>
 
 				<h4>Tema</h4>
@@ -123,15 +123,11 @@
 					<ol>
 						<li>Nama aplikasi.</li>
 						<li>Deskripsi aplikasi.</li>
-						<li>Latar belakang aplikasi.</li>
-						<li>Ceritakan latar belakang yang mendorong anda untuk membuat aplikasi tersebut.</li>
-						<li>Tujuan pembuatan aplikasi.</li>
-						<li>Ceritakan tujuan anda membuat aplikasi tersebut.</li>
-						<li>Teknologi yang digunakan.</li>
-						<li>Sebutkan teknologi (software) yang menunjang pengembangan aplikasi anda.</li>
+						<li>Latar belakang aplikasi. (ceritakan latar belakang yang mendorong anda untuk membuat aplikasi tersebut)</li>
+						<li>Tujuan pembuatan aplikasi. (ceritakan tujuan anda membuat aplikasi tersebut)</li>
+						<li>Teknologi yang digunakan. (sebutkan teknologi (software) yang menunjang pengembangan aplikasi anda)</li>
 						<li>Dokumentasi (bisa berupa mock up atau desain aplikasi yang akan diterapkan pada aplikasi anda).</li>
-						<li>Penjelasan fitur yang akan digunakan.</li>
-						<li>Jelaskan fitur fitur apa saja yang akan anda gunakan dalam aplikasi yang anda kembangkan secara singkat.</li>
+						<li>Penjelasan fitur yang akan digunakan. (jelaskan fitur fitur apa saja yang akan anda gunakan dalam aplikasi yang anda kembangkan secara singkat)</li>
 						<li>Proposal ide aplikasi dikumpulkan dengan format .pdf.</li>
 					</ol>
 
@@ -152,7 +148,7 @@
 				<h3 class="mont-bold">Pendaftaran</h3>
 				<hr class="bl-line-sep">
 				<h4>Biaya</h4>
-					<p>Biaya Pendaftaran lomba adalah Rp. 20.000 / Tim</p>
+					<p>Biaya Pendaftaran lomba adalah Rp. 25.000 / Tim</p>
 
 				<h4>Periode</h4>
 					<p>Tanggal : 1 Februari – 6 Maret 2017</p>
@@ -172,12 +168,11 @@
 					<h5>Online</h5>
 					<ol>
 						<li>Peserta melakukan pendaftaran di <a href="http://www.vocomfest.com/register">www.vocomfest.com/register</a></li>
-						<li>Peserta mengisi form registrasi yang tersedia dengan data yang sebenarnya-benarnya.</li>
-						<li>Peserta melakukan pembayaran sebesar Rp, 20.000 di transfer ke nomor rekening : (Bank BRI) 0033-01-071149-50-9 (a/n. Naila Elma Nuarisya)</li>
-						<li>Setelah selesai melakukan registrasi dan pembayaran, peserta mengirimkan scan Kartu Tanda Mahasiswa (KTM) ketua dan anggota serta Scan Bukti pemvayaran  ke email madc@vocomfest.com dengan Subyek “Scan KTM dan Bukti Pembayaran (Nama Tim)”.</li>
-						<li>Setelah selesai mengirimkan scan Kartu Tanda Mahasiswa (KTM) dan Bukti Pembayaran, peserta mengkonfirmasi di nomor 085700697207 bahwa kelompok tersebut telah mengirim scan Kartu Tanda Mahasiswa (KTM) dan Bukti Transfer.</li>
-						<li>Akun peserta akan diaktifasi oleh panitia, setelah peserta mengirim scan Kartu Tanda Mahasiswa (KTM) dan Bukti Transfer.</li>
-						<li>Setelah akun diaktifasi, peserta dapat melakukan login di <a href="http://www.vocomfest.com/login">www.vocomfest.com/login</a></li>
+						<li>Peserta melengkapi data tim dan mengupload scan Kartu Tanda Mahasiswa.</li>
+						<li>Setelah melengkapi data tim dengan sebenar-benarnya peserta dapat mengunci detail tim.</li>
+						<li>Peserta melakukan pembayaran sebesar Rp, 25.000 ditransfer ke nomor rekening : (Bank BRI) 0033-01-071149-50-9 (a/n. Naila Elma Nuarisya).</li>
+						<li>Peserta dapat mengupload scan Bukti Pembayaran.</li>
+						<li>Setelah mengupload scan Bukti Pembayaran, menunggu diverifikasi oleh panitia untuk selanjutnya peserta dapat mengupload link drive Proposalnya.</li>
 					</ol>
 
 					<h5>Offline</h5>
@@ -188,12 +183,10 @@
 						<li>Menyiapkan berkas pendaftaran untuk diletakkan pada formulir pendaftaran, yaitu:
 							<ul>
 								<li>Scan ktm semua anggota</li>
-								<li>Foto 3x4 semua anggota (background bebas)</li>
-								<li>Biodata diri (Nama, TTL, No.Telp, Alamat)</li>
 							</ul>
 						</li>
 						<li>Kemudian mengisi formulir yang disediakan serta membayar biaya pendaftaran.</li>
-						<li>f.	Jika berkas telah sesuai persyaratan dan lengkap, peserta akan mendapatkan email konfirmasi bahwa sudah terdaftar sebagai peserta MADC Vocomfest 2017.</li>
+						<li>Jika berkas telah sesuai persyaratan dan lengkap, peserta akan mendapatkan email konfirmasi bahwa sudah terdaftar sebagai peserta MADC Vocomfest 2017.</li>
 					</ol>
 
 				<h4>Contact Person</h4>
@@ -210,12 +203,12 @@
 				<hr class="bl-line-sep">
 				<h4>Proposal</h4>
 					<p>
-						Proposal ide dikirim ke website vocomfest.com dalam bentuk pdf dengan nama file:
-						<br><span class="special">[MADC17]_[Nama Karya]_[Nama Tim].pdf</span>
+						Proposal ide diupload ke google drive dalam bentuk pdf dengan nama file:  Kemudian link drive dikirim ke website <a href="http://www.vocomfest.com/dashboard">vocomfest.com/dashboard</a>
+						<br><span class="special">[MADC17]_[Nama Karya]_[Nama Tim].pdf.</span>
 						<br>Contoh : MADC17_AplikasiX_Tim1.pdf
 					</p>
 				<h4>Aplikasi/Prototype</h4>
-					<p>Aplikasi jadi/protype yang dikirim dalam bentuk executable file (.APK) dan dikirim ke website vocomfest.com nama folder : <span class="special">Nama_tim(spasi)Nama_aplikasi</span></p>
+					<p>Aplikasi jadi/protype dalam bentuk executable file (.APK) beserta link video demo apps (format .txt .doc atau .docx) dimasukan kedalam satu folder dengan nama folder : <span class="special">Nama_tim(spasi)Nama_aplikasi</span>dan diupload ke google drive. Kemudian link drive dikirim ke website <a href="http://www.vocomfest.com/dashboard">vocomfest.com/dashboard</a></p>
 					<p>Folder yang akan di kirimkan harus di zip terlebih dahulu. Yang harus ada dalam folder zip tersebut adalah :</p>
 					<ul>
 						<li>Executable file (.APK)</li>
@@ -224,6 +217,9 @@
 						<li>Deskripsi singkat aplikasi dan target device yang akan dipakai untuk aplikasi (format .txt .doc atau .docx)</li>
 						<li>Link video demo apps (format .txt .doc atau .docx)</li>
 					</ul>
+					<p>
+						Catatan: Untuk link file yang telah diupload di Google Drive diubah menjadi shareable link sehingga dapat diakses oleh publik.
+					</p>
 			</div>
 			<!-- /four -->
 			<!-- five -->

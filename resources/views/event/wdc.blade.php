@@ -194,6 +194,14 @@
 								<li>Pukul 09.00 – 17.00 WIB setiap hari Senin – Jumat.</li>
 								<li>Pukul 09.00 – 13.00 WIB di hari Sabtu.</li>
 							</ul>
+						<li>
+							Menyiapkan berkas pendaftaran untuk diletakkan pada formulir pendaftaran, yaitu:
+							<ul>
+								<li>
+									Fotocopy Kartu Pelajar semua anggota
+								</li>
+							</ul>
+						</li>
 						<li>Kemudian mengisi formulir yang disediakan serta membayar biaya pendaftaran.</li>
 						<li>Jika berkas telah sesuai persyaratan dan lengkap, peserta akan mendapatkan email konfirmasi bahwa sudah terdaftar sebagai peserta Vocomfest 2017 di bidang lomba Web Design Competition.</li>
 					</ol>
