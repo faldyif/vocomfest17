@@ -1,7 +1,7 @@
 <?php
 	$user = Auth::user();
 	$arr_type = array("", "Website", "Proposal", "Aplikasi");
-	$arr_jml_bayar = array(0, 0, 100000, 50000, 50000);
+	$arr_jml_bayar = array(0, 0, 75000, 25000, 35000);
 	$arr_progress = array("", "Menunggu pembayaran", "Seleksi website", "Seleksi proposal", "Seleksi aplikasi", "Finalis", "Penukaran Tiket", "Tiket sudah diambil");
 	$arr_submission_type = array(0, 0, 1, 2, 3, 0, 0);
 	$type = 0;
