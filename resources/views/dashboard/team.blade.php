@@ -1,7 +1,7 @@
 <?php
 	$user = Auth::user();
 	$arr_type = array("", "Website", "Proposal", "Aplikasi");
-	$arr_jml_bayar = array(0, 0, 100000, 50000, 50000);
+	$arr_jml_bayar = array(0, 0, 75000, 25000, 35000);
 	$arr_progress = array("", "Menunggu pembayaran", "Seleksi website", "Seleksi proposal", "Seleksi aplikasi", "Finalis", "Penukaran Tiket", "Tiket sudah diambil");
 	$arr_submission_type = array(0, 0, 1, 2, 3, 0, 0);
 	$type = 0;
@@ -63,7 +63,7 @@
 			<h3>{{ Auth::user()->name }}</h3>
 			<hr class="line-db">
 			@if(Auth::user()->role_id != 4)
-				<span>Keuta Tim</span>
+				<span>Ketua Tim</span>
 				<h4 class="nomag">{{ Auth::user()->team->leader_name }}</h4>
 			@endif
 		</div>
@@ -142,6 +142,13 @@
     </div>
 </div>
 @endif
+@if (Session::has('error'))
+<div class="row">
+    <div class="alert alert-danger">
+        <div class="sb-msg"><i class="icon-thumbs-up"></i>{{ Session::get('error') }}</div>
+    </div>
+</div>
+@endif
 @if ($user->team->verified == 0 && Auth::user()->role_id != 4)
 <div class="row">
     <div class="alert alert-danger">
@@ -170,7 +177,13 @@
 		 	<section class="col-md-3 col-sm-3 col-xs-6 pd-t-15 pd-lr-15">
 				<div class="sec-content-db">
 					<figure class="img-profile">
-						<img src="{{ url('assets/img/leader.jpg') }}">
+						@if($user->team->leader_identity == NULL)
+							<img src="{{ url('assets/img/leader.jpg') }}">
+						@else
+							<a href="{{ url('storage/identity_scans') }}/{{ $user->team->leader_identity }}" data-rel="lightcase">
+							<img src="{{ url('storage/identity_scans') }}/{{ $user->team->leader_identity }}">
+							</a>
+						@endif
 					</figure>
 					<span class="text-center">
 						<p class="blue mg-t-15">Ketua Tim</p>
@@ -187,7 +200,13 @@
 			<section class="col-md-3 col-sm-3 col-xs-6 pd-t-15 pd-lr-15">
 				<div class="sec-content-db">
 					<figure class="img-profile">
-						<img src="{{ url('assets/img/member.jpg') }}">
+						@if($user->team->member1_identity == NULL)
+							<img src="{{ url('assets/img/member.jpg') }}">
+						@else
+							<a href="{{ url('storage/identity_scans') }}/{{ $user->team->member1_identity }}" data-rel="lightcase">
+							<img src="{{ url('storage/identity_scans') }}/{{ $user->team->member1_identity }}">
+							</a>
+						@endif
 					</figure>
 					<span class="text-center">
 						<p class="blue mg-t-15">Anggota</p>
@@ -205,7 +224,13 @@
 			<section class="col-md-3 col-sm-3 col-xs-6 pd-t-15 pd-lr-15">
 				<div class="sec-content-db">
 					<figure class="img-profile">
-						<img src="{{ url('assets/img/member.jpg') }}">
+						@if($user->team->member2_identity == NULL)
+							<img src="{{ url('assets/img/member.jpg') }}">
+						@else
+							<a href="{{ url('storage/identity_scans') }}/{{ $user->team->member2_identity }}" data-rel="lightcase">
+							<img src="{{ url('storage/identity_scans') }}/{{ $user->team->member2_identity }}">
+							</a>
+						@endif
 					</figure>
 					<span class="text-center">
 						<p class="blue mg-t-15">Anggota</p>
@@ -223,7 +248,13 @@
 			<section class="col-md-3 col-sm-3 col-xs-6 pd-t-15 pd-lr-15">
 				<div class="sec-content-db">
 					<figure class="img-profile">
-						<img src="{{ url('assets/img/member.jpg') }}">
+						@if($user->team->member3_identity == NULL)
+							<img src="{{ url('assets/img/member.jpg') }}">
+						@else
+							<a href="{{ url('storage/identity_scans') }}/{{ $user->team->member3_identity }}" data-rel="lightcase">
+							<img src="{{ url('storage/identity_scans') }}/{{ $user->team->member3_identity }}">
+							</a>
+						@endif
 					</figure>
 					<span class="text-center">
 						<p class="blue mg-t-15">Anggota</p>
@@ -271,7 +302,7 @@
 									<label for="amout" class="control-label">Nomor Handphone Ketua : </label>
 									<div class="input-group">
 										<span class="input-group-addon">+62</span>
-										{{ Form::text('leader_phone', null, array('class' => 'form-control')) }}
+										{{ Form::number('leader_phone', null, array('class' => 'form-control')) }}
 									</div>
 								</div>
 								<div class="form-group">
@@ -292,7 +323,7 @@
 									<label for="amout" class="control-label">Anggota #1 Phone Number : </label>
 									<div class="input-group">
 										<span class="input-group-addon">+62</span>
-										{{ Form::text('member1_phone', null, array('class' => 'form-control')) }}
+										{{ Form::number('member1_phone', null, array('class' => 'form-control')) }}
 									</div>
 								</div>
 								<div class="form-group">
@@ -313,7 +344,7 @@
 									<label for="amout" class="control-label">Anggota #2 Phone Number : </label>
 									<div class="input-group">
 										<span class="input-group-addon">+62</span>
-										{{ Form::text('member2_phone', null, array('class' => 'form-control')) }}
+										{{ Form::number('member2_phone', null, array('class' => 'form-control')) }}
 									</div>
 								</div>
 								<div class="form-group">
@@ -343,7 +374,7 @@
 									<label for="amout" class="control-label">Leader Phone Number : </label>
 									<div class="input-group">
 										<span class="input-group-addon">+62</span>
-										{{ Form::text('leader_phone', null, array('class' => 'form-control')) }}
+										{{ Form::number('leader_phone', null, array('class' => 'form-control')) }}
 									</div>
 								</div>
 								<div class="form-group">
@@ -364,7 +395,7 @@
 									<label for="amout" class="control-label">Anggota #1 Phone Number : </label>
 									<div class="input-group">
 										<span class="input-group-addon">+62</span>
-										{{ Form::text('member1_phone', null, array('class' => 'form-control')) }}
+										{{ Form::number('member1_phone', null, array('class' => 'form-control')) }}
 									</div>
 								</div>
 								<div class="form-group">
@@ -385,7 +416,7 @@
 									<label for="amout" class="control-label">Anggota #2 Phone Number : </label>
 									<div class="input-group">
 										<span class="input-group-addon">+62</span>
-										{{ Form::text('member2_phone', null, array('class' => 'form-control')) }}
+										{{ Form::number('member2_phone', null, array('class' => 'form-control')) }}
 									</div>
 								</div>
 								<div class="form-group">
@@ -406,7 +437,7 @@
 									<label for="amout" class="control-label">Anggota #3 Phone Number : </label>
 									<div class="input-group">
 										<span class="input-group-addon">+62</span>
-										{{ Form::text('member3_phone', null, array('class' => 'form-control')) }}
+										{{ Form::number('member3_phone', null, array('class' => 'form-control')) }}
 									</div>
 								</div>
 								<div class="form-group">
@@ -427,7 +458,7 @@
 		</div>
 	</div>
 </div>
-								
+
 <!-- /add members-->
 <!-- Modals -->
 @if($user->team->verified == 0)

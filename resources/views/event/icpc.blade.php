@@ -48,10 +48,9 @@
 				<h3 class="mont-bold">Deskripsi</h3>
 				<hr class="bl-line-sep">
 				<p class="text-center">
-					<img src="./assets/img/news-cover.jpg" class="news-img-inside">
+					<img src="./assets/img/icpc-cover.jpg" class="news-img-inside">
 					<span class="small">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua.
+						International Collegiate Programming Contest Vocational Computer Festival 2017
 					</span>
 				</p>
 				<p>
@@ -77,7 +76,7 @@
 						</tr>
 						<tr>
 							<th>Juara III</th>
-							<td>1.000.000,00</td>
+							<td>Rp1.000.000,00</td>
 						</tr>
 					</table>
 				</p>

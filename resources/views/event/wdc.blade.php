@@ -26,7 +26,7 @@
 		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#asideNav">
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
-		        <span class="icon-bar"></span>                        
+		        <span class="icon-bar"></span>
 		      </button>
 		    </div>
 		    <div class="collapse navbar-collapse nopad navEvent" id="asideNav">
@@ -51,8 +51,7 @@
 				<p class="text-center">
 					<img src="./assets/img/news-cover.jpg" class="news-img-inside">
 					<span class="small">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. 
+						Web Design Competition Vocational Computer Festival 2017
 					</span>
 				</p>
 				<p>
@@ -78,7 +77,7 @@
 						</tr>
 						<tr>
 							<th>Juara III</th>
-							<td>1.000.000,00</td>
+							<td>Rp1.000.000,00</td>
 						</tr>
 					</table>
 				</p>
@@ -151,7 +150,7 @@
 						</li>
 						<li>Ketentuan dan persyaratan yang belum tercantum akan ditambahkan kemudian hari bila diperlukan.</li>
 					</ol>
-			</div>	
+			</div>
 			<!-- /two -->
 			<!-- three -->
 			<div id="three" class="divEvent pd-b-20">
@@ -166,11 +165,9 @@
 				<h4>Syarat Pendaftaran</h4>
 					<ul>
 						<li>Menentukan nama tim, ketua tim, dan anggota tim</li>
-						<li>Mempersiapkan : 
+						<li>Mempersiapkan :
 							<ol>
 								<li>Scan kartu pelajar semua anggota</li>
-								<li>Foto 3x4 semua anggota (background bebas)</li>
-								<li>Biodata diri (Nama, TTL, No.Telp, Alamat)</li>
 							</ol>
 						</li>
 					</ul>
@@ -180,28 +177,32 @@
 					<h5>Online</h5>
 					<ol>
 						<li>Peserta melakukan pendaftaran di <a href="http://www.vocomfest.com/register">www.vocomfest.com/register</a></li>
-						<li>Peserta mengisi form registrasi yang tersedia dengan data yang sebenarnya-benarnya.</li>
+						<li>Peserta melengkapi data tim dan mengupload scan Kartu Pelajar.</li>
+						<li>Setelah melengkapi data tim dengan sebenar-benarnya peserta dapat mengunci detail tim.</li>
 						<li>Peserta melakukan pembayaran sebesar Rp, 75.000 di transfer ke nomor rekening : (Bank BRI) 0033-01-071149-50-9 (a/n. Naila Elma Nuarisya)</li>
-						<li>Setelah selesai melakukan registrasi dan pembayaran, peserta mengirimkan scan Kartu Tanda Mahasiswa (KTM) ketua dan anggota serta Scan Bukti pemvayaran  ke email wdc@vocomfest.com dengan Subyek “Scan Kartu Pelajar dan Bukti Pembayaran (Nama Tim)”.</li>
-						<li>Setelah selesai mengirimkan scan Kartu Tanda Mahasiswa (KTM) dan Bukti Pembayaran, peserta mengkonfirmasi di nomor (No. hp TS) bahwa kelompok tersebut telah mengirim scan Kartu Tanda Mahasiswa (KTM) dan Bukti Transfer.</li>
-						<li>Akun peserta akan diaktifasi oleh panitia, setelah peserta mengirim scan Kartu Tanda Mahasiswa (KTM) dan Bukti Transfer.</li>
-						<li>Setelah akun diaktifasi, peserta dapat melakukan login di <a href="http://www.vocomfest.com/login">www.vocomfest.com/login</a></li>
+						<li>Peserta mengupload scan Bukti Pembayaran.</li>
+						<li>Setelah mengupload scan Bukti Pembayaran, menunggu diverifikasi oleh panitia untuk selanjutnya peserta dapat mengupload link drive hasil karyanya.</li>
 					</ol>
 
 					<h5>Offline</h5>
 					<ol>
 						<li>Periode pendaftaran	: 1 Februari – 15 Maret 2017</li>
-						<li>Lokasi pendaftaran	: Sekretariat Himakomsi SV UGM, Gedung Sekolah Vokasi Sekip I.</li>
-						<li>Waktu pendaftaran	: Pukul 09.00 – 17.00 WIB setiap hari Senin – Sabtu.</li>
-						<li>Menyiapkan berkas pendaftaran untuk diletakkan pada formulir pendaftaran, yaitu:
+						<li>Lokasi pendaftaran	: Lobby KPTU SV UGM, Gedung Sekolah Vokasi Sekip I.</li>
+						<li>Waktu pendaftaran: </li>
 							<ul>
-								<li>Scan kartu pelajar semua anggota</li>
-								<li>Foto 3x4 semua anggota (background bebas)</li>
-								<li>Biodata diri (Nama, TTL, No.Telp, Alamat)</li>
+								<li>Pukul 09.00 – 17.00 WIB setiap hari Senin – Jumat.</li>
+								<li>Pukul 09.00 – 13.00 WIB di hari Sabtu.</li>
+							</ul>
+						<li>
+							Menyiapkan berkas pendaftaran untuk diletakkan pada formulir pendaftaran, yaitu:
+							<ul>
+								<li>
+									Fotocopy Kartu Pelajar semua anggota
+								</li>
 							</ul>
 						</li>
 						<li>Kemudian mengisi formulir yang disediakan serta membayar biaya pendaftaran.</li>
-						<li>Jika berkas telah sesuai persyaratan dan lengkap, peserta akan mendapatkan email konfirmasi bahwa sudah terdaftar sebagai peserta Vocomfest 2017 bidang lomba Web Design Competition.</li>
+						<li>Jika berkas telah sesuai persyaratan dan lengkap, peserta akan mendapatkan email konfirmasi bahwa sudah terdaftar sebagai peserta Vocomfest 2017 di bidang lomba Web Design Competition.</li>
 					</ol>
 
 				<h4>Contact Person</h4>
@@ -210,23 +211,28 @@
 					<p>HP	: 085700697207</p>
 					<p>line	: nithahuwaida</p>
 				</address>
-			</div>	
+			</div>
 			<!-- /three -->
 			<!-- Four -->
 			<div id="four" class="divEvent pd-b-20">
 				<h3 class="mont-bold">Pengumpulan Karya</h3>
 				<hr class="bl-line-sep">
 				<p>
-					Hasil karya dikirimkan melalui website www.vocomfest.com dengan nama folder : 
-					<br><span class="special">WDC_nama tim_nama website</span>
-					<br>Contoh : WDC_TimA_WebsiteX.
+					Hasil karya diupload ke Google Drive dimasukan ke dalam satu folder dengan nama folder:
+					<br><span class="special">WDC_nama tim</span>
+					<br>Contoh : WDC_TimA. Kemudian link drive dikirim ke website <a href="www.vocomfest.com/dashboard">www.vocomfest.com/dashboard</a>
 				</p>
-				<p>Yang harus disertakan dalam pengumpulan hasil karya:</p>
+				<p>Folder yang akan di kirimkan harus di zip terlebih dahulu. Yang <span class="special">harus</span> ada dalam folder zip tersebut adalah:</p>
 					<ul>
+<<<<<<< HEAD
 						<li><i>Screenshoot</i> website</li>
+=======
+						<li>Screenshot website</li>
+>>>>>>> 4715a90a422aad1e9f7884f81b3ef2a328012383
 						<li>File website disimpan dalam satu folder dengan nama folder <strong>WDC_nama tim_nama website</strong>, kemudian dikompres dengan format zip.</li>
 					</ul>
-			</div>	
+				<p class="small">Catatan : Untuk link file yang telah diupload di Google Drive diubah menjadi shareable link sehingga dapat diakses oleh publik.</p>
+			</div>
 			<!-- /Four -->
 			<!-- Five -->
 			<div id="five" class="divEvent pd-b-20">
@@ -241,7 +247,7 @@
 					<li>Estetika</li>
 					<li>Fungsionalitas</li>
 				</ol>
-			</div>	
+			</div>
 			<!-- /Five -->
 			<!-- Six -->
 			<div id="six" class="divEvent pd-b-20">
@@ -275,7 +281,7 @@
 					<p class="special">Babak finalnya kapan?</p>
 					<p class="small">Tanggal 9 April 2017</p>
 				</blockquote>
-			</div>	
+			</div>
 			<!-- /Six -->
 			</div>
 		</div>
