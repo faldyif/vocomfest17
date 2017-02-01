@@ -231,7 +231,7 @@
 					<p class="small">ICPC merupakan kompetisi pemrograman yang merupakan salah satu rangkaian acara terbesar KOMSI SV UGM yaitu VOCOMFEST</p>
 				</blockquote>
 				<blockquote>
-					<p class="special">Ada tahapannya ga?</p>
+					<p class="special">Ada tahapannya tidak?</p>
 					<p class="small">Ada dua tahap, yaitu pertama seleksi dan kedua babak final.</p>
 				</blockquote>
 				<blockquote>
@@ -239,16 +239,12 @@
 					<p class="small">Babak Final ICPC di Yogyakarta tepatnya di Universitas Gadjah Mada</p>
 				</blockquote>
 				<blockquote>
-					<p class="special">Ada biaya pendaftarannya ga?</p>
+					<p class="special">Ada biaya pendaftarannya tidak?</p>
 					<p class="small">Biaya pendaftaran Rp.100.000/Tim</p>
 				</blockquote>
 				<blockquote>
 					<p class="special">Babak finalnya kapan?</p>
 					<p class="small">15 April 2017</p>
-				</blockquote>
-				<blockquote>
-					<p class="special">ICPC keren ya?</p>
-					<p>Woh jelas!</p>
 				</blockquote>
 			</div>
 			<!-- /five -->
