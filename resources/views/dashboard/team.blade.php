@@ -63,7 +63,7 @@
 			<h3>{{ Auth::user()->name }}</h3>
 			<hr class="line-db">
 			@if(Auth::user()->role_id != 4)
-				<span>Keuta Tim</span>
+				<span>Ketua Tim</span>
 				<h4 class="nomag">{{ Auth::user()->team->leader_name }}</h4>
 			@endif
 		</div>
@@ -427,7 +427,7 @@
 		</div>
 	</div>
 </div>
-								
+
 <!-- /add members-->
 <!-- Modals -->
 @if($user->team->verified == 0)
