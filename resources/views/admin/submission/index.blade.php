@@ -93,7 +93,7 @@
 			                            			<th>No</th>
 			                            			<th>Nama Tim</th>
 			                            			<th>Kategori</th>
-			                            			<th>Tahap</th>
+			                            			<th>File</th>
 			                            			<th>File URL</th>
 			                            			<th>Aksi</th>
 			                            		</tr>
@@ -105,7 +105,7 @@
 			                            			<td>{{ $it++ }}</td>
 			                            			<td>{{ \App\User::where('id', $key->user_id)->first()->name }}</td>
 			                            			<td>{{ \App\User::where('id', $key->user_id)->first()->getKategori() }}</td>
-			                            			<td>{!! \App\User::where('id', $key->user_id)->first()->getPhase() !!}</td>
+			                            			<td>{!! $key->getCategory() !!}</td>
 			                            			<td>{{ $key->path_url }}</td>
 			                            			<td>
 			                            				<a target="_blank" href="{{ $key->path_url }}" class="btn btn-primary btn-sm"><i class="fa fa-eye"></i></a>

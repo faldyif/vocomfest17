@@ -6,12 +6,15 @@
 	$arr_submission_type = array(0, 0, 1, 2, 3, 0, 0);
 	$type = 0;
 	$progress;
+	$due;
+    $now = \Carbon\Carbon::now('Asia/Jakarta');
 	if ($user->role_id == 2) {
         if($user->team->progress == 1) {
         	$progress = 1;
         } else if($user->team->progress == 2) {
             $type = 1; // web
             $progress = 2;
+            $due = \Carbon\Carbon::createFromDate(2017, 3, 21, 'Asia/Jakarta');
         } else if($user->team->progress == 3) {
         	$progress = 5;
         }
@@ -21,9 +24,11 @@
         } else if($user->team->progress == 2) {
             $type = 2; // proposal
             $progress = 3;
+            $due = \Carbon\Carbon::createFromDate(2017, 3, 16, 'Asia/Jakarta');
         } else if ($user->team->progress == 3) {
             $type = 3; // aplikasi
             $progress = 4;
+            $due = \Carbon\Carbon::createFromDate(2017, 4, 5, 'Asia/Jakarta');
         } else if($user->team->progress == 4) {
         	$progress = 5;
         }
@@ -90,7 +95,7 @@
 	</div>
 </div>
 @endif
-@if($progress == 2 || $progress == 3 || $progress == 4)
+@if(($progress == 2 || $progress == 3 || $progress == 4) && $now->diffInDays($due, false) > 0)
 <div id="uploadModal" class="modal fade">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -493,7 +498,9 @@
 										@if(\App\Submission::where('user_id', Auth::user()->id)->where('type', $arr_submission_type[$progress])->count() >= 1)
 											Submitted (<a target="_blank" href="{{ \App\Submission::where('user_id', Auth::user()->id)->where('type', $arr_submission_type[$progress])->latest()->first()->path_url }}">Link</a>)
 											</p>
+										    @if($now->diffInDays($due, false) > 0)
 											<p><a href="#" data-toggle="modal" data-target="#uploadModal"><i class="fa fa-edit"></i>Revisi</a></p>
+										    @endif
 										@else
 											Belum mensubmit
 											</p>
