@@ -78,7 +78,7 @@
 						</div>
 						<div class="form-group">
 							<label for="payment" class="control-label">Bukti pembayaran (jpeg, png, bmp, gif, atau svg) * :</label>
-							<input type="file" id="payment" name="proof" class="form-control" />
+							<input type="file" id="payment" name="proof" class="form-control" accept=".jpg, .jpeg, .png, .gif" />
 						</div>
 						<div class="form-group">
 							<label class="control-label">Keterangan Tambahan (opsional) : </label>
