@@ -3,10 +3,10 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Vocational Computer Festival (Vocomfest) adalah lomba tahunan yang diselenggarakan oleh HIMAKOMSI UGM yang terdiri dari lomba web design untuk SLTA, lomba mmobile apps untuk mahasiswa, dan ditutup dengan sebuah seminar nasional.">
+	<meta name="description" content="Vocational Computer Festival (Vocomfest) adalah lomba tahunan yang diselenggarakan oleh HIMAKOMSI UGM yang terdiri dari lomba web design untuk SLTA, lomba mmobile apps dan competitive programming untuk mahasiswa, dan ditutup dengan sebuah seminar nasional.">
 	<meta name="keywords" content="vocomfest, ugm, himakomsi, computer, festival, lomba">
 	<meta name="author" content="Vocomfest Technical Support Team">
-	<meta name="robots" content="index,follow">
+	<meta name="robots" content="noindex,nofollow">
 
 	<title>@yield('title')</title>
 
