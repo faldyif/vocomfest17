@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\DB;
+use Illuminate\Contracts\Pagination\Paginator;
 // Custom class
 use App\User;
 use App\MobileTeam;
@@ -24,8 +25,10 @@ class AdminTeamController extends Controller
         if(Auth::user()->role_id != 1) {
             return redirect('dashboard'); 
         }
-        $team = User::all()->whereIn('role_id', [2, 3]);
-        return View('admin.team.index')->with('team', $team);
+        // $team = User::all()->whereIn('role_id', [2, 3])->paginate(10);
+        $team = $this->data['pages'] = User::whereIn('role_id', [2, 3])->paginate(10);
+        return View('admin.team.index')->with('team',$team);
+        // return View('admin.team.index')->with('team', $team);
     }
 
     /**

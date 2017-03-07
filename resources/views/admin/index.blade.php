@@ -132,7 +132,7 @@
 												</tr>
 											</thead>
 											<tbody>
-												@foreach(\App\User::whereIn('role_id', [2,3,4])->latest()->get() as $key)
+												@foreach(\App\User::whereIn('role_id', [2,3,4])->limit(10)->latest()->get() as $key)
 												<tr>
 													<td>{{ $loop->iteration }}</td>
 													<td>{{ $key->name }}</td>

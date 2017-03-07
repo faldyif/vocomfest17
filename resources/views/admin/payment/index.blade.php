@@ -104,7 +104,7 @@
 			                            	<tbody>
 			                            		@foreach($payment as $key)
 			                            		<tr>
-			                            			<td>{{ $loop->iteration }}</td>
+			                            			<td>{{ (($payment->currentPage() - 1 ) * $payment->perPage() ) + $loop->iteration }}</td>
 			                            			@if(\App\User::where('id', $key->user_id)->first()->role_id != 4)
 			                            				<td><a href="{{ url('adminvocomfest17/team') }}/{{ \App\User::where('id', $key->user_id)->first()->id }}" class="special blue">{{ \App\User::where('id', $key->user_id)->first()->name }}</a></td>
 			                            			@else
@@ -163,6 +163,7 @@
 			                            			</td>
 			                            		</tr>
 			                            		@endforeach
+			                            		{!! $payment->render() !!}
 			                            	</tbody>
 			                            </table>
 									</div>

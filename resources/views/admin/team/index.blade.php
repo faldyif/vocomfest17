@@ -104,7 +104,7 @@
 												@foreach($team as $key)
 												<div id="dummy{{ $key->id }}" style="width: 0; height: 0"></div>
 												<tr>
-													<td>{{ ++$no }}</td>
+													<td>{{ (($team->currentPage() - 1 ) * $team->perPage() ) + $loop->iteration }}</td>
 													<td><a href="{{ url('adminvocomfest17/team') }}/{{ $key->id }}" class="special blue">{{ $key->name }}</a></td>
 													<td>{{ $key->getKategori() }}</td>
 													<td>{!! $key->getPhase() !!}</td>
@@ -163,6 +163,7 @@
 													</td>
 												</tr>
 												@endforeach
+												{!! $team->render() !!}
 											</tbody>
 										</table>
 									</div>

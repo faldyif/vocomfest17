@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Contracts\Pagination\Paginator;
 
 // Custom class
 use App\User;
@@ -22,8 +24,10 @@ class AdminPaymentController extends Controller
         if(Auth::user()->role_id != 1) {
             return redirect('dashboard');
         }
-        $payment = PaymentConfirmation::latest()->get();
-        return View('admin.payment.index')->with('payment', $payment);
+        // $payment = PaymentConfirmation::latest()->get()->paginate(10);
+        // $payment = $this->data['payments'] = PaymentConfirmation::latest()->get()->paginate(10);
+         $users = DB::table('payment_confirmations')->paginate(10);
+        return View('admin.payment.index')->with('payment', $users);
     }
 
     /**
